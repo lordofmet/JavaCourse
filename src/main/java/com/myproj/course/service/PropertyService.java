@@ -36,7 +36,7 @@ public class PropertyService {
     }
 
     public Property addProperty(Property property) {
-        if (property.getBookingPricePerDay() == null || property.getBookingPricePerDay().compareTo(BigDecimal.ZERO) <= 0) {
+        if (property.getBookingPricePerDay() == 0) {
             throw new IllegalArgumentException("Booking price per day must be greater than zero.");
         }
         return propertyRepository.save(property);
@@ -89,6 +89,11 @@ public class PropertyService {
         reviewRepository.save(review);
         property.getReviews().add(review);
         return propertyRepository.save(property);
+    }
+
+    // Метод для получения всех свойств по владельцу
+    public List<Property> getPropertiesByOwnerId(Long ownerId) {
+        return propertyRepository.findByOwnerId(ownerId);
     }
 
 }

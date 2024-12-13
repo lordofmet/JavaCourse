@@ -10,12 +10,15 @@ async function loadProperties() {
     document.getElementById("owner-name").textContent = user.fullName;
 
     try {
-        const response = await fetch("http://localhost:8080/properties");
+        const response = await fetch(`http://localhost:8080/properties/owner/${user.id}`);
         const properties = await response.json();
+
+        if (!Array.isArray(properties)) {
+            throw new Error("Expected an array of properties");
+        }
 
         const propertyList = document.getElementById("property-list");
         propertyList.innerHTML = properties
-            .filter((prop) => prop.owner?.id === user.id) // Only display properties owned by the user
             .map(
                 (prop) => `
                 <div class="property-item">
@@ -24,29 +27,64 @@ async function loadProperties() {
                     <p><strong>Property Price:</strong> ${prop.price} USD</p>
                     <p><strong>Booking Price:</strong> ${prop.bookingPricePerDay} USD per day</p>
                     <p><strong>Amenities:</strong> ${prop.amenities.join(", ")}</p>
-                    <div>
-                        <h4>Reviews:</h4>
-                        <ul>
-                            ${prop.reviews
-                                ?.map(
-                                    (review) => `
-                                    <li>
-                                        <strong>${review.user?.fullName || "Anonymous"}:</strong>
-                                        ${review.comment} (Rating: ${review.rating})
-                                    </li>
-                                `
-                                )
-                                .join("") || "No reviews yet"}
-                        </ul>
+                    <div id="bookings-${prop.id}">
+                        <!-- Список бронирований будет отображаться здесь -->
                     </div>
-                    <button onclick="deleteProperty(${prop.id})">Delete Property</button>
                 </div>
             `
             )
             .join("");
+
+        // Загрузка бронирований для каждого свойства
+        properties.forEach((property) => {
+            loadBookings(property.id);
+        });
+
     } catch (error) {
         console.error("Error loading properties:", error);
         alert("Failed to load properties. Please try again later.");
+    }
+}
+
+async function loadBookings(propertyId) {
+    const user = JSON.parse(sessionStorage.getItem("user"));
+
+    try {
+        const response = await fetch(`http://localhost:8080/bookings/owner/${user.id}`);
+        const bookings = await response.json();
+
+        if (!Array.isArray(bookings)) {
+            throw new Error('Expected an array of bookings');
+        }
+
+        const bookingsContainer = document.getElementById(`bookings-${propertyId}`);
+        const propertyBookings = bookings.filter((booking) => booking.property.id === propertyId);
+
+        // Заголовок Bookings
+        if (propertyBookings.length > 0) {
+            bookingsContainer.innerHTML = `
+                <h4>Bookings</h4>
+                ${propertyBookings
+                    .map(
+                        (booking) => `
+                            <div>
+                                <p><strong>User:</strong> ${booking.user.fullName}</p>
+                                <p><strong>Start Date:</strong> ${booking.startDate}</p>
+                                <p><strong>End Date:</strong> ${booking.endDate}</p>
+                                <p><strong>Status:</strong> ${booking.status}</p>
+                                <p><strong>Total Price:</strong> ${booking.totalPrice} USD</p>
+                            </div>
+                        `
+                    )
+                    .join("")}
+            `;
+        } else {
+            bookingsContainer.innerHTML = "No bookings yet.";
+        }
+
+    } catch (error) {
+        console.error("Error loading bookings:", error);
+        alert("Failed to load bookings. Please try again later.");
     }
 }
 

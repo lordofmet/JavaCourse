@@ -1,10 +1,16 @@
 package com.myproj.course.controller;
 
 import com.myproj.course.model.Booking;
+import com.myproj.course.model.Property;
+import com.myproj.course.repository.PropertyRepository;
+import com.myproj.course.repository.UserRepository;
 import com.myproj.course.service.BookingService;
+import com.myproj.course.service.PropertyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 @RestController
@@ -14,8 +20,26 @@ public class BookingController {
     @Autowired
     private BookingService bookingService;
 
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private PropertyRepository propertyRepository;
+
+    @Autowired
+    private PropertyService propertyService;
+
     @PostMapping
     public Booking createBooking(@RequestBody Booking booking) {
+
+        Property property = propertyService.getPropertyById(booking.getProperty().getId());
+
+        double price = property.getPrice();
+        double priceBooking = property.getBookingPricePerDay();
+
+        long days = ChronoUnit.DAYS.between(booking.getStartDate(), booking.getEndDate());
+        booking.setTotalPrice(days * priceBooking + price);
+
         return bookingService.createBooking(booking);
     }
 
@@ -37,6 +61,11 @@ public class BookingController {
     @DeleteMapping("/{id}")
     public void deleteBooking(@PathVariable Long id) {
         bookingService.deleteBooking(id);
+    }
+
+    @GetMapping("/owner/{ownerId}")
+    public List<Booking> getBookingsByOwnerId(@PathVariable Long ownerId) {
+        return bookingService.getBookingsByOwnerId(ownerId);
     }
 
 }

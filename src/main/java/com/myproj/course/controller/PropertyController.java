@@ -45,7 +45,7 @@ public class PropertyController {
         // Устанавливаем владельца
         property.setOwner(owner);
 
-        if (property.getBookingPricePerDay() == null || property.getBookingPricePerDay().compareTo(BigDecimal.ZERO) <= 0) {
+        if (property.getBookingPricePerDay() == 0) {
             throw new IllegalArgumentException("Booking price per day must be greater than zero.");
         }
 
@@ -82,5 +82,10 @@ public class PropertyController {
     @PostMapping({"/{id}/reviews"})
     public Property setPropertyReviews(@PathVariable Long id, @RequestBody Review review) {
         return this.propertyService.setPropertyReviews(id, review);
+    }
+
+    @GetMapping("/owner/{ownerId}")
+    public List<Property> getPropertiesByOwnerId(@PathVariable Long ownerId) {
+        return propertyService.getPropertiesByOwnerId(ownerId);
     }
 }

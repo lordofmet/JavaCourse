@@ -40,7 +40,7 @@ public class Property {
     private List<Booking> bookings;
 
     @Column(nullable = false)
-    private BigDecimal bookingPricePerDay;
+    private double bookingPricePerDay;
 
     public List<String> getAmenities() {
         return amenities;
@@ -106,11 +106,12 @@ public class Property {
         this.bookings = bookings;
     }
 
-    public BigDecimal getBookingPricePerDay() {
+
+    public double getBookingPricePerDay() {
         return bookingPricePerDay;
     }
 
-    public void setBookingPricePerDay(BigDecimal bookingPricePerDay) {
+    public void setBookingPricePerDay(double bookingPricePerDay) {
         this.bookingPricePerDay = bookingPricePerDay;
     }
 }

@@ -3,6 +3,65 @@ document.addEventListener("DOMContentLoaded", () => {
     loadBookings();
 });
 
+// Функция для загрузки всех бронирований
+async function loadBookings() {
+    const user = JSON.parse(sessionStorage.getItem("user"));
+
+    try {
+        const response = await fetch(`http://localhost:8080/bookings?userId=${user.id}`);
+        if (!response.ok) {
+            throw new Error(`Failed to load bookings: ${response.statusText}`);
+        }
+
+        const bookings = await response.json();
+
+        const bookingList = document.getElementById("booking-list");
+        bookingList.innerHTML = bookings
+            .map(
+                (booking) => `
+                <div>
+                    <h3>${booking.property.title}</h3>
+                    <p>Start Date: ${booking.startDate}</p>
+                    <p>End Date: ${booking.endDate}</p>
+                    <p>Total Price: $${booking.totalPrice}</p>
+                    <p>Status: ${booking.status}</p>
+                    <button onclick="deleteBooking(${booking.id})">Delete Booking</button>
+                </div>
+            `
+            )
+            .join("");
+    } catch (error) {
+        console.error("Error loading bookings:", error);
+        alert("Failed to load bookings. Please try again later.");
+    }
+}
+
+// Функция для удаления бронирования
+async function deleteBooking(bookingId) {
+    const user = JSON.parse(sessionStorage.getItem("user"));
+    
+    // Подтверждение удаления бронирования
+    const confirmDelete = confirm("Are you sure you want to delete this booking?");
+    if (!confirmDelete) return;
+
+    try {
+        const response = await fetch(`http://localhost:8080/bookings/${bookingId}`, {
+            method: "DELETE",
+            headers: { "Content-Type": "application/json" },
+        });
+
+        if (response.ok) {
+            alert("Booking deleted successfully.");
+            loadBookings(); // Перезагружаем список бронирований
+        } else {
+            alert("Failed to delete booking.");
+        }
+    } catch (error) {
+        console.error("Error deleting booking:", error);
+        alert("Failed to delete booking. Please try again later.");
+    }
+}
+
 async function loadProperties() {
     const user = JSON.parse(sessionStorage.getItem("user"));
     if (!user || user.role !== "TENANT") {
@@ -136,37 +195,6 @@ async function addBooking() {
         }
     } catch (error) {
         console.error("Error booking property:", error);
-    }
-}
-
-async function loadBookings() {
-    const user = JSON.parse(sessionStorage.getItem("user"));
-
-    try {
-        const response = await fetch(`http://localhost:8080/bookings?userId=${user.id}`);
-        if (!response.ok) {
-            throw new Error(`Failed to load bookings: ${response.statusText}`);
-        }
-
-        const bookings = await response.json();
-
-        const bookingList = document.getElementById("booking-list");
-        bookingList.innerHTML = bookings
-            .map(
-                (booking) => `
-                <div>
-                    <h3>${booking.property.title}</h3>
-                    <p>Start Date: ${booking.startDate}</p>
-                    <p>End Date: ${booking.endDate}</p>
-                    <p>Total Price: $${booking.totalPrice}</p>
-                    <p>Status: ${booking.status}</p>
-                </div>
-            `
-            )
-            .join("");
-    } catch (error) {
-        console.error("Error loading bookings:", error);
-        alert("Failed to load bookings. Please try again later.");
     }
 }
 
