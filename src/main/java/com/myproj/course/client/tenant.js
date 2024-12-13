@@ -58,8 +58,6 @@ async function loadProperties() {
     }
 }
 
-
-
 function showReviewForm(propertyId) {
     document.getElementById("add-review-form").style.display = "block";
     document.getElementById("add-review-form").dataset.propertyId = propertyId;

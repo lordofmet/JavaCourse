@@ -8,27 +8,27 @@
 </head>
 <body>
 <div id="auth-container">
-    <h1>Welcome to Sanatorium</h1>
+    <h1>Sanatorium</h1>
 
-    <div id="login-form">
+    <form id="login-form">
         <h2>Login</h2>
-        <input type="text" id="login-username" placeholder="Username">
-        <input type="password" id="login-password" placeholder="Password">
-        <button onclick="login()">Login</button>
-    </div>
+        <input type="text" id="login-username" placeholder="Username" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button type="button" onclick="login()">Login</button>
+    </form>
 
-    <div id="register-form">
+    <form id="register-form">
         <h2>Register</h2>
-        <input type="text" id="register-fullname" placeholder="Full Name">
-        <input type="text" id="register-username" placeholder="Username">
-        <input type="password" id="register-password" placeholder="Password">
-        <input type="email" id="register-email" placeholder="Email">
+        <input type="text" id="register-fullname" placeholder="Full Name" required>
+        <input type="text" id="register-username" placeholder="Username" required>
+        <input type="password" id="register-password" placeholder="Password" required>
+        <input type="email" id="register-email" placeholder="Email" required>
         <select id="register-role">
             <option value="OWNER">OWNER</option>
             <option value="TENANT">TENANT</option>
         </select>
-        <button onclick="register()">Register</button>
-    </div>
+        <button type="button" onclick="register()">Register</button>
+    </form>
 </div>
 <script src="auth.js"></script>
 </body>

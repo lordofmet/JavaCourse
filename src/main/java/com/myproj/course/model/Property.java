@@ -24,7 +24,7 @@ public class Property {
 
     private double price;
 
-    @ElementCollection
+    //@ElementCollection
     private List<String> amenities;
 
     @ManyToOne
