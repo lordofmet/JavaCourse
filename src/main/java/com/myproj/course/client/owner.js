@@ -34,14 +34,30 @@ async function addProperty() {
     const price = document.getElementById("property-price").value;
     const amenities = document.getElementById("property-amenities").value.split(",");
 
+    // ��������� ID ��������� �� sessionStorage
+    const user = JSON.parse(sessionStorage.getItem("user"));
+    
+    // �������� �� ������������� ������������
+    if (!user || !user.id) {
+        alert("User information is missing.");
+        return;
+    }
+
     await fetch("http://localhost:8080/properties", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ title, description, price, amenities }),
+        body: JSON.stringify({
+            title,
+            description,
+            price,
+            amenities,
+            owner: { id: user.id }  // �������� id ���������
+        }),
     });
 
     loadProperties();
 }
+
 
 async function deleteProperty(id) {
     await fetch(`http://localhost:8080/properties/${id}`, { method: "DELETE" });

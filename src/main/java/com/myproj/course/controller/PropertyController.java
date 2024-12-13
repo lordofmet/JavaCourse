@@ -2,17 +2,25 @@ package com.myproj.course.controller;
 
 import com.myproj.course.model.Property;
 import com.myproj.course.model.Review;
+import com.myproj.course.model.Users;
 import com.myproj.course.service.PropertyService;
 import java.util.List;
+
+import com.myproj.course.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
 @RestController
 @RequestMapping({"/properties"})
 public class PropertyController {
+
     @Autowired
     private PropertyService propertyService;
+
+    @Autowired
+    private UserService userService;
 
     @Autowired
     public PropertyController(PropertyService propertyService) {
@@ -28,9 +36,17 @@ public class PropertyController {
     }
 
     @PostMapping
-    public Property addProperty(@RequestBody Property property) {
-        return this.propertyService.addProperty(property);
+    public ResponseEntity<Property> addProperty(@RequestBody Property property) {
+        // Получаем пользователя по ID
+        Users owner = userService.getUserById(property.getOwner().getId());
+
+        // Устанавливаем владельца
+        property.setOwner(owner);
+
+        Property savedProperty = propertyService.addProperty(property);
+        return ResponseEntity.ok(savedProperty);
     }
+
 
     @GetMapping({"/{id}"})
     public Property getPropertyById(@PathVariable Long id) {
