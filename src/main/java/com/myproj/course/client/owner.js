@@ -18,11 +18,12 @@ async function loadProperties() {
             .filter((prop) => prop.owner?.id === user.id) // Only display properties owned by the user
             .map(
                 (prop) => `
-                <div>
+                <div class="property-item">
                     <h3>${prop.title}</h3>
-                    <p>${prop.description}</p>
-                    <p>Price: ${prop.price}</p>
-                    <p>Amenities: ${prop.amenities.join(", ")}</p>
+                    <p><strong>Description:</strong> ${prop.description}</p>
+                    <p><strong>Property Price:</strong> ${prop.price} USD</p>
+                    <p><strong>Booking Price:</strong> ${prop.bookingPricePerDay} USD per day</p>
+                    <p><strong>Amenities:</strong> ${prop.amenities.join(", ")}</p>
                     <div>
                         <h4>Reviews:</h4>
                         <ul>
@@ -54,6 +55,7 @@ async function addProperty() {
     const description = document.getElementById("property-description").value;
     const price = document.getElementById("property-price").value;
     const amenities = document.getElementById("property-amenities").value.split(",");
+    const bookingPrice = document.getElementById("property-booking-price").value;
 
     const user = JSON.parse(sessionStorage.getItem("user"));
     if (!user || !user.id) {
@@ -62,19 +64,25 @@ async function addProperty() {
     }
 
     try {
-        await fetch("http://localhost:8080/properties", {
+        const response = await fetch("http://localhost:8080/properties", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 title,
                 description,
-                price,
+                price: parseFloat(price),
                 amenities,
+                bookingPricePerDay: parseFloat(bookingPrice),
                 owner: { id: user.id }
             }),
         });
 
-        loadProperties();
+        if (response.ok) {
+            alert("Property added successfully.");
+            loadProperties();
+        } else {
+            alert("Failed to add property. Please check your inputs.");
+        }
     } catch (error) {
         console.error("Error adding property:", error);
         alert("Failed to add property. Please try again.");

@@ -5,13 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tenant Dashboard</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Улучшенный стиль */
+        #booking-header {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .logout-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .logout-btn:hover {
+            background-color: #d32f2f;
+        }
+        .property-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 15px 0;
+            padding: 15px;
+        }
+        .property-card h3 {
+            margin: 0 0 10px;
+        }
+        .property-card p {
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
     <h1>Welcome, <span id="tenant-name"></span></h1>
 
     <div id="property-list">
-        <h2>Your Properties</h2>
+        <h2>Available Properties</h2>
         <!-- Properties will be dynamically loaded here -->
     </div>
 
@@ -22,7 +56,23 @@
         <button onclick="addReview()">Add Review</button>
     </div>
 
-    <button onclick="logout()">Logout</button>
+    <div id="add-booking-form" class="hidden">
+        <h2>Book Property</h2>
+        <label for="booking-start-date">Start Date:</label>
+        <input type="date" id="booking-start-date" required>
+        <label for="booking-end-date">End Date:</label>
+        <input type="date" id="booking-end-date" required>
+        <button onclick="addBooking()">Book Now</button>
+    </div>
+
+    <div id="booking-section">
+        <h2 id="booking-header">Your Bookings</h2>
+        <div id="booking-list">
+            <!-- Bookings will be dynamically loaded here -->
+        </div>
+    </div>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
 </div>
 <script src="tenant.js"></script>
 </body>

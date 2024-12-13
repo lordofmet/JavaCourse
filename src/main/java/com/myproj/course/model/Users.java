@@ -32,6 +32,10 @@ public class Users {
     @OneToMany(mappedBy = "owner")
     private List<Property> properties;
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Booking> bookings;
+
     public String getPassword() {
         return password;
     }
@@ -94,5 +98,13 @@ public class Users {
 
     public void setProperties(List<Property> properties) {
         this.properties = properties;
+    }
+
+    public List<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(List<Booking> bookings) {
+        this.bookings = bookings;
     }
 }

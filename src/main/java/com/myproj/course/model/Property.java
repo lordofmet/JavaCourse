@@ -8,6 +8,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class Property {
 
     private double price;
 
-    //@ElementCollection
+    @ElementCollection
     private List<String> amenities;
 
     @ManyToOne
@@ -33,6 +34,13 @@ public class Property {
 
     @OneToMany(mappedBy = "property", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Review> reviews;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "property", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Booking> bookings;
+
+    @Column(nullable = false)
+    private BigDecimal bookingPricePerDay;
 
     public List<String> getAmenities() {
         return amenities;
@@ -88,5 +96,21 @@ public class Property {
 
     public void setReviews(List<Review> reviews) {
         this.reviews = reviews;
+    }
+
+    public List<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(List<Booking> bookings) {
+        this.bookings = bookings;
+    }
+
+    public BigDecimal getBookingPricePerDay() {
+        return bookingPricePerDay;
+    }
+
+    public void setBookingPricePerDay(BigDecimal bookingPricePerDay) {
+        this.bookingPricePerDay = bookingPricePerDay;
     }
 }

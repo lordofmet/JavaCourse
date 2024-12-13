@@ -1,4 +1,7 @@
-document.addEventListener("DOMContentLoaded", loadProperties);
+document.addEventListener("DOMContentLoaded", () => {
+    loadProperties();
+    loadBookings();
+});
 
 async function loadProperties() {
     const user = JSON.parse(sessionStorage.getItem("user"));
@@ -7,11 +10,9 @@ async function loadProperties() {
         return;
     }
 
-    // Display full name
     document.getElementById("tenant-name").textContent = user.fullName;
 
     try {
-        // Fetch properties from server
         const response = await fetch("http://localhost:8080/properties");
         if (!response.ok) {
             throw new Error(`Failed to load properties: ${response.statusText}`);
@@ -19,18 +20,15 @@ async function loadProperties() {
 
         const properties = await response.json();
 
-        if (!Array.isArray(properties)) {
-            throw new Error("Received data is not an array");
-        }
-
         const propertyList = document.getElementById("property-list");
         propertyList.innerHTML = properties
             .map(
                 (prop) => `
-                <div>
+                <div class="property-card">
                     <h3>${prop.title}</h3>
                     <p>${prop.description}</p>
-                    <p>Price: ${prop.price}</p>
+                    <p><strong>Property Price:</strong> $${prop.price}</p>
+                    <p><strong>Booking Price per Day:</strong> $${prop.bookingPricePerDay}</p>
                     <p>Amenities: ${prop.amenities ? prop.amenities.join(", ") : "None"}</p>
                     <div>
                         <h4>Reviews:</h4>
@@ -48,6 +46,7 @@ async function loadProperties() {
                         </ul>
                     </div>
                     <button onclick="showReviewForm(${prop.id})">Add Review</button>
+                    <button onclick="showBookingForm(${prop.id})">Book Property</button>
                 </div>
             `
             )
@@ -77,21 +76,97 @@ async function addReview() {
     const reviewData = {
         comment,
         rating: parseInt(rating),
-        user: { id: user.id }, // устанавливаем ID пользователя
-        property: { id: parseInt(propertyId) } // устанавливаем ID свойства
+        user: { id: user.id },
+        property: { id: parseInt(propertyId) },
     };
 
-    const response = await fetch(`http://localhost:8080/properties/${propertyId}/reviews`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(reviewData)
-    });
+    try {
+        const response = await fetch(`http://localhost:8080/properties/${propertyId}/reviews`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(reviewData),
+        });
 
-    if (response.ok) {
-        alert("Review added successfully!");
-        loadProperties(); // перезагрузить список после добавления отзыва
-    } else {
-        alert("Failed to add review.");
+        if (response.ok) {
+            alert("Review added successfully!");
+            loadProperties();
+        } else {
+            alert("Failed to add review.");
+        }
+    } catch (error) {
+        console.error("Error adding review:", error);
+    }
+}
+
+function showBookingForm(propertyId) {
+    document.getElementById("add-booking-form").style.display = "block";
+    document.getElementById("add-booking-form").dataset.propertyId = propertyId;
+}
+
+async function addBooking() {
+    const startDate = document.getElementById("booking-start-date").value;
+    const endDate = document.getElementById("booking-end-date").value;
+    const propertyId = document.getElementById("add-booking-form").dataset.propertyId;
+
+    if (!startDate || !endDate || !propertyId) {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    const user = JSON.parse(sessionStorage.getItem("user"));
+    const bookingData = {
+        startDate,
+        endDate,
+        user: { id: user.id },
+        property: { id: parseInt(propertyId) },
+    };
+
+    try {
+        const response = await fetch("http://localhost:8080/bookings", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(bookingData),
+        });
+
+        if (response.ok) {
+            alert("Booking successful!");
+            loadBookings();
+        } else {
+            alert("Failed to book the property.");
+        }
+    } catch (error) {
+        console.error("Error booking property:", error);
+    }
+}
+
+async function loadBookings() {
+    const user = JSON.parse(sessionStorage.getItem("user"));
+
+    try {
+        const response = await fetch(`http://localhost:8080/bookings?userId=${user.id}`);
+        if (!response.ok) {
+            throw new Error(`Failed to load bookings: ${response.statusText}`);
+        }
+
+        const bookings = await response.json();
+
+        const bookingList = document.getElementById("booking-list");
+        bookingList.innerHTML = bookings
+            .map(
+                (booking) => `
+                <div>
+                    <h3>${booking.property.title}</h3>
+                    <p>Start Date: ${booking.startDate}</p>
+                    <p>End Date: ${booking.endDate}</p>
+                    <p>Total Price: $${booking.totalPrice}</p>
+                    <p>Status: ${booking.status}</p>
+                </div>
+            `
+            )
+            .join("");
+    } catch (error) {
+        console.error("Error loading bookings:", error);
+        alert("Failed to load bookings. Please try again later.");
     }
 }
 

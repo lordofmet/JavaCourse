@@ -4,6 +4,8 @@ import com.myproj.course.model.Property;
 import com.myproj.course.model.Review;
 import com.myproj.course.model.Users;
 import com.myproj.course.service.PropertyService;
+
+import java.math.BigDecimal;
 import java.util.List;
 
 import com.myproj.course.service.UserService;
@@ -42,6 +44,10 @@ public class PropertyController {
 
         // Устанавливаем владельца
         property.setOwner(owner);
+
+        if (property.getBookingPricePerDay() == null || property.getBookingPricePerDay().compareTo(BigDecimal.ZERO) <= 0) {
+            throw new IllegalArgumentException("Booking price per day must be greater than zero.");
+        }
 
         Property savedProperty = propertyService.addProperty(property);
         return ResponseEntity.ok(savedProperty);

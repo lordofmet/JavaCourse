@@ -9,6 +9,7 @@ import com.myproj.course.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import static com.myproj.course.model.Role.OWNER;
@@ -35,6 +36,9 @@ public class PropertyService {
     }
 
     public Property addProperty(Property property) {
+        if (property.getBookingPricePerDay() == null || property.getBookingPricePerDay().compareTo(BigDecimal.ZERO) <= 0) {
+            throw new IllegalArgumentException("Booking price per day must be greater than zero.");
+        }
         return propertyRepository.save(property);
     }
 
