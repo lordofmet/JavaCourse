@@ -46,6 +46,11 @@ public class ReviewController {
         reviewService.deleteReview(id);
     }
 
+    @PostMapping("/{id}/reviews")
+    public Review addReview(@PathVariable Long id, @RequestBody Review review) {
+        return reviewService.addReview(review);
+    }
+
     @PostMapping("/{id}/assign-user")
     public Review assignUserToReview(@PathVariable Long id, @RequestBody Long userId) {
         return reviewService.assignUserToReview(id, userId);

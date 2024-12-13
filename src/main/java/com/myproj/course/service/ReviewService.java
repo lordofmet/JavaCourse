@@ -32,15 +32,31 @@ public class ReviewService {
     }
 
     public Review addReview(Review review) {
-        if (review.getProperty() == null) {
-            throw new RuntimeException("Property must be provided");
+        // Проверка на наличие пользователя
+        if (review.getUser() == null || review.getUser().getId() == null) {
+            throw new IllegalArgumentException("User must be provided for the review");
         }
+
+        // Проверка на наличие свойства
+        if (review.getProperty() == null || review.getProperty().getId() == null) {
+            throw new IllegalArgumentException("Property must be provided for the review");
+        }
+
+        // Получение пользователя и свойства из базы данных
+        Users user = userRepository.findById(review.getUser().getId())
+                .orElseThrow(() -> new RuntimeException("User not found"));
 
         Property property = propertyRepository.findById(review.getProperty().getId())
                 .orElseThrow(() -> new RuntimeException("Property not found"));
+
+        // Установка связи отзыва с пользователем и свойством
+        review.setUser(user);
         review.setProperty(property);
+
+        // Сохранение отзыва в базе данных
         return reviewRepository.save(review);
     }
+
 
     public Review getReviewById(Long id) {
         return reviewRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Review not found"));

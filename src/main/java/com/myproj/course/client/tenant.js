@@ -78,12 +78,12 @@ async function addReview() {
     const user = JSON.parse(sessionStorage.getItem("user"));
     const reviewData = {
         comment,
-        rating: parseInt(rating), // Убедитесь, что рейтинг это число
-        user: { id: user.id }, // Предполагается, что ID пользователя есть в объекте user
-        property: { id: parseInt(propertyId) } // ID свойства
+        rating: parseInt(rating),
+        user: { id: user.id }, // устанавливаем ID пользователя
+        property: { id: parseInt(propertyId) } // устанавливаем ID свойства
     };
 
-    const response = await fetch("http://localhost:8080/reviews", {
+    const response = await fetch(`http://localhost:8080/properties/${propertyId}/reviews`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(reviewData)
@@ -91,7 +91,7 @@ async function addReview() {
 
     if (response.ok) {
         alert("Review added successfully!");
-        loadProperties(); // Перезагрузить список свойств после добавления отзыва
+        loadProperties(); // перезагрузить список после добавления отзыва
     } else {
         alert("Failed to add review.");
     }

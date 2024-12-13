@@ -8,6 +8,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -26,12 +27,10 @@ public class Property {
     @ElementCollection
     private List<String> amenities;
 
-    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "owner_id")
     private Users owner;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "property", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Review> reviews;
 

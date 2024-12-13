@@ -4,6 +4,7 @@ import com.myproj.course.model.Property;
 import com.myproj.course.model.Review;
 import com.myproj.course.model.Users;
 import com.myproj.course.repository.PropertyRepository;
+import com.myproj.course.repository.ReviewRepository;
 import com.myproj.course.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,6 +22,9 @@ public class PropertyService {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private ReviewRepository reviewRepository;
 
     public PropertyService(PropertyRepository propertyRepository) {
         this.propertyRepository = propertyRepository;
@@ -74,6 +78,11 @@ public class PropertyService {
     public Property setPropertyReviews(Long id, Review review) {
         Property property = propertyRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Property not found"));
+        Users user = userRepository.findById(review.getUser().getId())
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        review.setProperty(property);
+        review.setUser(user); // связываем отзыв с пользователем
+        reviewRepository.save(review);
         property.getReviews().add(review);
         return propertyRepository.save(property);
     }
