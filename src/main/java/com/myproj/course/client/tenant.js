@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     loadBookings();
 });
 
-// Функция для загрузки всех бронирований
 async function loadBookings() {
     const user = JSON.parse(sessionStorage.getItem("user"));
 
@@ -16,6 +15,11 @@ async function loadBookings() {
         const bookings = await response.json();
 
         const bookingList = document.getElementById("booking-list");
+        if (!bookingList) {
+            console.error("Error: Element with id 'booking-list' not found.");
+            return;
+        }
+
         bookingList.innerHTML = bookings
             .map(
                 (booking) => `
@@ -25,7 +29,6 @@ async function loadBookings() {
                     <p>End Date: ${booking.endDate}</p>
                     <p>Total Price: $${booking.totalPrice}</p>
                     <p>Status: ${booking.status}</p>
-                    <button onclick="deleteBooking(${booking.id})">Delete Booking</button>
                 </div>
             `
             )
@@ -35,6 +38,7 @@ async function loadBookings() {
         alert("Failed to load bookings. Please try again later.");
     }
 }
+
 
 // Функция для удаления бронирования
 async function deleteBooking(bookingId) {
@@ -201,4 +205,8 @@ async function addBooking() {
 function logout() {
     sessionStorage.clear();
     window.location.href = "index.html";
+}
+
+function goToBasket() {
+    window.location.href = "basket.html";
 }

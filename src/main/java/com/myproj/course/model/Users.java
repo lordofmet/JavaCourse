@@ -36,6 +36,14 @@ public class Users {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Booking> bookings;
 
+    public Users() {
+
+    }
+
+    public Users(Long id) {
+        this.id = id;
+    }
+
     public String getPassword() {
         return password;
     }

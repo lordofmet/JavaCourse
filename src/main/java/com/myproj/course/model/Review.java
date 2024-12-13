@@ -27,6 +27,9 @@ public class Review {
     @JoinColumn(name = "property_id")
     private Property property;
 
+    public Review() {
+
+    }
 
     public Long getId() {
         return id;

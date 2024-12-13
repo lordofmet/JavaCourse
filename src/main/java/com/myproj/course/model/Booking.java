@@ -24,6 +24,14 @@ public class Booking {
 
     private double totalPrice;
 
+    @ManyToOne
+    @JoinColumn(name = "basket_id")
+    private Basket basket;
+
+    public Booking() {
+
+    }
+
     public Long getId() {
         return id;
     }
@@ -78,5 +86,13 @@ public class Booking {
 
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
+    }
+
+    public Basket getBasket() {
+        return basket;
+    }
+
+    public void setBasket(Basket basket) {
+        this.basket = basket;
     }
 }

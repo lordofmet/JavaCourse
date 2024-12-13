@@ -6,14 +6,54 @@
     <title>Tenant Dashboard</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Улучшенный стиль */
-        #booking-header {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #333;
-            margin-top: 20px;
-            text-align: center;
+        /* Общий стиль */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        .container {
+            padding: 20px;
+        }
+
+        /* Кнопка корзины */
+        .basket-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 10%;
+            margin-left: 90%;
+        }
+
+        .basket-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Список доступных объектов */
+        .property-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 15px 0;
+            padding: 15px;
+        }
+
+        .property-card h3 {
+            margin: 0 0 10px;
+        }
+
+        .property-card p {
+            margin: 5px 0;
+        }
+
         .logout-btn {
             margin-top: 20px;
             padding: 10px 20px;
@@ -23,81 +63,48 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
         .logout-btn:hover {
-            background-color: #d32f2f;
-        }
-        .property-card {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin: 15px 0;
-            padding: 15px;
-        }
-        .property-card h3 {
-            margin: 0 0 10px;
-        }
-        .property-card p {
-            margin: 5px 0;
-        }
-        /* Стиль для кнопок */
-        .booking-button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .booking-button:hover {
-            background-color: #45a049;
-        }
-        .delete-button {
-            background-color: #f44336;
-            color: white;
-            padding: 5px 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .delete-button:hover {
             background-color: #d32f2f;
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <h1>Welcome, <span id="tenant-name"></span></h1>
+    <div class="container">
+        <h1>Welcome, <span id="tenant-name"></span></h1>
 
-    <div id="property-list">
-        <h2>Available Properties</h2>
-        <!-- Properties will be dynamically loaded here -->
-    </div>
+        <button class="basket-button" onclick="goToBasket()">Basket</button>
 
-    <div id="add-review-form" class="hidden">
-        <h2>Add Review</h2>
-        <input type="text" id="review-comment" placeholder="Comment" required>
-        <input type="number" id="review-rating" placeholder="Rating (1-5)" min="1" max="5" required>
-        <button onclick="addReview()">Add Review</button>
-    </div>
-
-    <div id="add-booking-form" class="hidden">
-        <h2>Book Property</h2>
-        <label for="booking-start-date">Start Date:</label>
-        <input type="date" id="booking-start-date" required>
-        <label for="booking-end-date">End Date:</label>
-        <input type="date" id="booking-end-date" required>
-        <button onclick="addBooking()">Book Now</button>
-    </div>
-
-    <div id="booking-section">
-        <h2 id="booking-header">Your Bookings</h2>
-        <div id="booking-list">
-            <!-- Bookings will be dynamically loaded here -->
+        <div id="property-list">
+            <h2>Available Properties</h2>
+            <!-- Properties will be dynamically loaded here -->
         </div>
+
+        <div id="add-review-form" class="hidden">
+            <h2>Add Review</h2>
+            <input type="text" id="review-comment" placeholder="Comment" required>
+            <input type="number" id="review-rating" placeholder="Rating (1-5)" min="1" max="5" required>
+            <button onclick="addReview()">Add Review</button>
+        </div>
+
+        <div id="add-booking-form" class="hidden">
+            <h2>Book Property</h2>
+            <label for="booking-start-date">Start Date:</label>
+            <input type="date" id="booking-start-date" required>
+            <label for="booking-end-date">End Date:</label>
+            <input type="date" id="booking-end-date" required>
+            <button onclick="addBooking()">Book Now</button>
+        </div>
+
+        <div id="booking-section">
+            <h2 id="booking-header">Your Bookings</h2>
+            <div id="booking-list">
+                <!-- Bookings will be dynamically loaded here -->
+            </div>
+        </div>
+
+        <button class="logout-btn" onclick="logout()">Logout</button>
     </div>
-
-    <button class="logout-btn" onclick="logout()">Logout</button>
-</div>
-
-<script src="tenant.js"></script>
+    <script src="tenant.js"></script>
 </body>
 </html>

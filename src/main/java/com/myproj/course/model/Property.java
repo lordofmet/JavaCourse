@@ -42,6 +42,10 @@ public class Property {
     @Column(nullable = false)
     private double bookingPricePerDay;
 
+    public Property() {
+
+    }
+
     public List<String> getAmenities() {
         return amenities;
     }
