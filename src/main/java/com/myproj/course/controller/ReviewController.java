@@ -1,0 +1,59 @@
+package com.myproj.course.controller;
+
+import com.myproj.course.model.Review;
+import com.myproj.course.service.ReviewService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/reviews")
+public class ReviewController {
+
+    private ReviewService reviewService;
+
+    @Autowired
+    public ReviewController(ReviewService reviewService) {
+        this.reviewService = reviewService;
+    }
+
+    public ReviewController() {
+    }
+
+    @GetMapping
+    public List<Review> getAllReviews() {
+        return reviewService.getAllReviews();
+    }
+
+    @PostMapping
+    public Review addReview(@RequestBody Review review) {
+        return reviewService.addReview(review);
+    }
+
+    @GetMapping("/{id}")
+    public Review getReviewById(@PathVariable Long id) {
+        return reviewService.getReviewById(id);
+    }
+
+    @PutMapping("/{id}")
+    public Review updateReview(@PathVariable Long id, @RequestBody Review review) {
+        return reviewService.updateReview(id, review);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteReview(@PathVariable Long id) {
+        reviewService.deleteReview(id);
+    }
+
+    @PostMapping("/{id}/assign-user")
+    public Review assignUserToReview(@PathVariable Long id, @RequestBody Long userId) {
+        return reviewService.assignUserToReview(id, userId);
+    }
+
+    @PostMapping("/{id}/assign-property")
+    public Review assignPropertyToReview(@PathVariable Long id, @RequestBody Long propertyId) {
+        return reviewService.assignPropertyToReview(id, propertyId);
+    }
+
+}

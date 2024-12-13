@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Welcome, <span id="owner-name"></span></h1>
+<div id="property-list"></div>
+<div id="add-property-form">
+    <h2>Add Property</h2>
+    <input type="text" id="property-title" placeholder="Title">
+    <input type="text" id="property-description" placeholder="Description">
+    <input type="number" id="property-price" placeholder="Price">
+    <input type="text" id="property-amenities" placeholder="Amenities (comma-separated)">
+    <button onclick="addProperty()">Add Property</button>
+</div>
+<button onclick="logout()">Logout</button>
+<script src="owner.js"></script>
+</body>
+</html>
