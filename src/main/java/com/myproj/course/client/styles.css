@@ -302,7 +302,6 @@ button:hover {
     background-color: #455ca0;
 }
 
-/* Стиль для кнопки выхода */
 .logout-btn {
     position: fixed;  /* Positioning the button fixed at the top-right */
     top: 10px;  /* Adjust the top distance to place it below the basket button */
