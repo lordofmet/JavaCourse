@@ -33,12 +33,12 @@ async function loadBookings() {
             bookingList.innerHTML = paidBookings
                 .map(
                     (booking) => `
-                    <div>
-                        <h3>${booking.property?.title || "Unknown Property"}</h3>
-                        <p>Start Date: ${booking.startDate || "N/A"}</p>
-                        <p>End Date: ${booking.endDate || "N/A"}</p>
-                        <p>Total Price: $${booking.totalPrice || 0}</p>
-                        <p>Status: ${booking.status || "Unknown"}</p>
+                    <div class="booking-card" style="border: 1px solid #ddd; padding: 15px; margin: 10px; border-radius: 8px; background-color: #f9f9f9;">
+                        <h3 style="color: #333;">${booking.property?.title || "Unknown Property"}</h3>
+                        <p><strong>Start Date:</strong> ${booking.startDate || "N/A"}</p>
+                        <p><strong>End Date:</strong> ${booking.endDate || "N/A"}</p>
+                        <p><strong>Total Price:</strong> $${booking.totalPrice || 0}</p>
+                        <p><strong>Status:</strong> ${booking.status || "Unknown"}</p>
                     </div>
                 `
                 )

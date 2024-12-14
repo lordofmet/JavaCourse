@@ -23,8 +23,8 @@ async function loadProperties() {
         propertyList.innerHTML = properties
             .map(
                 (prop) => `
-                <div class="property-item">
-                    <h3>${prop.title || "Untitled Property"}</h3>
+                <div class="property-item" style="border: 1px solid #ddd; padding: 20px; margin: 15px; border-radius: 8px; background-color: #f9f9f9;">
+                    <h3 style="color: #333;">${prop.title || "Untitled Property"}</h3>
                     <p><strong>Description:</strong> ${prop.description || "No description provided."}</p>
                     <p><strong>Property Price:</strong> $${prop.price || 0}</p>
                     <p><strong>Booking Price:</strong> $${prop.bookingPricePerDay || 0} per day</p>
@@ -35,8 +35,8 @@ async function loadProperties() {
                     <div id="reviews-${prop.id}">
                         <!-- Reviews will be loaded here -->
                     </div>
-                    <button onclick="editProperty(${prop.id})">Edit</button>
-                    <button onclick="confirmDelete(${prop.id})">Delete</button>
+                    <button onclick="editProperty(${prop.id})" style="padding: 10px 20px; background-color: #FF9800; color: white; border: none; border-radius: 5px; cursor: pointer;">Edit</button>
+                    <button onclick="confirmDelete(${prop.id})" style="padding: 10px 20px; background-color: #F44336; color: white; border: none; border-radius: 5px; cursor: pointer;">Delete</button>
                 </div>
             `
             )
@@ -64,16 +64,18 @@ async function loadReviews(propertyId) {
     if (reviews.length > 0) {
         reviewsContainer.innerHTML = `
             <h4>Reviews</h4>
-            ${reviews
-                .map(
-                    (review) => `
-                    <div>
-                        <p><strong>User:</strong> ${review.user?.fullName || "Unknown"}</p>
-                        <p><strong>Rating:</strong> ${review.rating || "No rating"}</p>
-                        <p><strong>Comment:</strong> ${review.comment || "No comment"}</p>
-                    </div>`
-                )
-                .join("")}
+            <div class="reviews-list">
+                ${reviews
+                    .map(
+                        (review) => `
+                        <div class="review-item">
+                            <p><strong>User:</strong> ${review.user?.fullName || "Unknown"}</p>
+                            <p><strong>Rating:</strong> ${review.rating || "No rating"}</p>
+                            <p><strong>Comment:</strong> ${review.comment || "No comment"}</p>
+                        </div>`
+                    )
+                    .join("")}
+            </div>
         `;
     } else {
         reviewsContainer.innerHTML = "No reviews yet.";

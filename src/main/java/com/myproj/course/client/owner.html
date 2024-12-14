@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <div id="add-property-form">
+    <!--div id="add-property-form">
         <h2>Add Property</h2>
         <input type="text" id="property-title" placeholder="Title" required>
         <input type="text" id="property-description" placeholder="Description" required>
@@ -35,7 +35,54 @@
             <option value="STANDART">Standard</option>
         </select>
         <button onclick="addProperty()">Add Property</button>
+    </div-->
+
+    <div id="add-property-form">
+        <h2>Add Property</h2>
+        <form id="property-form" onsubmit="addProperty(); return false;">
+            <div class="form-group">
+                <label for="property-title">Title</label>
+                <input type="text" id="property-title" placeholder="Enter property title" required />
+            </div>
+    
+            <div class="form-group">
+                <label for="property-description">Description</label>
+                <textarea id="property-description" placeholder="Enter property description" required></textarea>
+            </div>
+    
+            <div class="form-group">
+                <label for="property-price">Price ($)</label>
+                <input type="number" id="property-price" placeholder="Enter price" required />
+            </div>
+    
+            <div class="form-group">
+                <label for="property-booking-price">Booking Price per Day ($)</label>
+                <input type="number" id="property-booking-price" placeholder="Enter booking price per day" required />
+            </div>
+    
+            <div class="form-group">
+                <label for="property-capacity">Capacity</label>
+                <input type="number" id="property-capacity" placeholder="Enter capacity" required />
+            </div>
+    
+            <div class="form-group">
+                <label for="property-type">Type</label>
+                <select id="property-type" required>
+                    <option value="">Select property type</option>
+                    <option value="DELUXE">Deluxe</option>
+                    <option value="STANDART">Standart</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="property-amenities">Amenities</label>
+                <input type="text" id="property-amenities" placeholder="Enter amenities" />
+            </div>
+    
+            <button type="submit" class="btn-submit">Add Property</button>
+        </form>
     </div>
+    
 
     <button onclick="logout()">Logout</button>
 

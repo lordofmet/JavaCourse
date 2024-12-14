@@ -1,14 +1,17 @@
+/* Общие стили */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f0f2f5;
     margin: 0;
     padding: 0;
     color: #333;
+    transition: background-color 0.3s ease;
 }
 
 h1, h2, h3, h4 {
     color: #444;
     margin: 0 0 10px 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -18,6 +21,162 @@ h1, h2, h3, h4 {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стиль для всех кнопок */
+button {
+    background-color: #0078D7;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #005ea2;
+    transform: scale(1.05);
+}
+
+/* Формы и инпуты */
+form input, form select, form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus, select:focus, button:focus {
+    border-color: #0078D7;
+    outline: none;
+}
+
+h1, h2, h3 {
+    color: #444;
+    font-family: 'Roboto', sans-serif;
+}
+
+.property-card, .basket-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 15px 0;
+    padding: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    background-color: #fff;
+}
+
+.property-card:hover, .basket-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+}
+
+/* Стиль для кнопок действий */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-buttons button:hover {
+    background-color: #45a049;
+}
+
+/* Модальные окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 50px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+/* Стиль корзины */
+.basket-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #2142a5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.basket-button:hover {
+    background-color: #455ca0;
+    transform: scale(1.05);
+}
+
+/* Прочее */
+.hidden {
+    display: none;
+}
+
+/* Общий стиль для карточек */
+.property {
+    padding: 15px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для элементов страницы корзины */
+.basket-item h3, .property-card h3 {
+    color: #0078D7;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+}
+
+.basket-item p, .property-card p {
+    color: #555;
+    font-size: 14px;
+    margin: 5px 0;
 }
 
 #auth-container {
@@ -36,98 +195,236 @@ h1, h2, h3, h4 {
     color: #0078D7;
 }
 
-form {
-    margin-bottom: 20px;
+/* Стиль для корзины */
+#basket-list {
+    margin-top: 20px;
 }
 
-input, select, button {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
+.pay-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
     border-radius: 5px;
-    font-size: 14px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-input:focus, select:focus, button:focus {
-    border-color: #0078D7;
-    outline: none;
+.pay-btn:hover {
+    background-color: #45a049;
 }
 
+/* Общие стили для кнопок */
 button {
     background-color: #0078D7;
     color: #fff;
     border: none;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
     background-color: #005ea2;
+    transform: scale(1.05);
 }
 
-#property-list, .property {
+/* Общий стиль карточек */
+.property-card, .booking-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #fafafa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.property-card h3, .booking-card h3 {
+    margin: 0 0 10px;
+    color: #0078D7;
+}
+
+.property-card p, .booking-card p {
+    margin: 5px 0;
+}
+
+.property-list {
     display: flex;
     flex-direction: column;
 }
 
-.property {
-    margin-bottom: 15px;
-    padding: 15px;
-    background-color: #fafafa;
+.property-card button, .booking-card button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.property-card button:hover, .booking-card button:hover {
+    background-color: #45a049;
+}
+
+/* Если карточки для бронирований */
+.booking-card {
+    background-color: #f0f8ff;
     border: 1px solid #e0e0e0;
-    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.property h3 {
-    margin: 0 0 5px;
-    color: #0078D7;
+.booking-card h3 {
+    color: #4CAF50;
 }
 
-#add-property-form, #add-review-form {
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-top: 20px;
-    background-color: #fafafa;
-}
-
-.hidden {
-    display: none;
-}
-
-.modal {
-    display: none;
+/* Стиль кнопки корзины */
+.basket-button {
     position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    top: 10px;
+    right: 10px;
+    background-color: #2142a5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 10%;
+    margin-left: 90%;
 }
 
-.modal-content {
-    background-color: #fff;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+.basket-button:hover {
+    background-color: #455ca0;
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover, .close:focus {
-    color: black;
-    text-decoration: none;
+/* Стиль кнопки выхода */
+.logout-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
+
+.logout-btn:hover {
+    background-color: #d32f2f;
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.review-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-item p {
+    margin: 3px 0;
+    font-size: 14px;
+}
+
+.reviews-list .review-item p strong {
+    color: #333;
+}
+
+#add-property-form {
+    background-color: #f4f7fa;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#add-property-form h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #45a049;
+}
+
+.btn-submit:active {
+    background-color: #3e8e41;
+}
+
+@media (max-width: 768px) {
+    #add-property-form {
+        padding: 20px;
+    }
+
+    #add-property-form h2 {
+        font-size: 20px;
+    }
+}
+
+
+
 
