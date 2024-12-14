@@ -3,8 +3,10 @@ package com.myproj.course.controller;
 import com.myproj.course.model.Review;
 import com.myproj.course.service.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -66,6 +68,15 @@ public class ReviewController {
     @PostMapping("/{id}/assign-property")
     public Review assignPropertyToReview(@PathVariable Long id, @RequestBody Long propertyId) {
         return reviewService.assignPropertyToReview(id, propertyId);
+    }
+
+    @GetMapping("/property/{propertyId}")
+    public ResponseEntity<?> getReviewsByProperty(@PathVariable Long propertyId) {
+        List<Review> reviews = reviewService.getReviewsByPropertyId(propertyId);
+        if (reviews.isEmpty()) {
+            return ResponseEntity.ok(Collections.emptyList());
+        }
+        return ResponseEntity.ok(reviews);
     }
 
 }

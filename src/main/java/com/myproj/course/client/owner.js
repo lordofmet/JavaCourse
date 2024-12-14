@@ -120,13 +120,18 @@ async function loadBookings(propertyId) {
 }
 
 async function addProperty() {
-    const title = document.getElementById("property-title").value;
-    const description = document.getElementById("property-description").value;
-    const price = document.getElementById("property-price").value;
-    const amenities = document.getElementById("property-amenities").value;
-    const bookingPrice = document.getElementById("property-booking-price").value;
-    const capacity = document.getElementById("property-capacity").value;
-    const type = document.getElementById("property-type").value;
+    const title = document.getElementById("property-title").value.trim();
+    const description = document.getElementById("property-description").value.trim();
+    const price = parseFloat(document.getElementById("property-price").value);
+    const amenities = document.getElementById("property-amenities").value.trim();
+    const bookingPrice = parseFloat(document.getElementById("property-booking-price").value);
+    const capacity = parseInt(document.getElementById("property-capacity").value, 10);
+    const type = document.getElementById("property-type").value.toUpperCase();
+
+    if (!title || !description || isNaN(price) || isNaN(bookingPrice) || isNaN(capacity) || !type) {
+        alert("Please fill in all fields correctly.");
+        return;
+    }
 
     const user = JSON.parse(sessionStorage.getItem("user"));
     if (!user || !user.id) {
@@ -141,12 +146,12 @@ async function addProperty() {
             body: JSON.stringify({
                 title,
                 description,
-                price: parseFloat(price),
+                price,
                 amenities,
-                bookingPricePerDay: parseFloat(bookingPrice),
-                capacity: parseInt(capacity),
+                bookingPricePerDay: bookingPrice,
+                capacity,
                 type,
-                owner: { id: user.id }
+                owner: { id: user.id },
             }),
         });
 
@@ -154,6 +159,8 @@ async function addProperty() {
             alert("Property added successfully.");
             loadProperties();
         } else {
+            const errorData = await response.json();
+            console.error("Error response:", errorData);
             alert("Failed to add property. Please check your inputs.");
         }
     } catch (error) {

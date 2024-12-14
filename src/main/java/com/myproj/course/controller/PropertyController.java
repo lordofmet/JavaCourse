@@ -37,11 +37,6 @@ public class PropertyController {
 
     }
 
-    /*@GetMapping
-    public List<Property> getAllProperties() {
-        return this.propertyService.getAllProperties();
-    }*/
-
     @GetMapping
     public List<Property> getProperties() {
         return reviewService.getAllPropertiesWithAverageRatings();
