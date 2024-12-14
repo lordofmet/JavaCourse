@@ -118,6 +118,7 @@ async function loadProperties() {
                                     : "No reviews yet"
                             }
                         </ul>
+                        <p><strong>Average Rating:</strong> ${prop.averageRating.toFixed(1) || "N/A"}</p>
                     </div>
                     <button onclick="showReviewForm(${prop.id})">Add Review</button>
                     <button onclick="showBookingForm(${prop.id})">Book Property</button>
@@ -130,6 +131,7 @@ async function loadProperties() {
         alert("Failed to load properties. Please try again later.");
     }
 }
+
 
 function showReviewForm(propertyId) {
     document.getElementById("add-review-form").style.display = "block";

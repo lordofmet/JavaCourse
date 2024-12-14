@@ -31,6 +31,9 @@ public class Property {
 
     private int capacity;
 
+    @Transient
+    private double averageRating;
+
     @ManyToOne
     @JoinColumn(name = "owner_id")
     private Users owner;
@@ -136,5 +139,13 @@ public class Property {
 
     public void setCapacity(int capacity) {
         this.capacity = capacity;
+    }
+
+    public double getAverageRating() {
+        return averageRating;
+    }
+
+    public void setAverageRating(double averageRating) {
+        this.averageRating = averageRating;
     }
 }

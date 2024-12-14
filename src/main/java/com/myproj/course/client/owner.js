@@ -29,8 +29,9 @@ async function loadProperties() {
                     <p><strong>Capacity:</strong> ${prop.capacity || "N/A"}</p>
                     <p><strong>Type:</strong> ${prop.type || "N/A"}</p>
                     <p><strong>Amenities:</strong> ${prop.amenities || "None"}</p>
-                    <div id="bookings-${prop.id}">
-                        <!-- Bookings will be loaded here -->
+                    <p><strong>Average Rating:</strong> ${prop.averageRating.toFixed(2)}</p>
+                    <div id="reviews-${prop.id}">
+                        <!-- Reviews will be loaded here -->
                     </div>
                 </div>
             `
@@ -38,11 +39,40 @@ async function loadProperties() {
             .join("");
 
         properties.forEach((property) => {
-            loadBookings(property.id);
+            loadReviews(property.id);
         });
     } catch (error) {
         console.error("Error loading properties:", error);
         alert("Failed to load properties. Please try again later.");
+    }
+}
+
+async function loadReviews(propertyId) {
+    const response = await fetch(`http://localhost:8080/reviews/property/${propertyId}`);
+    if (!response.ok) {
+        console.error("Failed to load reviews for property:", propertyId);
+        return;
+    }
+
+    const reviews = await response.json();
+    const reviewsContainer = document.getElementById(`reviews-${propertyId}`);
+
+    if (reviews.length > 0) {
+        reviewsContainer.innerHTML = `
+            <h4>Reviews</h4>
+            ${reviews
+                .map(
+                    (review) => `
+                    <div>
+                        <p><strong>User:</strong> ${review.user?.fullName || "Unknown"}</p>
+                        <p><strong>Rating:</strong> ${review.rating || "No rating"}</p>
+                        <p><strong>Comment:</strong> ${review.comment || "No comment"}</p>
+                    </div>`
+                )
+                .join("")}
+        `;
+    } else {
+        reviewsContainer.innerHTML = "No reviews yet.";
     }
 }
 

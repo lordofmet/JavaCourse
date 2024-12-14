@@ -8,6 +8,7 @@ import com.myproj.course.service.PropertyService;
 import java.math.BigDecimal;
 import java.util.List;
 
+import com.myproj.course.service.ReviewService;
 import com.myproj.course.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -25,6 +26,9 @@ public class PropertyController {
     private UserService userService;
 
     @Autowired
+    private ReviewService reviewService;
+
+    @Autowired
     public PropertyController(PropertyService propertyService) {
         this.propertyService = propertyService;
     }
@@ -33,9 +37,14 @@ public class PropertyController {
 
     }
 
-    @GetMapping
+    /*@GetMapping
     public List<Property> getAllProperties() {
         return this.propertyService.getAllProperties();
+    }*/
+
+    @GetMapping
+    public List<Property> getProperties() {
+        return reviewService.getAllPropertiesWithAverageRatings();
     }
 
     @PostMapping
@@ -86,7 +95,14 @@ public class PropertyController {
     }
 
     @GetMapping("/owner/{ownerId}")
-    public List<Property> getPropertiesByOwnerId(@PathVariable Long ownerId) {
-        return propertyService.getPropertiesByOwnerId(ownerId);
+    public List<Property> getPropertiesByOwner(@PathVariable Long ownerId) {
+        List<Property> properties = reviewService.getAllPropertiesWithAverageRatings(ownerId);
+
+        for (Property property : properties) {
+            List<Review> reviews = reviewService.getReviewsByPropertyId(property.getId());
+            property.setReviews(reviews);
+        }
+
+        return properties;
     }
 }

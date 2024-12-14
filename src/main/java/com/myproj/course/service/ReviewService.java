@@ -31,6 +31,19 @@ public class ReviewService {
         return reviewRepository.findAll();
     }
 
+    public List<Property> getAllPropertiesWithAverageRatings() {
+        List<Property> properties = propertyRepository.findAll();
+        for (Property property : properties) {
+            double averageRating = reviewRepository.findAllByPropertyId(property.getId())
+                    .stream()
+                    .mapToInt(Review::getRating)
+                    .average()
+                    .orElse(0); // Среднее значение, если отзывов нет, то 0
+            property.setAverageRating(averageRating); // Предположим, что у Property есть поле для среднего рейтинга
+        }
+        return properties;
+    }
+
     public Review addReview(Review review) {
         // Проверка на наличие пользователя
         if (review.getUser() == null || review.getUser().getId() == null) {
@@ -91,6 +104,23 @@ public class ReviewService {
                 .orElseThrow(() -> new RuntimeException("Property not found"));
         review.setProperty(property);
         return reviewRepository.save(review);
+    }
+
+    public List<Property> getAllPropertiesWithAverageRatings(Long ownerId) {
+        List<Property> properties = propertyRepository.findByOwnerId(ownerId);
+        for (Property property : properties) {
+            List<Review> reviews = reviewRepository.findAllByPropertyId(property.getId());
+            double averageRating = reviews.stream()
+                    .mapToInt(Review::getRating)
+                    .average()
+                    .orElse(0);
+            property.setAverageRating(averageRating);
+        }
+        return properties;
+    }
+
+    public List<Review> getReviewsByPropertyId(Long propertyId) {
+        return reviewRepository.findAllByPropertyId(propertyId);
     }
 
 }
