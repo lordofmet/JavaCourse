@@ -14,6 +14,11 @@ public class BasketController {
         this.basketService = basketService;
     }
 
+    @PostMapping("/{userId}/create")
+    public Basket createBasket(@PathVariable Long userId) {
+        return basketService.createBasket(userId);
+    }
+
     @GetMapping("/{userId}")
     public Basket getBasket(@PathVariable Long userId) {
         return basketService.getOrCreateBasket(userId);

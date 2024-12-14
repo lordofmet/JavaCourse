@@ -5,8 +5,10 @@ import com.myproj.course.model.Booking;
 import com.myproj.course.model.Users;
 import com.myproj.course.repository.BasketRepository;
 import com.myproj.course.repository.BookingRepository;
+import com.myproj.course.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
@@ -19,13 +21,26 @@ public class BasketService {
     @Autowired
     private BookingRepository bookingRepository;
 
+    @Autowired
+    private UserRepository userRepository;
+
+    public Basket createBasket(Long userId) {
+        // Check if the user exists
+        Users user = userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        // Create a new basket
+        Basket basket = new Basket();
+        basket.setUser(user);
+        // Initialize any other properties of the basket if necessary (e.g., status, date created)
+
+        // Save the new basket to the repository
+        return basketRepository.save(basket);
+    }
+
     public Basket getOrCreateBasket(Long userId) {
         return basketRepository.findByUserId(userId)
-                .orElseGet(() -> {
-                    Basket newBasket = new Basket();
-                    newBasket.setUser(new Users(userId)); // Создаем новую корзину для пользователя
-                    return basketRepository.save(newBasket);
-                });
+                .orElseGet(() -> createBasket(userId));
     }
 
     public Basket addBookingToBasket(Long userId, Long bookingId) {

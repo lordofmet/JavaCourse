@@ -185,13 +185,15 @@ async function addBooking() {
     };
 
     try {
-        const response = await fetch("http://localhost:8080/bookings", {
+        const bookingResponse = await fetch("http://localhost:8080/bookings", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(bookingData),
         });
 
-        if (response.ok) {
+        if (bookingResponse.ok) {
+            const booking = await bookingResponse.json(); 
+            await addToBasket(user.id, booking.id); // Add booking to basket
             alert("Booking successful!");
             loadBookings();
         } else {
@@ -201,6 +203,20 @@ async function addBooking() {
         console.error("Error booking property:", error);
     }
 }
+
+async function addToBasket(userId, bookingId) {
+    try {
+        const response = await fetch(`http://localhost:8080/baskets/${userId}/add/${bookingId}`, {
+            method: "POST",
+        });
+        if (!response.ok) {
+            console.error("Failed to add booking to basket.");
+        }
+    } catch (error) {
+        console.error("Error adding to basket:", error);
+    }
+}
+
 
 function logout() {
     sessionStorage.clear();

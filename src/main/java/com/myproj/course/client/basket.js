@@ -27,7 +27,7 @@ async function loadBasket() {
                     <h3>${booking.property.title}</h3>
                     <p>Start Date: ${booking.startDate}</p>
                     <p>End Date: ${booking.endDate}</p>
-                    <p>Total Price: $${booking.totalPrice}</p>
+                    <p>Total Price: ${booking.totalPrice}</p>
                     <div class="action-buttons">
                         <button onclick="removeFromBasket(${booking.id})">Remove</button>
                     </div>
@@ -40,7 +40,6 @@ async function loadBasket() {
         alert("Failed to load basket.");
     }
 }
-
 
 async function removeFromBasket(bookingId) {
     const user = JSON.parse(sessionStorage.getItem("user"));

@@ -1,5 +1,6 @@
 package com.myproj.course.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.time.LocalDate;
 
@@ -24,6 +25,7 @@ public class Booking {
 
     private double totalPrice;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "basket_id")
     private Basket basket;
