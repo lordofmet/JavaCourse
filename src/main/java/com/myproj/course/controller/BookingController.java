@@ -2,6 +2,7 @@ package com.myproj.course.controller;
 
 import com.myproj.course.model.Booking;
 import com.myproj.course.model.Property;
+import com.myproj.course.model.SalesStatistics;
 import com.myproj.course.repository.PropertyRepository;
 import com.myproj.course.repository.UserRepository;
 import com.myproj.course.service.BookingService;
@@ -66,6 +67,11 @@ public class BookingController {
     @GetMapping("/owner/{ownerId}")
     public List<Booking> getBookingsByOwnerId(@PathVariable Long ownerId) {
         return bookingService.getBookingsByOwnerId(ownerId);
+    }
+
+    @GetMapping("/owner/{ownerId}/statistics")
+    public SalesStatistics getSalesStatistics(@PathVariable Long ownerId) {
+        return bookingService.calculateSalesStatistics(ownerId);
     }
 
 }
