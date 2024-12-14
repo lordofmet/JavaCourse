@@ -282,3 +282,7 @@ function logout() {
 function goToBasket() {
     window.location.href = "basket.html";
 }
+
+function goToTenantDashboard() {
+    window.location.href = "tenant_account.html";
+}

@@ -38,8 +38,8 @@ public class UserService {
         oldUser.setSessionToken(user.getSessionToken());
         oldUser.setUsername(user.getUsername());
         oldUser.setEmail(user.getEmail());
-        oldUser.setRole(user.getRole());
-        oldUser.setProperties(user.getProperties());
+        //oldUser.setRole(user.getRole());
+        //oldUser.setProperties(user.getProperties());
         oldUser.setFullName(user.getFullName());
         return userRepository.save(oldUser);
     }
