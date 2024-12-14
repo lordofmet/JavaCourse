@@ -52,10 +52,9 @@ public class PropertyService {
         existingProperty.setDescription(property.getDescription());
         existingProperty.setPrice(property.getPrice());
         existingProperty.setAmenities(property.getAmenities());
-        existingProperty.setOwner(property.getOwner());
-        existingProperty.setReviews(property.getReviews());
         existingProperty.setType(property.getType());
         existingProperty.setCapacity(property.getCapacity());
+        existingProperty.setBookingPricePerDay(property.getBookingPricePerDay());
         return propertyRepository.save(existingProperty);
     }
 

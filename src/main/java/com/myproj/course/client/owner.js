@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", loadProperties);
+let deletingPropertyId = null;
+let editingPropertyId = null;
 
 async function loadProperties() {
     const user = JSON.parse(sessionStorage.getItem("user"));
@@ -33,6 +35,8 @@ async function loadProperties() {
                     <div id="reviews-${prop.id}">
                         <!-- Reviews will be loaded here -->
                     </div>
+                    <button onclick="editProperty(${prop.id})">Edit</button>
+                    <button onclick="confirmDelete(${prop.id})">Delete</button>
                 </div>
             `
             )
@@ -169,18 +173,165 @@ async function addProperty() {
     }
 }
 
-
-async function deleteProperty(id) {
-    try {
-        await fetch(`http://localhost:8080/properties/${id}`, { method: "DELETE" });
-        loadProperties();
-    } catch (error) {
-        console.error("Error deleting property:", error);
-        alert("Failed to delete property. Please try again.");
-    }
-}
-
 function logout() {
     sessionStorage.clear();
     window.location.href = "index.html";
 }
+
+function showEditPropertyModal(id) {
+    editingPropertyId = id;
+
+    // Получить текущие данные свойства
+    const property = properties.find((prop) => prop.id === id);
+    if (!property) return;
+
+    // Установить текущие значения в поля
+    document.getElementById("edit-property-title").value = property.title;
+    document.getElementById("edit-property-description").value = property.description;
+    document.getElementById("edit-property-price").value = property.price;
+    document.getElementById("edit-property-amenities").value = property.amenities;
+    document.getElementById("edit-property-booking-price").value = property.bookingPricePerDay;
+    document.getElementById("edit-property-capacity").value = property.capacity;
+    document.getElementById("edit-property-type").value = property.type;
+
+    document.getElementById("edit-property-modal").style.display = "block";
+}
+
+
+function closeEditModal() {
+    document.getElementById("edit-property-modal").style.display = "none";
+}
+
+function editProperty(propertyId) {
+    // Получить данные о свойстве
+    fetch(`http://localhost:8080/properties/${propertyId}`)
+        .then(response => response.json())
+        .then(property => {
+            // Заполнить поля модального окна значениями из объекта property
+            document.getElementById("edit-property-title").value = property.title;
+            document.getElementById("edit-property-description").value = property.description;
+            document.getElementById("edit-property-price").value = property.price;
+            document.getElementById("edit-property-amenities").value = property.amenities;
+            document.getElementById("edit-property-booking-price").value = property.bookingPricePerDay;
+            document.getElementById("edit-property-capacity").value = property.capacity;
+            document.getElementById("edit-property-type").value = property.type;
+
+            // Открыть модальное окно редактирования
+            const modal = document.getElementById("edit-property-modal");
+            modal.style.display = "block";
+
+            // Сохранить ID свойства для использования при сохранении изменений
+            window.propertyToEdit = propertyId;  // Убедитесь, что ID сохраняется
+        })
+        .catch(error => {
+            console.error("Error loading property for editing:", error);
+            alert("Failed to load property for editing.");
+        });
+}
+
+
+// Функция для открытия модального окна подтверждения удаления
+function confirmDelete(propertyId) {
+    // Открыть модальное окно
+    const modal = document.getElementById("delete-property-modal");
+    modal.style.display = "block";
+
+    // Сохранить ID для удаления в переменной
+    window.propertyToDelete = propertyId;
+}
+
+async function saveEditedProperty() {
+    const title = document.getElementById("edit-property-title").value.trim();
+    const description = document.getElementById("edit-property-description").value.trim();
+    const price = parseFloat(document.getElementById("edit-property-price").value);
+    const amenities = document.getElementById("edit-property-amenities").value.trim();
+    const bookingPrice = parseFloat(document.getElementById("edit-property-booking-price").value);
+    const capacity = parseInt(document.getElementById("edit-property-capacity").value, 10);
+    const type = document.getElementById("edit-property-type").value.toUpperCase();
+
+    if (!title || !description || isNaN(price) || isNaN(bookingPrice) || isNaN(capacity) || !type) {
+        alert("Please fill in all fields correctly.");
+        return;
+    }
+
+    // Создаем объект с измененными данными
+    const updatedProperty = {
+        title,
+        description,
+        price,
+        amenities,
+        bookingPricePerDay: bookingPrice,
+        capacity,
+        type
+    };
+
+    // Используем ID, которое мы сохранили в window.propertyToEdit
+    const propertyId = window.propertyToEdit;
+
+    if (!propertyId) {
+        console.error("Property ID is missing.");
+        alert("Property ID is missing.");
+        return;
+    }
+
+    try {
+        const response = await fetch(`http://localhost:8080/properties/${propertyId}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(updatedProperty)
+        });
+
+        if (response.ok) {
+            alert("Property updated successfully.");
+            loadProperties(); // Перезагрузить список свойств
+        } else {
+            const errorData = await response.json();
+            console.error("Error response:", errorData);
+            alert("Failed to update property.");
+        }
+    } catch (error) {
+        console.error("Error updating property:", error);
+        alert("Failed to update property. Please try again.");
+    }
+
+    // Закрыть модальное окно
+    closeEditModal();
+}
+
+
+function confirmDeleteProperty(id) {
+    deletingPropertyId = id;
+    document.getElementById("delete-property-modal").style.display = "block";
+}
+
+function closeDeleteModal() {
+    const modal = document.getElementById("delete-property-modal");
+    modal.style.display = "none";
+}
+
+async function deleteConfirmedProperty() {
+    try {
+        // Отправить запрос на удаление свойства по ID
+        const response = await fetch(`http://localhost:8080/properties/${window.propertyToDelete}`, {
+            method: "DELETE"
+        });
+
+        if (response.ok) {
+            alert("Property deleted successfully.");
+            loadProperties(); // Перезагрузить список свойств
+        } else {
+            alert("Failed to delete property.");
+        }
+    } catch (error) {
+        console.error("Error deleting property:", error);
+        alert("Failed to delete property. Please try again.");
+    }
+
+    // Закрыть модальное окно
+    closeDeleteModal();
+}
+
+
+
+
+
