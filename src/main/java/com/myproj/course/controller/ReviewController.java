@@ -23,7 +23,13 @@ public class ReviewController {
 
     @GetMapping
     public List<Review> getAllReviews() {
-        return reviewService.getAllReviews();
+        List<Review> reviews = reviewService.getAllReviews();
+        for (Review review : reviews) {
+            if (review.getUser() != null) {
+                review.getUser().setFullName(review.getUser().getFullName());
+            }
+        }
+        return reviews;
     }
 
     @PostMapping

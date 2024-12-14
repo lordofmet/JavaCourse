@@ -7,8 +7,6 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-//@Data
-//@Table(name = "users")
 public class Users {
 
     @Id
