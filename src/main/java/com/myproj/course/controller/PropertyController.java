@@ -5,7 +5,6 @@ import com.myproj.course.model.Review;
 import com.myproj.course.model.Users;
 import com.myproj.course.service.PropertyService;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import com.myproj.course.service.ReviewService;

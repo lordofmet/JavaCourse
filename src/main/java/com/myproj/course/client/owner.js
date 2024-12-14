@@ -363,3 +363,7 @@ async function loadSalesStatistics() {
 function closeSalesStatistics() {
     document.getElementById("sales-statistics").style.display = "none";
 }
+
+function goToOwnerDashboard() {
+    window.location.href = "owner_account.html";
+}

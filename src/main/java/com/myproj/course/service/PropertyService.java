@@ -2,20 +2,15 @@ package com.myproj.course.service;
 
 import com.myproj.course.model.Property;
 import com.myproj.course.model.Review;
-import com.myproj.course.model.SalesStatistics;
 import com.myproj.course.model.Users;
 import com.myproj.course.repository.PropertyRepository;
 import com.myproj.course.repository.ReviewRepository;
-import com.myproj.course.repository.SalesStatisticsRepository;
 import com.myproj.course.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.math.BigDecimal;
 import java.util.List;
-
-import static com.myproj.course.model.Role.OWNER;
-import static com.myproj.course.model.Role.TENANT;
+import static com.myproj.course.model.Role.*;
 
 @Service
 public class PropertyService {

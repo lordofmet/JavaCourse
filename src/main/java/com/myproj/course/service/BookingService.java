@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +24,6 @@ public class BookingService {
     public Booking createBooking(Booking booking) {
         double totalPrice = booking.getTotalPrice();
 
-        // Убедитесь, что totalPrice не равен 0, если bookingPricePerDay задан
         if (totalPrice == 0) {
             System.out.println(booking.getProperty().getPrice());
             System.out.println(totalPrice);
@@ -66,10 +64,8 @@ public class BookingService {
     }
 
     public List<Booking> getBookingsByOwnerId(Long ownerId) {
-        // Получаем все свойства владельца
         List<Property> properties = propertyRepository.findByOwnerId(ownerId);
 
-        // Для каждого свойства находим все бронирования
         List<Booking> bookings = new ArrayList<>();
         for (Property property : properties) {
             bookings.addAll(bookingRepository.findByPropertyId(property.getId()));
@@ -110,10 +106,8 @@ public class BookingService {
             }
         }
 
-        // Расчет среднего дохода за последний год
-        // Можете добавить дополнительную логику, чтобы учитывать только прошедшие месяцы года
         if (!bookings.isEmpty()) {
-            averageMonthlyIncome = totalSalesThisYear / 12; // Простой расчет, можно уточнить
+            averageMonthlyIncome = totalSalesThisYear / 12;
         }
 
         SalesStatistics salesStatistics = new SalesStatistics();

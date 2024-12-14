@@ -1,7 +1,6 @@
 package com.myproj.course.service;
 
 import com.myproj.course.model.Property;
-import com.myproj.course.model.Review;
 import com.myproj.course.model.Role;
 import com.myproj.course.model.Users;
 import com.myproj.course.repository.UserRepository;
@@ -35,11 +34,8 @@ public class UserService {
     public Users updateUser(Long id, Users user) {
         Users oldUser = getUserById(id);
         oldUser.setPassword(user.getPassword());
-        oldUser.setSessionToken(user.getSessionToken());
         oldUser.setUsername(user.getUsername());
         oldUser.setEmail(user.getEmail());
-        oldUser.setRole(user.getRole());
-        oldUser.setProperties(user.getProperties());
         oldUser.setFullName(user.getFullName());
         return userRepository.save(oldUser);
     }

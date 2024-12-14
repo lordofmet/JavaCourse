@@ -1,7 +1,6 @@
 package com.myproj.course.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -21,8 +20,6 @@ public class Users {
     private String password;
 
     private String email;
-
-    private String sessionToken;
 
     private Role role;
 
@@ -48,14 +45,6 @@ public class Users {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getSessionToken() {
-        return sessionToken;
-    }
-
-    public void setSessionToken(String sessionToken) {
-        this.sessionToken = sessionToken;
     }
 
     public String getUsername() {

@@ -38,8 +38,8 @@ public class ReviewService {
                     .stream()
                     .mapToInt(Review::getRating)
                     .average()
-                    .orElse(0); // Среднее значение, если отзывов нет, то 0
-            property.setAverageRating(averageRating); // Предположим, что у Property есть поле для среднего рейтинга
+                    .orElse(0);
+            property.setAverageRating(averageRating);
         }
         return properties;
     }
@@ -50,23 +50,19 @@ public class ReviewService {
             throw new IllegalArgumentException("User must be provided for the review");
         }
 
-        // Проверка на наличие свойства
         if (review.getProperty() == null || review.getProperty().getId() == null) {
             throw new IllegalArgumentException("Property must be provided for the review");
         }
 
-        // Получение пользователя и свойства из базы данных
         Users user = userRepository.findById(review.getUser().getId())
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
         Property property = propertyRepository.findById(review.getProperty().getId())
                 .orElseThrow(() -> new RuntimeException("Property not found"));
 
-        // Установка связи отзыва с пользователем и свойством
         review.setUser(user);
         review.setProperty(property);
 
-        // Сохранение отзыва в базе данных
         return reviewRepository.save(review);
     }
 

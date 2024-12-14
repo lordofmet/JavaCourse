@@ -1,7 +1,6 @@
 package com.myproj.course.controller;
 
 import com.myproj.course.model.Property;
-import com.myproj.course.model.Review;
 import com.myproj.course.model.Role;
 import com.myproj.course.model.Users;
 import com.myproj.course.service.UserService;

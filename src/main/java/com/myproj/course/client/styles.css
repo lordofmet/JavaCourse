@@ -425,6 +425,31 @@ button:hover {
     }
 }
 
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    outline: none;
+}
+
+.tab-button:hover {
+    background-color: #ddd;
+}
+
+.tab-content {
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+
 
 
 

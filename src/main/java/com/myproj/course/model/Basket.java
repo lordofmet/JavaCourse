@@ -1,6 +1,5 @@
 package com.myproj.course.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.List;

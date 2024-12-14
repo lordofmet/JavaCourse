@@ -74,4 +74,9 @@ public class BookingController {
         return bookingService.calculateSalesStatistics(ownerId);
     }
 
+    @GetMapping("/user/{userId}")
+    public List<Booking> getUserBookings(@PathVariable Long userId) {
+        return bookingService.getBookingsByUserId(userId);
+    }
+
 }

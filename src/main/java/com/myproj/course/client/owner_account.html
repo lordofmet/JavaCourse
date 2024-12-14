@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Owner Dashboard</h1>
+    <div id="owner-info">
+        <h2>Update Profile</h2>
+        <form id="owner-form" onsubmit="updateOwnerProfile(); return false;">
+            <div class="form-group">
+                <label for="owner-username">Username</label>
+                <input type="text" id="owner-username" required />
+            </div>
+            <div class="form-group">
+                <label for="owner-fullName">Full Name</label>
+                <input type="text" id="owner-fullName" required />
+            </div>
+            <div class="form-group">
+                <label for="owner-email">Email</label>
+                <input type="email" id="owner-email" required />
+            </div>
+            <div class="form-group">
+                <label for="owner-password">Password</label>
+                <input type="password" id="owner-password" required />
+            </div>
+            <button type="submit" class="btn-submit">Update Profile</button>
+        </form>
+    </div>
+
+    <div id="statistics-section">
+        <h2>Sales Statistics</h2>
+        <button onclick="loadSalesStatistics()">Show Sales Statistics</button>
+        <div id="sales-statistics" style="display: none;">
+            <h3>Statistics</h3>
+            <p><strong>Total Sales This Month:</strong> <span id="total-sales-month"></span></p>
+            <p><strong>Total Sales This Year:</strong> <span id="total-sales-year"></span></p>
+            <p><strong>Expected Payments Next Month:</strong> <span id="expected-payments-next-month"></span></p>
+            <p><strong>Expected Payments Next Year:</strong> <span id="expected-payments-next-year"></span></p>
+            <p><strong>Average Monthly Income:</strong> <span id="average-monthly-income"></span></p>
+            <button onclick="closeSalesStatistics()">Close</button>
+        </div>
+    </div>
+
+    <button onclick="logout()">Logout</button>
+</div>
+
+<script src="owner_account.js"></script>
+</body>
+</html>
