@@ -333,7 +333,33 @@ async function deleteConfirmedProperty() {
     closeDeleteModal();
 }
 
+async function loadSalesStatistics() {
+    const user = JSON.parse(sessionStorage.getItem("user"));
+    if (!user || !user.id) {
+        alert("User information is missing.");
+        return;
+    }
 
+    try {
+        const response = await fetch(`http://localhost:8080/bookings/owner/${user.id}/statistics`);
+        if (!response.ok) {
+            throw new Error(`Failed to load sales statistics: ${response.statusText}`);
+        }
 
+        const statistics = await response.json();
+        document.getElementById("total-sales-month").textContent = statistics.totalSalesThisMonth || 0;
+        document.getElementById("total-sales-year").textContent = statistics.totalSalesThisYear || 0;
+        document.getElementById("expected-payments-next-month").textContent = statistics.expectedPaymentsNextMonth || 0;
+        document.getElementById("expected-payments-next-year").textContent = statistics.expectedPaymentsNextYear || 0;
+        document.getElementById("average-monthly-income").textContent = statistics.averageMonthlyIncome || 0;
 
+        document.getElementById("sales-statistics").style.display = "block";
+    } catch (error) {
+        console.error("Error loading sales statistics:", error);
+        alert("Failed to load sales statistics. Please try again later.");
+    }
+}
 
+function closeSalesStatistics() {
+    document.getElementById("sales-statistics").style.display = "none";
+}

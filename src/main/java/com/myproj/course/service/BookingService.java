@@ -90,7 +90,7 @@ public class BookingService {
         int yearNow = now.getYear();
 
         for (Booking booking : bookings) {
-            if (booking.getStatus().equals("paid")) {
+            if (booking.getStatus().equals("Paid")) {
                 // Сумма продаж за текущий месяц
                 if (booking.getStartDate().getMonthValue() == monthNow && booking.getStartDate().getYear() == yearNow) {
                     totalSalesThisMonth += booking.getTotalPrice();

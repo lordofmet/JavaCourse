@@ -15,6 +15,20 @@
         <!-- Properties will be dynamically loaded here -->
     </div>
 
+    <div id="statistics-section">
+        <h2>Sales Statistics</h2>
+        <button onclick="loadSalesStatistics()">View Sales Statistics</button>
+        <div id="sales-statistics" style="display: none;">
+            <h3>Statistics</h3>
+            <p><strong>Total Sales This Month:</strong> <span id="total-sales-month"></span></p>
+            <p><strong>Total Sales This Year:</strong> <span id="total-sales-year"></span></p>
+            <p><strong>Expected Payments Next Month:</strong> <span id="expected-payments-next-month"></span></p>
+            <p><strong>Expected Payments Next Year:</strong> <span id="expected-payments-next-year"></span></p>
+            <p><strong>Average Monthly Income:</strong> <span id="average-monthly-income"></span></p>
+            <button onclick="closeSalesStatistics()">Close</button>
+        </div>
+    </div>
+
     <!-- Добавление заголовка Bookings перед информацией о бронированиях -->
     <div id="bookings-section">
         <div id="property-bookings">
