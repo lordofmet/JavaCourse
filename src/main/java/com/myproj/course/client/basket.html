@@ -38,7 +38,7 @@
             gap: 10px;
         }
 
-        .back-btn {
+        .back-btn, .pay-btn {
             margin-top: 20px;
             padding: 10px 20px;
             background-color: #4CAF50;
@@ -46,6 +46,10 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+        }
+
+        .pay-btn:hover {
+            background-color: #45a049;
         }
 
         .back-btn:hover {
@@ -57,6 +61,7 @@
     <div class="container">
         <h1>Your Basket</h1>
         <div id="basket-list"></div>
+        <button class="pay-btn" onclick="payForBasket()">Pay Now</button>
         <button class="back-btn" onclick="goBack()">Back to Dashboard</button>
     </div>
     <script src="basket.js"></script>

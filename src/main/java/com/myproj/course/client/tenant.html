@@ -23,7 +23,7 @@
             position: fixed;
             top: 10px;
             right: 10px;
-            background-color: #4CAF50;
+            background-color: #2142a5;
             color: white;
             border: none;
             border-radius: 5px;
@@ -35,7 +35,7 @@
         }
 
         .basket-button:hover {
-            background-color: #45a049;
+            background-color: #455ca0;
         }
 
         /* Список доступных объектов */
@@ -72,6 +72,20 @@
             display: none;
         }
 
+        .pay-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .pay-btn:hover {
+            background-color: #45a049;
+        }
+
     </style>
 </head>
 <body>
@@ -106,6 +120,7 @@
             <div id="booking-list">
                 <!-- Bookings will be dynamically loaded here -->
             </div>
+            <!--button class="pay-btn" onclick="payForBasket()">Pay for Basket</button-->
         </div>
 
         <button class="logout-btn" onclick="logout()">Logout</button>

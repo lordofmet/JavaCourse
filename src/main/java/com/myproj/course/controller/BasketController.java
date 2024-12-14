@@ -2,12 +2,14 @@ package com.myproj.course.controller;
 
 import com.myproj.course.model.Basket;
 import com.myproj.course.service.BasketService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/baskets")
 public class BasketController {
 
+    @Autowired
     private final BasketService basketService;
 
     public BasketController(BasketService basketService) {

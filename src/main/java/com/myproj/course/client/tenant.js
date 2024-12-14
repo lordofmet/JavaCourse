@@ -18,30 +18,59 @@ async function loadBookings() {
 
         const bookings = await response.json();
         const bookingList = document.getElementById("booking-list");
+        const bookingSection = document.getElementById("booking-section");
         const bookingHeader = document.getElementById("booking-header");
 
-        if (bookings.length === 0) {
-            bookingHeader.style.display = "none";
-            bookingList.innerHTML = "No bookings available.";
+        // Фильтрация бронирований с статусом "Paid"
+        const paidBookings = bookings.filter(booking => booking.status === "Paid");
+
+        if (paidBookings.length === 0) {
+            // Если нет оплаченных бронирований, скрыть раздел
+            bookingSection.style.display = "none";
         } else {
+            // Если есть оплаченные бронирования, показываем их
             bookingHeader.style.display = "block";
-            bookingList.innerHTML = bookings
+            bookingList.innerHTML = paidBookings
                 .map(
                     (booking) => `
-                <div>
-                    <h3>${booking.property?.title || "Unknown Property"}</h3>
-                    <p>Start Date: ${booking.startDate || "N/A"}</p>
-                    <p>End Date: ${booking.endDate || "N/A"}</p>
-                    <p>Total Price: $${booking.totalPrice || 0}</p>
-                    <p>Status: ${booking.status || "Unknown"}</p>
-                </div>
-            `
+                    <div>
+                        <h3>${booking.property?.title || "Unknown Property"}</h3>
+                        <p>Start Date: ${booking.startDate || "N/A"}</p>
+                        <p>End Date: ${booking.endDate || "N/A"}</p>
+                        <p>Total Price: $${booking.totalPrice || 0}</p>
+                        <p>Status: ${booking.status || "Unknown"}</p>
+                    </div>
+                `
                 )
                 .join("");
         }
     } catch (error) {
         console.error("Error loading bookings:", error);
         alert("Failed to load bookings. Please try again later.");
+    }
+}
+
+async function payForBasket() {
+    const user = JSON.parse(sessionStorage.getItem("user"));
+    if (!user || !user.id) {
+        alert("User information is missing.");
+        return;
+    }
+
+    try {
+        const response = await fetch(`http://localhost:8080/${user.id}/pay`, {
+            method: "POST",
+        });
+
+        if (response.ok) {
+            alert("Payment successful!");
+            loadBookings(); // Reload bookings to show updated statuses
+        } else {
+            alert("Payment failed. Please try again later.");
+        }
+    } catch (error) {
+        console.error("Error processing payment:", error);
+        alert("Payment failed. Please try again later.");
     }
 }
 
