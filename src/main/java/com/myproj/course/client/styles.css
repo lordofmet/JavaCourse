@@ -302,19 +302,23 @@ button:hover {
     background-color: #455ca0;
 }
 
-/* Стиль кнопки выхода */
+/* Стиль для кнопки выхода */
 .logout-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #f44336;
-    color: white;
+    position: fixed;  /* Positioning the button fixed at the top-right */
+    top: 10px;  /* Adjust the top distance to place it below the basket button */
+    right: 10px;  /* Same as basket button */
+    background-color: #f44336;  /* Red color */
+    color: white;  /* White text */
     border: none;
     border-radius: 5px;
+    padding: 10px 20px;
     cursor: pointer;
+    font-size: 16px;
+    margin-top: 50px;  /* Adjust the margin to create space between the basket and logout buttons */
 }
 
 .logout-btn:hover {
-    background-color: #d32f2f;
+    background-color: #d32f2f;  /* Darker red on hover */
 }
 
 .reviews-list {

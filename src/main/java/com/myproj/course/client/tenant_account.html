@@ -8,6 +8,7 @@
 </head>
 <body>
 <div class="container">
+    <button class="logout-btn" onclick="logout()">Logout</button>
     <h1>Tenant Dashboard</h1>
     <div id="tenant-info">
         <h2>Update Profile</h2>
@@ -34,11 +35,15 @@
 
     <div id="order-history-section">
         <h2>Order History</h2>
-        <button onclick="loadOrderHistory()">Show Order History</button>
-        <div id="order-history" style="display: none;"></div>
+        <button id="toggle-order-history" onclick="toggleOrderHistory()">Show Order History</button>
+        <div id="order-history" style="display: none; margin-top: 35px;">
+            <!-- История заказов будет динамически загружаться сюда -->
+        </div>
     </div>
 
-    <button onclick="logout()">Logout</button>
+    <div class="navigation-buttons">
+        <button onclick="goToHomePage()" style = "margin-top: 35px; margin-right: 35px;">Back to Home</button>
+    </div>
 </div>
 
 <script src="tenant_account.js"></script>

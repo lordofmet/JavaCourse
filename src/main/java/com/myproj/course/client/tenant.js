@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     loadBookings();
 });
 
+let bookingsVisible = true; // Состояние видимости бронирований
+
 async function loadBookings() {
     const user = JSON.parse(sessionStorage.getItem("user"));
     if (!user || !user.id) {
@@ -286,3 +288,22 @@ function goToBasket() {
 function goToTenantDashboard() {
     window.location.href = "tenant_account.html";
 }
+
+function toggleBookings() {
+    const bookingSection = document.getElementById("booking-section");
+    const bookingList = document.getElementById("booking-list");
+    const toggleButton = document.getElementById("toggle-bookings-button");
+
+    if (bookingsVisible) {
+        // Скрыть список бронирований
+        bookingList.style.display = "none";
+        toggleButton.textContent = "Show Bookings";
+    } else {
+        // Показать список бронирований
+        bookingList.style.display = "block";
+        toggleButton.textContent = "Hide Bookings";
+    }
+
+    bookingsVisible = !bookingsVisible; // Меняем состояние
+}
+

@@ -19,7 +19,7 @@ async function updateTenantProfile() {
         username: document.getElementById("tenant-username").value,
         fullName: document.getElementById("tenant-fullName").value,
         email: document.getElementById("tenant-email").value,
-        password: document.getElementById("tenant-password").value
+        password: document.getElementById("tenant-password").value,
     };
 
     try {
@@ -31,7 +31,7 @@ async function updateTenantProfile() {
 
         if (response.ok) {
             alert("Profile updated successfully.");
-            loadTenantProfile(); // Refresh to show updated information
+            loadTenantProfile();
         } else {
             const errorData = await response.json();
             alert("Failed to update profile: " + errorData.message);
@@ -39,6 +39,20 @@ async function updateTenantProfile() {
     } catch (error) {
         console.error("Error updating profile:", error);
         alert("Failed to update profile. Please try again later.");
+    }
+}
+
+async function toggleOrderHistory() {
+    const orderHistory = document.getElementById("order-history");
+    const button = document.getElementById("toggle-order-history");
+
+    if (orderHistory.style.display === "none") {
+        await loadOrderHistory();
+        orderHistory.style.display = "block";
+        button.textContent = "Close";
+    } else {
+        orderHistory.style.display = "none";
+        button.textContent = "Show Order History";
     }
 }
 
@@ -57,17 +71,17 @@ async function loadOrderHistory() {
 
         const orders = await response.json();
         const orderHistoryContainer = document.getElementById("order-history");
-        orderHistoryContainer.innerHTML = orders.map(order => `
-            <div>
-                <p><strong>Property:</strong> ${order.property.title || "Unknown"}</p>
-                <p><strong>Start Date:</strong> ${order.startDate}</p>
-                <p><strong>End Date:</strong> ${order.endDate}</p>
-                <p><strong>Status:</strong> ${order.status}</p>
-                <p><strong>Total Price:</strong> ${order.totalPrice}</p>
-            </div>
-        `).join("");
-
-        orderHistoryContainer.style.display = "block";
+        orderHistoryContainer.innerHTML = orders
+            .map(order => `
+                <div class="order-card" style="border: 1px solid #ddd; padding: 15px; margin: 10px; border-radius: 8px; background-color: #f9f9f9;">
+                    <h3>${order.property?.title || "Unknown Property"}</h3>
+                    <p><strong>Start Date:</strong> ${order.startDate || "N/A"}</p>
+                    <p><strong>End Date:</strong> ${order.endDate || "N/A"}</p>
+                    <p><strong>Status:</strong> ${order.status || "Unknown"}</p>
+                    <p><strong>Total Price:</strong> $${order.totalPrice || 0}</p>
+                </div>
+            `)
+            .join("");
     } catch (error) {
         console.error("Error loading order history:", error);
         alert("Failed to load order history. Please try again later.");
@@ -77,4 +91,8 @@ async function loadOrderHistory() {
 function logout() {
     sessionStorage.clear();
     window.location.href = "index.html";
+}
+
+function goToHomePage() {
+    window.location.href = "tenant.html"; // ”кажите URL вашей главной страницы
 }

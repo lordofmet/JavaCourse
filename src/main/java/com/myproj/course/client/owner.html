@@ -11,6 +11,7 @@
     <h1>Welcome, <span id="owner-name"></span></h1>
 
     <button class="profile-button" onclick="goToOwnerDashboard()">My Dashboard</button>
+    <button class="logout-btn" onclick="logout()">Logout</button>
 
     <div id="property-list">
         <h2>Your Properties</h2>
@@ -83,10 +84,6 @@
             <button type="submit" class="btn-submit">Add Property</button>
         </form>
     </div>
-    
-
-    <button onclick="logout()">Logout</button>
-
 
     <!-- Modal for editing property -->
     <div id="edit-property-modal" class="modal">

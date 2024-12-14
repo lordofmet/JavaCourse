@@ -76,3 +76,7 @@ function logout() {
     sessionStorage.clear();
     window.location.href = "index.html";
 }
+
+function goToHomePage() {
+    window.location.href = "owner.html"; // ”кажите URL вашей главной страницы
+}

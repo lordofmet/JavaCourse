@@ -12,6 +12,7 @@
 
         <button class="profile-button" onclick="goToTenantDashboard()">My Dashboard</button>
         <button class="basket-button" onclick="goToBasket()">Basket</button>
+        <button class="logout-btn" onclick="logout()">Logout</button>
 
         <div id="property-list">
             <h2>Available Properties</h2>
@@ -36,13 +37,12 @@
 
         <div id="booking-section">
             <h2 id="booking-header">Your Bookings</h2>
+            <button id="toggle-bookings-button" onclick="toggleBookings()">Hide Bookings</button>
             <div id="booking-list">
                 <!-- Bookings will be dynamically loaded here -->
             </div>
             <!--button class="pay-btn" onclick="payForBasket()">Pay for Basket</button-->
         </div>
-
-        <button class="logout-btn" onclick="logout()">Logout</button>
     </div>
     <script src="tenant.js"></script>
 </body>
