@@ -4,42 +4,42 @@ async function loadProperties() {
     const user = JSON.parse(sessionStorage.getItem("user"));
     if (!user || user.role !== "OWNER") {
         window.location.href = "index.html";
+        return;
     }
 
-    // Display owner's full name
-    document.getElementById("owner-name").textContent = user.fullName;
+    document.getElementById("owner-name").textContent = user.fullName || "Owner";
 
     try {
         const response = await fetch(`http://localhost:8080/properties/owner/${user.id}`);
-        const properties = await response.json();
-
-        if (!Array.isArray(properties)) {
-            throw new Error("Expected an array of properties");
+        if (!response.ok) {
+            throw new Error(`Failed to load properties: ${response.statusText}`);
         }
 
+        const properties = await response.json();
         const propertyList = document.getElementById("property-list");
+
         propertyList.innerHTML = properties
             .map(
                 (prop) => `
                 <div class="property-item">
-                    <h3>${prop.title}</h3>
-                    <p><strong>Description:</strong> ${prop.description}</p>
-                    <p><strong>Property Price:</strong> ${prop.price} USD</p>
-                    <p><strong>Booking Price:</strong> ${prop.bookingPricePerDay} USD per day</p>
-                    <p><strong>Amenities:</strong> ${prop.amenities.join(", ")}</p>
+                    <h3>${prop.title || "Untitled Property"}</h3>
+                    <p><strong>Description:</strong> ${prop.description || "No description provided."}</p>
+                    <p><strong>Property Price:</strong> $${prop.price || 0}</p>
+                    <p><strong>Booking Price:</strong> $${prop.bookingPricePerDay || 0} per day</p>
+                    <p><strong>Capacity:</strong> ${prop.capacity || "N/A"}</p>
+                    <p><strong>Type:</strong> ${prop.type || "N/A"}</p>
+                    <p><strong>Amenities:</strong> ${prop.amenities || "None"}</p>
                     <div id="bookings-${prop.id}">
-                        <!-- Список бронирований будет отображаться здесь -->
+                        <!-- Bookings will be loaded here -->
                     </div>
                 </div>
             `
             )
             .join("");
 
-        // Загрузка бронирований для каждого свойства
         properties.forEach((property) => {
             loadBookings(property.id);
         });
-
     } catch (error) {
         console.error("Error loading properties:", error);
         alert("Failed to load properties. Please try again later.");
@@ -48,19 +48,21 @@ async function loadProperties() {
 
 async function loadBookings(propertyId) {
     const user = JSON.parse(sessionStorage.getItem("user"));
+    if (!user || !user.id) {
+        console.error("User information is missing or invalid.");
+        return;
+    }
 
     try {
         const response = await fetch(`http://localhost:8080/bookings/owner/${user.id}`);
-        const bookings = await response.json();
-
-        if (!Array.isArray(bookings)) {
-            throw new Error('Expected an array of bookings');
+        if (!response.ok) {
+            throw new Error(`Failed to load bookings: ${response.statusText}`);
         }
 
+        const bookings = await response.json();
         const bookingsContainer = document.getElementById(`bookings-${propertyId}`);
-        const propertyBookings = bookings.filter((booking) => booking.property.id === propertyId);
+        const propertyBookings = bookings.filter((booking) => booking.property?.id === propertyId);
 
-        // Заголовок Bookings
         if (propertyBookings.length > 0) {
             bookingsContainer.innerHTML = `
                 <h4>Bookings</h4>
@@ -68,11 +70,11 @@ async function loadBookings(propertyId) {
                     .map(
                         (booking) => `
                             <div>
-                                <p><strong>User:</strong> ${booking.user.fullName}</p>
-                                <p><strong>Start Date:</strong> ${booking.startDate}</p>
-                                <p><strong>End Date:</strong> ${booking.endDate}</p>
-                                <p><strong>Status:</strong> ${booking.status}</p>
-                                <p><strong>Total Price:</strong> ${booking.totalPrice} USD</p>
+                                <p><strong>User:</strong> ${booking.user?.fullName || "Unknown"}</p>
+                                <p><strong>Start Date:</strong> ${booking.startDate || "N/A"}</p>
+                                <p><strong>End Date:</strong> ${booking.endDate || "N/A"}</p>
+                                <p><strong>Status:</strong> ${booking.status || "Unknown"}</p>
+                                <p><strong>Total Price:</strong> $${booking.totalPrice || 0}</p>
                             </div>
                         `
                     )
@@ -81,7 +83,6 @@ async function loadBookings(propertyId) {
         } else {
             bookingsContainer.innerHTML = "No bookings yet.";
         }
-
     } catch (error) {
         console.error("Error loading bookings:", error);
         alert("Failed to load bookings. Please try again later.");
@@ -92,8 +93,10 @@ async function addProperty() {
     const title = document.getElementById("property-title").value;
     const description = document.getElementById("property-description").value;
     const price = document.getElementById("property-price").value;
-    const amenities = document.getElementById("property-amenities").value.split(",");
+    const amenities = document.getElementById("property-amenities").value;
     const bookingPrice = document.getElementById("property-booking-price").value;
+    const capacity = document.getElementById("property-capacity").value;
+    const type = document.getElementById("property-type").value;
 
     const user = JSON.parse(sessionStorage.getItem("user"));
     if (!user || !user.id) {
@@ -111,6 +114,8 @@ async function addProperty() {
                 price: parseFloat(price),
                 amenities,
                 bookingPricePerDay: parseFloat(bookingPrice),
+                capacity: parseInt(capacity),
+                type,
                 owner: { id: user.id }
             }),
         });
@@ -126,6 +131,7 @@ async function addProperty() {
         alert("Failed to add property. Please try again.");
     }
 }
+
 
 async function deleteProperty(id) {
     try {

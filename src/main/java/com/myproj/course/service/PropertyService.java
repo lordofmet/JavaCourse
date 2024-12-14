@@ -54,6 +54,8 @@ public class PropertyService {
         existingProperty.setAmenities(property.getAmenities());
         existingProperty.setOwner(property.getOwner());
         existingProperty.setReviews(property.getReviews());
+        existingProperty.setType(property.getType());
+        existingProperty.setCapacity(property.getCapacity());
         return propertyRepository.save(existingProperty);
     }
 
@@ -64,7 +66,7 @@ public class PropertyService {
     public Property addAmenityToProperty(Long propertyId, String amenity) {
         Property property = propertyRepository.findById(propertyId)
                 .orElseThrow(() -> new RuntimeException("Property not found"));
-        property.getAmenities().add(amenity);
+        property.setAmenities(amenity + property.getAmenities());
         return propertyRepository.save(property);
     }
 

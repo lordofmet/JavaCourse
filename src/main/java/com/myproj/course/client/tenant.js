@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function loadBookings() {
     const user = JSON.parse(sessionStorage.getItem("user"));
+    if (!user || !user.id) {
+        console.error("User information is missing or invalid.");
+        return;
+    }
 
     try {
         const response = await fetch(`http://localhost:8080/bookings?userId=${user.id}`);
@@ -13,32 +17,33 @@ async function loadBookings() {
         }
 
         const bookings = await response.json();
-
         const bookingList = document.getElementById("booking-list");
-        if (!bookingList) {
-            console.error("Error: Element with id 'booking-list' not found.");
-            return;
-        }
+        const bookingHeader = document.getElementById("booking-header");
 
-        bookingList.innerHTML = bookings
-            .map(
-                (booking) => `
+        if (bookings.length === 0) {
+            bookingHeader.style.display = "none";
+            bookingList.innerHTML = "No bookings available.";
+        } else {
+            bookingHeader.style.display = "block";
+            bookingList.innerHTML = bookings
+                .map(
+                    (booking) => `
                 <div>
-                    <h3>${booking.property.title}</h3>
-                    <p>Start Date: ${booking.startDate}</p>
-                    <p>End Date: ${booking.endDate}</p>
-                    <p>Total Price: $${booking.totalPrice}</p>
-                    <p>Status: ${booking.status}</p>
+                    <h3>${booking.property?.title || "Unknown Property"}</h3>
+                    <p>Start Date: ${booking.startDate || "N/A"}</p>
+                    <p>End Date: ${booking.endDate || "N/A"}</p>
+                    <p>Total Price: $${booking.totalPrice || 0}</p>
+                    <p>Status: ${booking.status || "Unknown"}</p>
                 </div>
             `
-            )
-            .join("");
+                )
+                .join("");
+        }
     } catch (error) {
         console.error("Error loading bookings:", error);
         alert("Failed to load bookings. Please try again later.");
     }
 }
-
 
 // Функция для удаления бронирования
 async function deleteBooking(bookingId) {
@@ -73,7 +78,7 @@ async function loadProperties() {
         return;
     }
 
-    document.getElementById("tenant-name").textContent = user.fullName;
+    document.getElementById("tenant-name").textContent = user.fullName || "Tenant";
 
     try {
         const response = await fetch("http://localhost:8080/properties");
@@ -82,30 +87,36 @@ async function loadProperties() {
         }
 
         const properties = await response.json();
-
         const propertyList = document.getElementById("property-list");
+
         propertyList.innerHTML = properties
             .map(
                 (prop) => `
                 <div class="property-card">
-                    <h3>${prop.title}</h3>
-                    <p>${prop.description}</p>
-                    <p><strong>Property Price:</strong> $${prop.price}</p>
-                    <p><strong>Booking Price per Day:</strong> $${prop.bookingPricePerDay}</p>
-                    <p>Amenities: ${prop.amenities ? prop.amenities.join(", ") : "None"}</p>
+                    <h3>${prop.title || "Untitled Property"}</h3>
+                    <p>${prop.description || "No description provided."}</p>
+                    <p><strong>Property Price:</strong> $${prop.price || 0}</p>
+                    <p><strong>Booking Price per Day:</strong> $${prop.bookingPricePerDay || 0}</p>
+                    <p><strong>Type:</strong> ${prop.type || "Unknown"}</p>
+                    <p><strong>Capacity:</strong> ${prop.capacity || "N/A"}</p>
+                    <p>Amenities: ${prop.amenities || "None"}</p>
                     <div>
                         <h4>Reviews:</h4>
                         <ul>
-                            ${prop.reviews
-                                ?.map(
-                                    (review) => `
+                            ${
+                                prop.reviews?.length
+                                    ? prop.reviews
+                                          .map(
+                                              (review) => `
                                     <li>
                                         <strong>${review.user?.fullName || "Anonymous"}:</strong>
-                                        ${review.comment} (Rating: ${review.rating})
+                                        ${review.comment || "No comment"} (Rating: ${review.rating || "N/A"})
                                     </li>
                                 `
-                                )
-                                .join("") || "No reviews yet"}
+                                          )
+                                          .join("")
+                                    : "No reviews yet"
+                            }
                         </ul>
                     </div>
                     <button onclick="showReviewForm(${prop.id})">Add Review</button>
@@ -152,6 +163,7 @@ async function addReview() {
 
         if (response.ok) {
             alert("Review added successfully!");
+            document.getElementById("add-review-form").style.display = "none"; // Закрыть форму
             loadProperties();
         } else {
             alert("Failed to add review.");
@@ -159,6 +171,12 @@ async function addReview() {
     } catch (error) {
         console.error("Error adding review:", error);
     }
+}
+
+function showReviewForm(propertyId) {
+    const form = document.getElementById("add-review-form");
+    form.style.display = "block";
+    form.dataset.propertyId = propertyId;
 }
 
 function showBookingForm(propertyId) {
@@ -192,9 +210,10 @@ async function addBooking() {
         });
 
         if (bookingResponse.ok) {
-            const booking = await bookingResponse.json(); 
-            await addToBasket(user.id, booking.id); // Add booking to basket
+            const booking = await bookingResponse.json();
+            await addToBasket(user.id, booking.id);
             alert("Booking successful!");
+            document.getElementById("add-booking-form").style.display = "none"; // Закрыть форму
             loadBookings();
         } else {
             alert("Failed to book the property.");
@@ -202,6 +221,12 @@ async function addBooking() {
     } catch (error) {
         console.error("Error booking property:", error);
     }
+}
+
+function showBookingForm(propertyId) {
+    const form = document.getElementById("add-booking-form");
+    form.style.display = "block";
+    form.dataset.propertyId = propertyId;
 }
 
 async function addToBasket(userId, bookingId) {

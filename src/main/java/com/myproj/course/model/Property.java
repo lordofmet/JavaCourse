@@ -25,8 +25,11 @@ public class Property {
 
     private double price;
 
-    @ElementCollection
-    private List<String> amenities;
+    private String amenities;
+
+    private PropertyType type;
+
+    private int capacity;
 
     @ManyToOne
     @JoinColumn(name = "owner_id")
@@ -44,14 +47,6 @@ public class Property {
 
     public Property() {
 
-    }
-
-    public List<String> getAmenities() {
-        return amenities;
-    }
-
-    public void setAmenities(List<String> amenities) {
-        this.amenities = amenities;
     }
 
     public Long getId() {
@@ -117,5 +112,29 @@ public class Property {
 
     public void setBookingPricePerDay(double bookingPricePerDay) {
         this.bookingPricePerDay = bookingPricePerDay;
+    }
+
+    public String getAmenities() {
+        return amenities;
+    }
+
+    public void setAmenities(String amenities) {
+        this.amenities = amenities;
+    }
+
+    public PropertyType getType() {
+        return type;
+    }
+
+    public void setType(PropertyType type) {
+        this.type = type;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
     }
 }

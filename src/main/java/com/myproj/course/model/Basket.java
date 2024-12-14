@@ -16,7 +16,6 @@ public class Basket {
     @JoinColumn(name = "user_id", nullable = false)
     private Users user;
 
-    //@JsonIgnore
     @OneToMany(mappedBy = "basket", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Booking> bookings;
 
