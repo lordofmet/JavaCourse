@@ -54,12 +54,12 @@
     
             <div class="form-group">
                 <label for="property-price">Price ($)</label>
-                <input type="number" id="property-price" placeholder="Enter price" required />
+                <input type="text" id="property-price" placeholder="Enter price (e.g., 100.50)" required pattern="^\d+(\.\d{1,2})?$" title="Enter a valid price (e.g., 100 or 100.50)" />
             </div>
     
             <div class="form-group">
                 <label for="property-booking-price">Booking Price per Day ($)</label>
-                <input type="number" id="property-booking-price" placeholder="Enter booking price per day" required />
+                <input type="text" id="property-booking-price" placeholder="Enter booking price per day (e.g., 50.75)" required pattern="^\d+(\.\d{1,2})?$" title="Enter a valid price (e.g., 50 or 50.75)" />
             </div>
     
             <div class="form-group">
@@ -84,7 +84,7 @@
             <button type="submit" class="btn-submit">Add Property</button>
         </form>
     </div>
-
+    
     <!-- Modal for editing property -->
     <div id="edit-property-modal" class="modal">
         <div class="modal-content">
@@ -92,9 +92,9 @@
             <h2>Edit Property</h2>
             <input type="text" id="edit-property-title" placeholder="Title" required>
             <input type="text" id="edit-property-description" placeholder="Description" required>
-            <input type="number" id="edit-property-price" placeholder="Property Price" required>
+            <input type="text" id="edit-property-price" placeholder="Property Price (e.g., 200.00)" required pattern="^\d+(\.\d{1,2})?$" title="Enter a valid price (e.g., 200 or 200.00)">
             <input type="text" id="edit-property-amenities" placeholder="Amenities" required>
-            <input type="number" id="edit-property-booking-price" placeholder="Booking Price per Day" required>
+            <input type="text" id="edit-property-booking-price" placeholder="Booking Price per Day (e.g., 75.50)" required pattern="^\d+(\.\d{1,2})?$" title="Enter a valid price (e.g., 75 or 75.50)">
             <input type="number" id="edit-property-capacity" placeholder="Capacity (number of people)" required>
             <select id="edit-property-type" required>
                 <option value="DELUXE">Deluxe</option>
@@ -102,7 +102,7 @@
             </select>
             <button onclick="saveEditedProperty()">Save</button>
         </div>
-    </div>
+    </div>    
 
     <!-- Modal for confirming deletion -->
     <div id="delete-property-modal" class="modal">
