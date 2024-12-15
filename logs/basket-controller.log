@@ -15,3 +15,11 @@
 2024-12-15 19:44:07 - Getting basket for userId: 3
 2024-12-15 19:44:09 - Removing bookingId: 26 from basket of userId: 3
 2024-12-15 19:44:10 - Getting basket for userId: 3
+2024-12-15 21:39:26 - Adding bookingId: 27 to basket of userId: 3
+2024-12-15 21:39:29 - Getting basket for userId: 3
+2024-12-15 21:39:30 - Processing payment for basket of userId: 3
+2024-12-15 21:39:31 - Getting basket for userId: 3
+2024-12-15 21:40:52 - Adding bookingId: 28 to basket of userId: 3
+2024-12-15 21:40:54 - Getting basket for userId: 3
+2024-12-15 21:40:55 - Processing payment for basket of userId: 3
+2024-12-15 21:40:56 - Getting basket for userId: 3

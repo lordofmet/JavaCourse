@@ -96,7 +96,9 @@ public class BookingService {
                     totalSalesThisYear += booking.getTotalPrice();
                 }
                 // Предполагаемое поступление на следующий месяц (по всем бронированиям следующего месяца)
-                if (booking.getStartDate().isAfter(now) && booking.getStartDate().getMonthValue() == monthNow + 1) {
+                if ((booking.getStartDate().isAfter(now) && booking.getStartDate().getMonthValue() == monthNow + 1) ||
+                    (booking.getStartDate().getMonthValue() == 12 && booking.getEndDate().getMonthValue() == 1 &&
+                     booking.getStartDate().getYear() + 1 ==  booking.getEndDate().getYear())) {
                     expectedPaymentsNextMonth += booking.getTotalPrice();
                 }
                 // Предполагаемое поступление на следующий год

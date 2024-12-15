@@ -4025,3 +4025,394 @@ java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" becau
 2024-12-15 20:13:38 - Getting reviews for property with ID: 18
 2024-12-15 20:14:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
 2024-12-15 20:14:15 - Periodic state save executed.
+2024-12-15 20:15:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 20:15:15 - Periodic state save executed.
+2024-12-15 20:16:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 20:16:15 - Periodic state save executed.
+2024-12-15 20:16:27 - Fetching properties for ownerId: 1
+2024-12-15 20:16:27 - Fetching properties for ownerId: 1
+2024-12-15 20:16:27 - Getting reviews for property with ID: 17
+2024-12-15 20:16:27 - Getting reviews for property with ID: 18
+2024-12-15 20:16:27 - Getting reviews for property with ID: 17
+2024-12-15 20:16:27 - Getting reviews for property with ID: 18
+2024-12-15 20:16:54 - Fetching properties for ownerId: 1
+2024-12-15 20:16:54 - Fetching properties for ownerId: 1
+2024-12-15 20:16:54 - Getting reviews for property with ID: 17
+2024-12-15 20:16:54 - Getting reviews for property with ID: 18
+2024-12-15 20:16:54 - Getting reviews for property with ID: 17
+2024-12-15 20:16:54 - Getting reviews for property with ID: 18
+2024-12-15 20:16:56 - Fetching properties for ownerId: 1
+2024-12-15 20:16:56 - Fetching properties for ownerId: 1
+2024-12-15 20:16:56 - Getting reviews for property with ID: 17
+2024-12-15 20:16:56 - Getting reviews for property with ID: 18
+2024-12-15 20:16:56 - Getting reviews for property with ID: 17
+2024-12-15 20:16:56 - Getting reviews for property with ID: 18
+2024-12-15 20:17:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 20:17:15 - Periodic state save executed.
+2024-12-15 20:18:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 20:18:15 - Periodic state save executed.
+2024-12-15 20:19:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 20:19:15 - Periodic state save executed.
+2024-12-15 20:20:06 - Fetching sales statistics for ownerId: 1
+2024-12-15 20:20:09 - User exiting the system.
+2024-12-15 20:20:09 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 20:20:11 - User login attempt with username: user230
+2024-12-15 20:20:11 - User entering the system.
+2024-12-15 20:20:11 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 20:20:11 - Fetching all properties
+2024-12-15 20:20:11 - Fetching all bookings
+2024-12-15 20:20:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 20:20:15 - Periodic state save executed.
+2024-12-15 20:21:17 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 20:21:17 - Periodic state save executed.
+2024-12-15 20:22:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 20:22:15 - Periodic state save executed.
+2024-12-15 21:32:20 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h9m35s405ms893µs900ns).
+2024-12-15 21:32:20 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:20 - Periodic state save executed.
+2024-12-15 21:32:20 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:20 - Periodic state save executed.
+2024-12-15 21:32:20 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:20 - Periodic state save executed.
+2024-12-15 21:32:20 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:20 - Periodic state save executed.
+2024-12-15 21:32:20 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:20 - Periodic state save executed.
+2024-12-15 21:32:20 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:20 - Periodic state save executed.
+2024-12-15 21:32:20 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:20 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:21 - Periodic state save executed.
+2024-12-15 21:32:45 - User exiting the system.
+2024-12-15 21:32:45 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:48 - User login attempt with username: lordofprop12
+2024-12-15 21:32:48 - User entering the system.
+2024-12-15 21:32:48 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:32:48 - Fetching properties for ownerId: 1
+2024-12-15 21:32:48 - Getting reviews for property with ID: 17
+2024-12-15 21:32:48 - Getting reviews for property with ID: 18
+2024-12-15 21:32:51 - Fetching sales statistics for ownerId: 1
+2024-12-15 21:33:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:33:15 - Periodic state save executed.
+2024-12-15 21:34:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:34:15 - Periodic state save executed.
+2024-12-15 21:35:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:35:15 - Periodic state save executed.
+2024-12-15 21:36:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:36:15 - Periodic state save executed.
+2024-12-15 21:37:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:37:15 - Periodic state save executed.
+2024-12-15 21:37:18 - Fetching properties for ownerId: 1
+2024-12-15 21:37:18 - Getting reviews for property with ID: 17
+2024-12-15 21:37:18 - Getting reviews for property with ID: 18
+2024-12-15 21:38:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:38:15 - Periodic state save executed.
+2024-12-15 21:38:46 - User exiting the system.
+2024-12-15 21:38:46 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:38:48 - User login attempt with username: user230
+2024-12-15 21:38:48 - User entering the system.
+2024-12-15 21:38:48 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:38:48 - Fetching all properties
+2024-12-15 21:38:48 - Fetching all bookings
+2024-12-15 21:39:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:39:15 - Periodic state save executed.
+2024-12-15 21:39:26 - Booking created for propertyId: 18
+2024-12-15 21:39:26 - Adding bookingId: 27 to basket of userId: 3
+2024-12-15 21:39:27 - Fetching all bookings
+2024-12-15 21:39:29 - Getting basket for userId: 3
+2024-12-15 21:39:30 - Processing payment for basket of userId: 3
+2024-12-15 21:39:31 - Getting basket for userId: 3
+2024-12-15 21:39:33 - Fetching all properties
+2024-12-15 21:39:33 - Fetching all bookings
+2024-12-15 21:39:34 - User exiting the system.
+2024-12-15 21:39:34 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:39:36 - User login attempt with username: lordofprop12
+2024-12-15 21:39:36 - User entering the system.
+2024-12-15 21:39:36 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:39:36 - Fetching properties for ownerId: 1
+2024-12-15 21:39:37 - Getting reviews for property with ID: 17
+2024-12-15 21:39:37 - Getting reviews for property with ID: 18
+2024-12-15 21:40:12 - Fetching sales statistics for ownerId: 1
+2024-12-15 21:40:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:40:15 - Periodic state save executed.
+2024-12-15 21:40:20 - User exiting the system.
+2024-12-15 21:40:20 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:40:22 - User login attempt with username: lordofprop12
+2024-12-15 21:40:22 - User entering the system.
+2024-12-15 21:40:22 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:40:22 - Fetching properties for ownerId: 1
+2024-12-15 21:40:22 - Getting reviews for property with ID: 18
+2024-12-15 21:40:22 - Getting reviews for property with ID: 17
+2024-12-15 21:40:29 - User exiting the system.
+2024-12-15 21:40:29 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:40:31 - User login attempt with username: user230
+2024-12-15 21:40:31 - User entering the system.
+2024-12-15 21:40:31 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:40:31 - Fetching all properties
+2024-12-15 21:40:31 - Fetching all bookings
+2024-12-15 21:40:52 - Booking created for propertyId: 17
+2024-12-15 21:40:52 - Adding bookingId: 28 to basket of userId: 3
+2024-12-15 21:40:53 - Fetching all bookings
+2024-12-15 21:40:54 - Getting basket for userId: 3
+2024-12-15 21:40:55 - Processing payment for basket of userId: 3
+2024-12-15 21:40:56 - Getting basket for userId: 3
+2024-12-15 21:40:57 - Fetching all properties
+2024-12-15 21:40:57 - Fetching all bookings
+2024-12-15 21:40:58 - User exiting the system.
+2024-12-15 21:40:58 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:41:03 - User login attempt with username: lordofprop12
+2024-12-15 21:41:03 - User entering the system.
+2024-12-15 21:41:03 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:41:03 - Fetching properties for ownerId: 1
+2024-12-15 21:41:03 - Getting reviews for property with ID: 17
+2024-12-15 21:41:03 - Getting reviews for property with ID: 18
+2024-12-15 21:41:06 - Fetching sales statistics for ownerId: 1
+2024-12-15 21:41:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:41:15 - Periodic state save executed.
+2024-12-15 21:42:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:42:15 - Periodic state save executed.
+2024-12-15 21:43:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:43:15 - Periodic state save executed.
+2024-12-15 21:44:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:44:15 - Periodic state save executed.
+2024-12-15 21:45:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:45:15 - Periodic state save executed.
+2024-12-15 21:45:55 - Starting CourseApplication using Java 22.0.2 with PID 18320 (C:\Users\dmirt\OneDrive\Рабочий стол\labs\java\course\target\classes started by dmirt in C:\Users\dmirt\OneDrive\Рабочий стол\labs\java\course)
+2024-12-15 21:45:55 - No active profile set, falling back to 1 default profile: "default"
+2024-12-15 21:45:56 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-15 21:45:56 - Finished Spring Data repository scanning in 67 ms. Found 6 JPA repository interfaces.
+2024-12-15 21:45:57 - Tomcat initialized with port 8080 (http)
+2024-12-15 21:45:57 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-15 21:45:57 - Starting service [Tomcat]
+2024-12-15 21:45:57 - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-15 21:45:57 - Initializing Spring embedded WebApplicationContext
+2024-12-15 21:45:57 - Root WebApplicationContext: initialization completed in 1872 ms
+2024-12-15 21:45:58 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-15 21:45:58 - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-15 21:45:58 - HHH000026: Second-level cache disabled
+2024-12-15 21:45:58 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-15 21:45:58 - HikariPool-1 - Starting...
+2024-12-15 21:45:58 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6843fdc4
+2024-12-15 21:45:58 - HikariPool-1 - Start completed.
+2024-12-15 21:45:58 - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-15 21:45:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-15 21:46:00 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-15 21:46:00 - ServerStateService initialized with file: C:/Users/dmirt/OneDrive/server_state.ser
+2024-12-15 21:46:00 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-15 21:46:01 - Exposing 15 endpoints beneath base path '/actuator'
+2024-12-15 21:46:01 - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-15 21:46:01 - Tomcat started on port 8080 (http) with context path '/'
+2024-12-15 21:46:01 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:46:01 - Periodic state save executed.
+2024-12-15 21:46:01 - Server state loaded: ServerState{serverName='MainServ', status='running', activeConnections=4}
+2024-12-15 21:46:01 - Started CourseApplication in 6.303 seconds (process running for 6.707)
+2024-12-15 21:46:54 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-15 21:46:54 - Initializing Servlet 'dispatcherServlet'
+2024-12-15 21:46:54 - Completed initialization in 1 ms
+2024-12-15 21:46:54 - User login attempt with username: lordofprop12
+2024-12-15 21:46:54 - User entering the system.
+2024-12-15 21:46:54 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:46:54 - Fetching properties for ownerId: 1
+2024-12-15 21:46:54 - Getting reviews for property with ID: 17
+2024-12-15 21:46:54 - Getting reviews for property with ID: 18
+2024-12-15 21:46:55 - User exiting the system.
+2024-12-15 21:46:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:46:57 - User login attempt with username: lordofprop12
+2024-12-15 21:46:57 - User entering the system.
+2024-12-15 21:46:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:46:57 - Fetching properties for ownerId: 1
+2024-12-15 21:46:57 - Getting reviews for property with ID: 17
+2024-12-15 21:46:57 - Getting reviews for property with ID: 18
+2024-12-15 21:46:59 - Fetching sales statistics for ownerId: 1
+2024-12-15 21:47:01 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:47:01 - Periodic state save executed.
+2024-12-15 21:48:01 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:48:01 - Periodic state save executed.
+2024-12-15 21:48:26 - Fetching property with id: 18
+2024-12-15 21:48:34 - Updating property with id: 18
+2024-12-15 21:48:35 - Fetching properties for ownerId: 1
+2024-12-15 21:48:35 - Getting reviews for property with ID: 17
+2024-12-15 21:48:35 - Getting reviews for property with ID: 18
+2024-12-15 21:48:44 - Fetching property with id: 18
+2024-12-15 21:48:51 - Updating property with id: 18
+2024-12-15 21:48:53 - Fetching properties for ownerId: 1
+2024-12-15 21:48:53 - Getting reviews for property with ID: 18
+2024-12-15 21:48:53 - Getting reviews for property with ID: 17
+2024-12-15 21:48:54 - Fetching property with id: 18
+2024-12-15 21:49:01 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:49:01 - Periodic state save executed.
+2024-12-15 21:49:04 - Updating property with id: 18
+2024-12-15 21:49:07 - Fetching properties for ownerId: 1
+2024-12-15 21:49:07 - Getting reviews for property with ID: 17
+2024-12-15 21:49:07 - Getting reviews for property with ID: 18
+2024-12-15 21:49:10 - Fetching property with id: 18
+2024-12-15 21:50:01 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:50:01 - Periodic state save executed.
+2024-12-15 21:51:01 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:51:01 - Periodic state save executed.
+2024-12-15 21:51:11 - Updating property with id: 18
+2024-12-15 21:51:12 - Fetching properties for ownerId: 1
+2024-12-15 21:51:12 - Getting reviews for property with ID: 18
+2024-12-15 21:51:12 - Getting reviews for property with ID: 17
+2024-12-15 21:52:01 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:52:01 - Periodic state save executed.
+2024-12-15 21:53:01 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:53:01 - Periodic state save executed.
+2024-12-15 21:54:01 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:54:01 - Periodic state save executed.
+2024-12-15 21:55:01 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:55:01 - Periodic state save executed.
+2024-12-15 21:56:01 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:56:01 - Periodic state save executed.
+2024-12-15 21:57:01 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:57:01 - Periodic state save executed.
+2024-12-15 21:57:46 - Fetching property with id: 17
+2024-12-15 21:57:52 - User exiting the system.
+2024-12-15 21:57:52 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:58:01 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:58:01 - Periodic state save executed.
+2024-12-15 21:59:01 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:59:01 - Periodic state save executed.
+2024-12-15 21:59:11 - User login attempt with username: lordofprop12
+2024-12-15 21:59:11 - User entering the system.
+2024-12-15 21:59:11 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 21:59:12 - Fetching properties for ownerId: 1
+2024-12-15 21:59:12 - Getting reviews for property with ID: 18
+2024-12-15 21:59:12 - Getting reviews for property with ID: 17
+2024-12-15 21:59:13 - Fetching property with id: 17
+2024-12-15 21:59:16 - Updating property with id: 17
+2024-12-15 21:59:17 - Fetching properties for ownerId: 1
+2024-12-15 21:59:17 - Getting reviews for property with ID: 18
+2024-12-15 21:59:17 - Getting reviews for property with ID: 17
