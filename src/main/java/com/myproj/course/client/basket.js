@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 async function loadBasket() {
-    const user = JSON.parse(sessionStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem("user"));
 
     try {
         const response = await fetch(`http://localhost:8080/baskets/${user.id}`);
@@ -36,7 +36,7 @@ async function loadBasket() {
                         <h3>${booking.property.title}</h3>
                         <p>Start Date: ${booking.startDate}</p>
                         <p>End Date: ${booking.endDate}</p>
-                        <p>Total Price: $${booking.totalPrice}</p>
+                        <p>Total Price: $${booking.totalPrice.toFixed(2)}</p>
                         <div class="action-buttons">
                             <button onclick="removeFromBasket(${booking.id})">Remove</button>
                         </div>
@@ -52,7 +52,7 @@ async function loadBasket() {
 }
 
 async function removeFromBasket(bookingId) {
-    const user = JSON.parse(sessionStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem("user"));
 
     try {
         const response = await fetch(`http://localhost:8080/baskets/${user.id}/remove/${bookingId}`, {
@@ -71,7 +71,7 @@ async function removeFromBasket(bookingId) {
 }
 
 async function payForBasket() {
-    const user = JSON.parse(sessionStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem("user"));
 
     try {
         const response = await fetch(`http://localhost:8080/baskets/${user.id}/pay`, {

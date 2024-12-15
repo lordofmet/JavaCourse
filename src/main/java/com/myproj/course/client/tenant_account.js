@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", loadTenantProfile);
 
 async function loadTenantProfile() {
-    const user = JSON.parse(sessionStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem("user"));
     if (!user || user.role !== "TENANT") {
         window.location.href = "index.html";
         return;
@@ -14,7 +14,7 @@ async function loadTenantProfile() {
 }
 
 async function updateTenantProfile() {
-    const user = JSON.parse(sessionStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem("user"));
     const updatedData = {
         username: document.getElementById("tenant-username").value,
         fullName: document.getElementById("tenant-fullName").value,
@@ -34,13 +34,18 @@ async function updateTenantProfile() {
             loadTenantProfile();
         } else {
             const errorData = await response.json();
-            alert("Failed to update profile: " + errorData.message);
+            if (errorData.message) {
+                alert(errorData.message); // Display server's error message
+            } else {
+                alert("Failed to update profile. Please use another username or email.");
+            }
         }
     } catch (error) {
         console.error("Error updating profile:", error);
         alert("Failed to update profile. Please try again later.");
     }
 }
+
 
 async function toggleOrderHistory() {
     const orderHistory = document.getElementById("order-history");
@@ -57,7 +62,7 @@ async function toggleOrderHistory() {
 }
 
 async function loadOrderHistory() {
-    const user = JSON.parse(sessionStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem("user"));
     if (!user || !user.id) {
         alert("User information is missing.");
         return;
@@ -78,7 +83,7 @@ async function loadOrderHistory() {
                     <p><strong>Start Date:</strong> ${order.startDate || "N/A"}</p>
                     <p><strong>End Date:</strong> ${order.endDate || "N/A"}</p>
                     <p><strong>Status:</strong> ${order.status || "Unknown"}</p>
-                    <p><strong>Total Price:</strong> $${order.totalPrice || 0}</p>
+                    <p><strong>Total Price:</strong> $${order.totalPrice.toFixed(2) || 0}</p>
                 </div>
             `)
             .join("");
@@ -90,7 +95,7 @@ async function loadOrderHistory() {
 
 function logout() {
     userExit();
-    sessionStorage.clear();
+    localStorage.clear();
     window.location.href = "index.html";
 }
 

@@ -1,4 +1,4 @@
-/* РћР±С‰РёРµ СЃС‚РёР»Рё */
+/* Общие стили */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f0f2f5;
@@ -23,7 +23,7 @@ h1, h2, h3, h4 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* РЎС‚РёР»СЊ РґР»СЏ РІСЃРµС… РєРЅРѕРїРѕРє */
+/* Стиль для всех кнопок */
 button {
     background-color: #0078D7;
     color: #fff;
@@ -41,7 +41,7 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Р¤РѕСЂРјС‹ Рё РёРЅРїСѓС‚С‹ */
+/* Формы и инпуты */
 form input, form select, form button {
     width: 100%;
     padding: 10px;
@@ -75,7 +75,7 @@ h1, h2, h3 {
     transform: scale(1.02);
 }
 
-/* РЎС‚РёР»СЊ РґР»СЏ РєРЅРѕРїРѕРє РґРµР№СЃС‚РІРёР№ */
+/* Стиль для кнопок действий */
 .action-buttons {
     display: flex;
     gap: 10px;
@@ -94,7 +94,7 @@ h1, h2, h3 {
     background-color: #45a049;
 }
 
-/* РњРѕРґР°Р»СЊРЅС‹Рµ РѕРєРЅР° */
+/* Модальные окна */
 .modal {
     display: none;
     position: fixed;
@@ -133,7 +133,7 @@ h1, h2, h3 {
     color: #000;
 }
 
-/* РЎС‚РёР»СЊ РєРѕСЂР·РёРЅС‹ */
+/* Стиль корзины */
 .basket-button {
     position: fixed;
     top: 10px;
@@ -153,12 +153,12 @@ h1, h2, h3 {
     transform: scale(1.05);
 }
 
-/* РџСЂРѕС‡РµРµ */
+/* Прочее */
 .hidden {
     display: none;
 }
 
-/* РћР±С‰РёР№ СЃС‚РёР»СЊ РґР»СЏ РєР°СЂС‚РѕС‡РµРє */
+/* Общий стиль для карточек */
 .property {
     padding: 15px;
     background-color: #fafafa;
@@ -166,7 +166,7 @@ h1, h2, h3 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* РЎС‚РёР»Рё РґР»СЏ СЌР»РµРјРµРЅС‚РѕРІ СЃС‚СЂР°РЅРёС†С‹ РєРѕСЂР·РёРЅС‹ */
+/* Стили для элементов страницы корзины */
 .basket-item h3, .property-card h3 {
     color: #0078D7;
     font-family: 'Roboto', sans-serif;
@@ -195,7 +195,7 @@ h1, h2, h3 {
     color: #0078D7;
 }
 
-/* РЎС‚РёР»СЊ РґР»СЏ РєРѕСЂР·РёРЅС‹ */
+/* Стиль для корзины */
 #basket-list {
     margin-top: 20px;
 }
@@ -213,7 +213,7 @@ h1, h2, h3 {
     background-color: #45a049;
 }
 
-/* РћР±С‰РёРµ СЃС‚РёР»Рё РґР»СЏ РєРЅРѕРїРѕРє */
+/* Общие стили для кнопок */
 button {
     background-color: #0078D7;
     color: #fff;
@@ -231,7 +231,7 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* РћР±С‰РёР№ СЃС‚РёР»СЊ РєР°СЂС‚РѕС‡РµРє */
+/* Общий стиль карточек */
 .property-card, .booking-card {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -271,7 +271,7 @@ button:hover {
     background-color: #45a049;
 }
 
-/* Р•СЃР»Рё РєР°СЂС‚РѕС‡РєРё РґР»СЏ Р±СЂРѕРЅРёСЂРѕРІР°РЅРёР№ */
+/* Если карточки для бронирований */
 .booking-card {
     background-color: #f0f8ff;
     border: 1px solid #e0e0e0;
@@ -282,7 +282,7 @@ button:hover {
     color: #4CAF50;
 }
 
-/* РЎС‚РёР»СЊ РєРЅРѕРїРєРё РєРѕСЂР·РёРЅС‹ */
+/* Стиль кнопки корзины */
 .basket-button {
     position: fixed;
     top: 10px;
@@ -455,5 +455,22 @@ button:hover {
 
 
 
+#edit-property-modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    width: 100%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 
+/* When the modal is visible */
+#edit-property-modal.active {
+    display: block;
+}
 

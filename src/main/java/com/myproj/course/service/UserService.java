@@ -24,6 +24,12 @@ public class UserService {
     }
 
     public Users registerUser(Users user) {
+        if (existsByUsername(user.getUsername())) {
+            throw new IllegalArgumentException("Username already exists.");
+        }
+        if (existsByEmail(user.getEmail())) {
+            throw new IllegalArgumentException("Email already exists.");
+        }
         return userRepository.save(user);
     }
 
@@ -33,6 +39,21 @@ public class UserService {
 
     public Users updateUser(Long id, Users user) {
         Users oldUser = getUserById(id);
+
+        if (!oldUser.getUsername().equals(user.getUsername())) {
+            Users userWithSameUsername = userRepository.findByUsername(user.getUsername());
+            if (userWithSameUsername != null && !userWithSameUsername.getId().equals(id)) {
+                throw new IllegalArgumentException("Username is already taken.");
+            }
+        }
+
+        if (!oldUser.getEmail().equals(user.getEmail())) {
+            Users userWithSameEmail = userRepository.findByEmail(user.getEmail());
+            if (userWithSameEmail != null && !userWithSameEmail.getId().equals(id)) {
+                throw new IllegalArgumentException("Email is already taken.");
+            }
+        }
+
         oldUser.setPassword(user.getPassword());
         oldUser.setUsername(user.getUsername());
         oldUser.setEmail(user.getEmail());
@@ -63,6 +84,16 @@ public class UserService {
             return user;
         }
         throw new RuntimeException("Invalid credentials");
+    }
+
+    // Проверка существования пользователя по username
+    public boolean existsByUsername(String username) {
+        return userRepository.findByUsername(username) != null;
+    }
+
+    // Проверка существования пользователя по email
+    public boolean existsByEmail(String email) {
+        return userRepository.findByEmail(email) != null;
     }
 
 }

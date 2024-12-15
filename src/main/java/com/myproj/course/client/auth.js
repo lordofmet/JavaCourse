@@ -10,7 +10,7 @@ async function login() {
 
     if (response.ok) {
         const user = await response.json();
-        sessionStorage.setItem("user", JSON.stringify(user));
+        localStorage.setItem("user", JSON.stringify(user));
         userEnter();
         if (user.role === "OWNER") {
             window.location.href = "owner.html";
@@ -29,21 +29,32 @@ async function register() {
     const email = document.getElementById("register-email").value;
     const role = document.getElementById("register-role").value;
 
-    const response = await fetch("http://localhost:8080/users", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ fullName, username, password, email, role }),
-    });
+    try {
+        const response = await fetch("http://localhost:8080/users", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ fullName, username, password, email, role }),
+        });
 
-    if (response.ok) {
-        alert("Registration successful. Please login.");
-    } else {
-        alert("Registration failed.");
+        if (response.ok) {
+            alert("Registration successful. Please login.");
+        } else {
+            const errorData = await response.json();
+            if (errorData.message) {
+                alert(`Registration failed: ${errorData.message}`);
+            } else {
+                alert("User with such a username or an email already exists.");
+            }
+        }
+    } catch (error) {
+        console.error("Error during registration:", error);
+        alert("Registration failed due to a network error.");
     }
 }
 
+
 function logout() {
-    sessionStorage.clear();
+    localStorage.clear();
     window.location.href = "index.html";
     userExit();
 }

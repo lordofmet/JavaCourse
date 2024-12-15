@@ -31,13 +31,31 @@ public class ServerStateService {
     }
 
     // Загружаем состояние при старте приложения
-    @EventListener(ContextRefreshedEvent.class)
+    //@EventListener(ContextRefreshedEvent.class)
     public void loadState() {
         if (stateFile.exists() && stateFile.length() > 0) {
             try {
                 // Чтение состояния из JSON файла
                 currentState = objectMapper.readValue(stateFile, ServerState.class);
                 logger.info("Server state loaded: {}", currentState);
+            } catch (IOException e) {
+                logger.error("Failed to load server state from file. Initializing with empty state.", e);
+                currentState = new ServerState(); // Инициализация пустого состояния
+            }
+        } else {
+            logger.warn("State file not found or is empty. Initializing with empty state.");
+            currentState = new ServerState(); // Инициализация пустого состояния
+        }
+    }
+
+    @EventListener(ContextRefreshedEvent.class)
+    public void initState() {
+        if (stateFile.exists() && stateFile.length() > 0) {
+            try {
+                // Чтение состояния из JSON файла
+                currentState = objectMapper.readValue(stateFile, ServerState.class);
+                logger.info("Server state loaded: {}", currentState);
+                currentState.setActiveConnections(0);
             } catch (IOException e) {
                 logger.error("Failed to load server state from file. Initializing with empty state.", e);
                 currentState = new ServerState(); // Инициализация пустого состояния
@@ -55,7 +73,6 @@ public class ServerStateService {
             // Записываем состояние в JSON файл
             objectMapper.writerWithDefaultPrettyPrinter().writeValue(stateFile, currentState);
             logger.info("Server state successfully saved to file: {}", stateFile.getAbsolutePath());
-            //currentState.setActiveConnections(0);
         } catch (IOException e) {
             logger.error("Failed to save server state to file.", e);
         }

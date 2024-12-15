@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 let bookingsVisible = true; // Состояние видимости бронирований
 
 async function loadBookings() {
-    const user = JSON.parse(sessionStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem("user"));
     if (!user || !user.id) {
         console.error("User information is missing or invalid.");
         return;
@@ -39,7 +39,7 @@ async function loadBookings() {
                         <h3 style="color: #333;">${booking.property?.title || "Unknown Property"}</h3>
                         <p><strong>Start Date:</strong> ${booking.startDate || "N/A"}</p>
                         <p><strong>End Date:</strong> ${booking.endDate || "N/A"}</p>
-                        <p><strong>Total Price:</strong> $${booking.totalPrice || 0}</p>
+                        <p><strong>Total Price:</strong> $${booking.totalPrice.toFixed(2) || 0}</p>
                         <p><strong>Status:</strong> ${booking.status || "Unknown"}</p>
                     </div>
                 `
@@ -53,7 +53,7 @@ async function loadBookings() {
 }
 
 async function payForBasket() {
-    const user = JSON.parse(sessionStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem("user"));
     if (!user || !user.id) {
         alert("User information is missing.");
         return;
@@ -78,7 +78,7 @@ async function payForBasket() {
 
 // Функция для удаления бронирования
 async function deleteBooking(bookingId) {
-    const user = JSON.parse(sessionStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem("user"));
     
     // Подтверждение удаления бронирования
     const confirmDelete = confirm("Are you sure you want to delete this booking?");
@@ -103,7 +103,7 @@ async function deleteBooking(bookingId) {
 }
 
 async function loadProperties() {
-    const user = JSON.parse(sessionStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem("user"));
     if (!user || user.role !== "TENANT") {
         window.location.href = "index.html";
         return;
@@ -126,8 +126,8 @@ async function loadProperties() {
                 <div class="property-card">
                     <h3>${prop.title || "Untitled Property"}</h3>
                     <p>${prop.description || "No description provided."}</p>
-                    <p><strong>Property Price:</strong> $${prop.price || 0}</p>
-                    <p><strong>Booking Price per Day:</strong> $${prop.bookingPricePerDay || 0}</p>
+                    <p><strong>Property Price:</strong> $${prop.price.toFixed(2) || 0}</p>
+                    <p><strong>Booking Price per Day:</strong> $${prop.bookingPricePerDay.toFixed(2) || 0}</p>
                     <p><strong>Type:</strong> ${prop.type || "Unknown"}</p>
                     <p><strong>Capacity:</strong> ${prop.capacity || "N/A"}</p>
                     <p>Amenities: ${prop.amenities || "None"}</p>
@@ -149,7 +149,7 @@ async function loadProperties() {
                                     : "No reviews yet"
                             }
                         </ul>
-                        <p><strong>Average Rating:</strong> ${prop.averageRating.toFixed(1) || "N/A"}</p>
+                        <p><strong>Average Rating:</strong> ${prop.averageRating.toFixed(2) || "N/A"}</p>
                     </div>
                     <button onclick="showReviewForm(${prop.id})">Add Review</button>
                     <button onclick="showBookingForm(${prop.id})">Book Property</button>
@@ -179,7 +179,13 @@ async function addReview() {
         return;
     }
 
-    const user = JSON.parse(sessionStorage.getItem("user"));
+    const ratingValue = parseInt(rating, 10);
+    if (!Number.isInteger(ratingValue) || ratingValue < 1 || ratingValue > 5) {
+        alert("Rating must be an integer between 1 and 5.");
+        return;
+    }
+
+    const user = JSON.parse(localStorage.getItem("user"));
     const reviewData = {
         comment,
         rating: parseInt(rating),
@@ -227,7 +233,19 @@ async function addBooking() {
         return;
     }
 
-    const user = JSON.parse(sessionStorage.getItem("user"));
+    const currentDate = new Date().toISOString().split("T")[0];
+
+    if (startDate < currentDate) {
+        alert("Start date cannot be earlier than today.");
+        return;
+    }
+
+    if (endDate <= startDate) {
+        alert("End date must be later than start date.");
+        return;
+    }
+
+    const user = JSON.parse(localStorage.getItem("user"));
     const bookingData = {
         startDate,
         endDate,
@@ -278,7 +296,7 @@ async function addToBasket(userId, bookingId) {
 
 function logout() {
     userExit();
-    sessionStorage.clear();
+    localStorage.clear();
     window.location.href = "index.html";
 }
 

@@ -3,7 +3,7 @@ let deletingPropertyId = null;
 let editingPropertyId = null;
 
 async function loadProperties() {
-    const user = JSON.parse(sessionStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem("user"));
     if (!user || user.role !== "OWNER") {
         window.location.href = "index.html";
         return;
@@ -83,7 +83,7 @@ async function loadReviews(propertyId) {
 }
 
 async function loadBookings(propertyId) {
-    const user = JSON.parse(sessionStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem("user"));
     if (!user || !user.id) {
         console.error("User information is missing or invalid.");
         return;
@@ -139,7 +139,23 @@ async function addProperty() {
         return;
     }
 
-    const user = JSON.parse(sessionStorage.getItem("user"));
+    // Проверка на отрицательные или слишком большие значения
+    if (price <= 0 || price > 10000) {
+        alert("Property price must be a positive number and not greater than 10000.");
+        return;
+    }
+
+    if (bookingPrice <= 0 || bookingPrice > 10000) {
+        alert("Booking price must be a positive number and not greater than 10000.");
+        return;
+    }
+
+    if (capacity <= 0 || capacity > 20) {
+        alert("Capacity must be a positive integer and not greater than 20.");
+        return;
+    }
+
+    const user = JSON.parse(localStorage.getItem("user"));
     if (!user || !user.id) {
         alert("User information is missing.");
         return;
@@ -177,7 +193,7 @@ async function addProperty() {
 
 function logout() {
     userExit();
-    sessionStorage.clear();
+    localStorage.clear();
     window.location.href = "index.html";
 }
 
@@ -210,6 +226,7 @@ function editProperty(propertyId) {
     fetch(`http://localhost:8080/properties/${propertyId}`)
         .then(response => response.json())
         .then(property => {
+
             // Заполнить поля модального окна значениями из объекта property
             document.getElementById("edit-property-title").value = property.title;
             document.getElementById("edit-property-description").value = property.description;
@@ -218,6 +235,7 @@ function editProperty(propertyId) {
             document.getElementById("edit-property-booking-price").value = property.bookingPricePerDay;
             document.getElementById("edit-property-capacity").value = property.capacity;
             document.getElementById("edit-property-type").value = property.type;
+
 
             // Открыть модальное окно редактирования
             const modal = document.getElementById("edit-property-modal");
@@ -231,7 +249,6 @@ function editProperty(propertyId) {
             alert("Failed to load property for editing.");
         });
 }
-
 
 // Функция для открытия модального окна подтверждения удаления
 function confirmDelete(propertyId) {
@@ -254,6 +271,21 @@ async function saveEditedProperty() {
 
     if (!title || !description || isNaN(price) || isNaN(bookingPrice) || isNaN(capacity) || !type) {
         alert("Please fill in all fields correctly.");
+        return;
+    }
+
+    if (price <= 0 || price > 10000) {
+        alert("Property price must be a positive number and not greater than 10000.");
+        return;
+    }
+
+    if (bookingPrice <= 0 || bookingPrice > 10000) {
+        alert("Booking price must be a positive number and not greater than 10000.");
+        return;
+    }
+
+    if (capacity <= 0 || capacity > 20) {
+        alert("Capacity must be a positive integer and not greater than 20.");
         return;
     }
 
@@ -302,6 +334,7 @@ async function saveEditedProperty() {
 }
 
 
+
 function confirmDeleteProperty(id) {
     deletingPropertyId = id;
     document.getElementById("delete-property-modal").style.display = "block";
@@ -335,7 +368,7 @@ async function deleteConfirmedProperty() {
 }
 
 async function loadSalesStatistics() {
-    const user = JSON.parse(sessionStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem("user"));
     if (!user || !user.id) {
         alert("User information is missing.");
         return;
@@ -348,11 +381,11 @@ async function loadSalesStatistics() {
         }
 
         const statistics = await response.json();
-        document.getElementById("total-sales-month").textContent = statistics.totalSalesThisMonth || 0;
-        document.getElementById("total-sales-year").textContent = statistics.totalSalesThisYear || 0;
-        document.getElementById("expected-payments-next-month").textContent = statistics.expectedPaymentsNextMonth || 0;
-        document.getElementById("expected-payments-next-year").textContent = statistics.expectedPaymentsNextYear || 0;
-        document.getElementById("average-monthly-income").textContent = statistics.averageMonthlyIncome || 0;
+        document.getElementById("total-sales-month").textContent = statistics.totalSalesThisMonth.toFixed(2) || 0;
+        document.getElementById("total-sales-year").textContent = statistics.totalSalesThisYear.toFixed(2) || 0;
+        document.getElementById("expected-payments-next-month").textContent = statistics.expectedPaymentsNextMonth.toFixed(2) || 0;
+        document.getElementById("expected-payments-next-year").textContent = statistics.expectedPaymentsNextYear.toFixed(2) || 0;
+        document.getElementById("average-monthly-income").textContent = statistics.averageMonthlyIncome.toFixed(2) || 0;
 
         document.getElementById("sales-statistics").style.display = "block";
     } catch (error) {

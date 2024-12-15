@@ -19,20 +19,63 @@
             <!-- Properties will be dynamically loaded here -->
         </div>
 
-        <div id="add-review-form" class="hidden">
+        <!--div id="add-review-form" class="form-container hidden">
             <h2>Add Review</h2>
-            <input type="text" id="review-comment" placeholder="Comment" required>
-            <input type="number" id="review-rating" placeholder="Rating (1-5)" min="1" max="5" required>
-            <button onclick="addReview()">Add Review</button>
-        </div>
+            <form id="review-form">
+                <label for="review-comment">Comment:</label>
+                <input type="text" id="review-comment" placeholder="Enter your comment" required>
+                
+                <label for="review-rating">Rating (1-5):</label>
+                <input type="number" id="review-rating" min="1" max="5" placeholder="Rating" required>
+                
+                <button type="button" class="form-btn" onclick="addReview()">Submit Review</button>
+            </form>
+        </div-->
 
-        <div id="add-booking-form" class="hidden">
+        <!-- Modal for editing property -->
+<div id="edit-property-modal" class="form-container hidden">
+    <h2>Edit Property</h2>
+    <form id="edit-property-form">
+        <label for="edit-property-title">Title:</label>
+        <input type="text" id="edit-property-title" placeholder="Title" required>
+        
+        <label for="edit-property-description">Description:</label>
+        <input type="text" id="edit-property-description" placeholder="Description" required>
+        
+        <label for="edit-property-price">Property Price (e.g., 200.00):</label>
+        <input type="text" id="edit-property-price" placeholder="Property Price" required pattern="^\d+(\.\d{1,2})?$" title="Enter a valid price (e.g., 200 or 200.00)">
+        
+        <label for="edit-property-amenities">Amenities:</label>
+        <input type="text" id="edit-property-amenities" placeholder="Amenities" required>
+        
+        <label for="edit-property-booking-price">Booking Price per Day (e.g., 75.50):</label>
+        <input type="text" id="edit-property-booking-price" placeholder="Booking Price" required pattern="^\d+(\.\d{1,2})?$" title="Enter a valid price (e.g., 75 or 75.50)">
+        
+        <label for="edit-property-capacity">Capacity (number of people):</label>
+        <input type="number" id="edit-property-capacity" placeholder="Capacity" required min="1" max="1000">
+        
+        <label for="edit-property-type">Type:</label>
+        <select id="edit-property-type" required>
+            <option value="DELUXE">Deluxe</option>
+            <option value="STANDART">Standard</option>
+        </select>
+        
+        <button type="button" class="form-btn" onclick="saveEditedProperty()">Save</button>
+    </form>
+</div>
+
+
+        <div id="add-booking-form" class="form-container hidden">
             <h2>Book Property</h2>
-            <label for="booking-start-date">Start Date:</label>
-            <input type="date" id="booking-start-date" required>
-            <label for="booking-end-date">End Date:</label>
-            <input type="date" id="booking-end-date" required>
-            <button onclick="addBooking()">Book Now</button>
+            <form id="booking-form">
+                <label for="booking-start-date">Start Date:</label>
+                <input type="date" id="booking-start-date" required>
+                
+                <label for="booking-end-date">End Date:</label>
+                <input type="date" id="booking-end-date" required>
+                
+                <button type="button" class="form-btn" onclick="addBooking()">Book Now</button>
+            </form>
         </div>
 
         <div id="booking-section">

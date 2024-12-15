@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", loadOwnerProfile);
 
 async function loadOwnerProfile() {
-    const user = JSON.parse(sessionStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem("user"));
     if (!user || user.role !== "OWNER") {
         window.location.href = "index.html";
         return;
@@ -13,12 +13,12 @@ async function loadOwnerProfile() {
 }
 
 async function updateOwnerProfile() {
-    const user = JSON.parse(sessionStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem("user"));
     const updatedData = {
         username: document.getElementById("owner-username").value,
         fullName: document.getElementById("owner-fullName").value,
         email: document.getElementById("owner-email").value,
-        password: document.getElementById("owner-password").value
+        password: document.getElementById("owner-password").value,
     };
 
     try {
@@ -30,10 +30,14 @@ async function updateOwnerProfile() {
 
         if (response.ok) {
             alert("Profile updated successfully.");
-            loadOwnerProfile(); // Refresh to show updated information
+            loadOwnerProfile();
         } else {
             const errorData = await response.json();
-            alert("Failed to update profile: " + errorData.message);
+            if (errorData.message) {
+                alert(errorData.message); // Display server's error message
+            } else {
+                alert("Failed to update profile. Please use another username or email.");
+            }
         }
     } catch (error) {
         console.error("Error updating profile:", error);
@@ -42,7 +46,7 @@ async function updateOwnerProfile() {
 }
 
 async function loadSalesStatistics() {
-    const user = JSON.parse(sessionStorage.getItem("user"));
+    const user = JSON.parse(localStorage.getItem("user"));
     if (!user || !user.id) {
         alert("User information is missing.");
         return;
@@ -55,11 +59,11 @@ async function loadSalesStatistics() {
         }
 
         const statistics = await response.json();
-        document.getElementById("total-sales-month").textContent = statistics.totalSalesThisMonth || 0;
-        document.getElementById("total-sales-year").textContent = statistics.totalSalesThisYear || 0;
-        document.getElementById("expected-payments-next-month").textContent = statistics.expectedPaymentsNextMonth || 0;
-        document.getElementById("expected-payments-next-year").textContent = statistics.expectedPaymentsNextYear || 0;
-        document.getElementById("average-monthly-income").textContent = statistics.averageMonthlyIncome || 0;
+        document.getElementById("total-sales-month").textContent = statistics.totalSalesThisMonth.toFixed(2) || 0;
+        document.getElementById("total-sales-year").textContent = statistics.totalSalesThisYear.toFixed(2) || 0;
+        document.getElementById("expected-payments-next-month").textContent = statistics.expectedPaymentsNextMonth.toFixed(2) || 0;
+        document.getElementById("expected-payments-next-year").textContent = statistics.expectedPaymentsNextYear.toFixed(2) || 0;
+        document.getElementById("average-monthly-income").textContent = statistics.averageMonthlyIncome.toFixed(2) || 0;
 
         document.getElementById("sales-statistics").style.display = "block";
     } catch (error) {
@@ -74,7 +78,7 @@ function closeSalesStatistics() {
 
 function logout() {
     userExit();
-    sessionStorage.clear();
+    localStorage.clear();
     window.location.href = "index.html";
 }
 
