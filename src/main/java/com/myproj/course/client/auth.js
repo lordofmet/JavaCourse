@@ -11,7 +11,7 @@ async function login() {
     if (response.ok) {
         const user = await response.json();
         sessionStorage.setItem("user", JSON.stringify(user));
-
+        userEnter();
         if (user.role === "OWNER") {
             window.location.href = "owner.html";
         } else if (user.role === "TENANT") {
@@ -45,4 +45,36 @@ async function register() {
 function logout() {
     sessionStorage.clear();
     window.location.href = "index.html";
+    userExit();
+}
+
+
+async function userEnter() {
+    try {
+        const response = await fetch("http://localhost:8080/server/enter", {
+            method: "POST",
+        });
+        if (response.ok) {
+            console.log("User entered.");
+        } else {
+            console.error("Failed to increase active users.");
+        }
+    } catch (error) {
+        console.error("Error updating active users:", error);
+    }
+}
+
+async function userExit() {
+    try {
+        const response = await fetch("http://localhost:8080/server/exit", {
+            method: "POST",
+        });
+        if (response.ok) {
+            console.log("User exited.");
+        } else {
+            console.error("Failed to decrease active users.");
+        }
+    } catch (error) {
+        console.error("Error updating active users:", error);
+    }
 }

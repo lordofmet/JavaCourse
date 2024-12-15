@@ -73,10 +73,26 @@ function closeSalesStatistics() {
 }
 
 function logout() {
+    userExit();
     sessionStorage.clear();
     window.location.href = "index.html";
 }
 
 function goToHomePage() {
     window.location.href = "owner.html"; // ”кажите URL вашей главной страницы
+}
+
+async function userExit() {
+    try {
+        const response = await fetch("http://localhost:8080/server/exit", {
+            method: "POST",
+        });
+        if (response.ok) {
+            console.log("User exited.");
+        } else {
+            console.error("Failed to decrease active users.");
+        }
+    } catch (error) {
+        console.error("Error updating active users:", error);
+    }
 }

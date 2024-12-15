@@ -277,6 +277,7 @@ async function addToBasket(userId, bookingId) {
 
 
 function logout() {
+    userExit();
     sessionStorage.clear();
     window.location.href = "index.html";
 }
@@ -307,3 +308,17 @@ function toggleBookings() {
     bookingsVisible = !bookingsVisible; // Меняем состояние
 }
 
+async function userExit() {
+    try {
+        const response = await fetch("http://localhost:8080/server/exit", {
+            method: "POST",
+        });
+        if (response.ok) {
+            console.log("User exited.");
+        } else {
+            console.error("Failed to decrease active users.");
+        }
+    } catch (error) {
+        console.error("Error updating active users:", error);
+    }
+}

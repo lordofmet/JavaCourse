@@ -176,6 +176,7 @@ async function addProperty() {
 }
 
 function logout() {
+    userExit();
     sessionStorage.clear();
     window.location.href = "index.html";
 }
@@ -366,4 +367,19 @@ function closeSalesStatistics() {
 
 function goToOwnerDashboard() {
     window.location.href = "owner_account.html";
+}
+
+async function userExit() {
+    try {
+        const response = await fetch("http://localhost:8080/server/exit", {
+            method: "POST",
+        });
+        if (response.ok) {
+            console.log("User exited.");
+        } else {
+            console.error("Failed to decrease active users.");
+        }
+    } catch (error) {
+        console.error("Error updating active users:", error);
+    }
 }
