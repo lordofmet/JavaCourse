@@ -1,0 +1,247 @@
+2024-12-15 16:44:40 - Starting CourseApplication using Java 22.0.2 with PID 27792 (C:\Users\dmirt\OneDrive\Рабочий стол\labs\java\course\target\classes started by dmirt in C:\Users\dmirt\OneDrive\Рабочий стол\labs\java\course)
+2024-12-15 16:44:40 - No active profile set, falling back to 1 default profile: "default"
+2024-12-15 16:44:41 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-15 16:44:41 - Finished Spring Data repository scanning in 63 ms. Found 6 JPA repository interfaces.
+2024-12-15 16:44:42 - Tomcat initialized with port 8080 (http)
+2024-12-15 16:44:42 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-15 16:44:42 - Starting service [Tomcat]
+2024-12-15 16:44:42 - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-15 16:44:42 - Initializing Spring embedded WebApplicationContext
+2024-12-15 16:44:42 - Root WebApplicationContext: initialization completed in 1834 ms
+2024-12-15 16:44:43 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-15 16:44:43 - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-15 16:44:43 - HHH000026: Second-level cache disabled
+2024-12-15 16:44:43 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-15 16:44:43 - HikariPool-1 - Starting...
+2024-12-15 16:44:43 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5305f936
+2024-12-15 16:44:43 - HikariPool-1 - Start completed.
+2024-12-15 16:44:43 - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-15 16:44:45 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-15 16:44:45 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-15 16:44:45 - ServerStateService initialized with file: C:/Users/dmirt/OneDrive/server_state.ser
+2024-12-15 16:44:45 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-15 16:44:46 - Exposing 15 endpoints beneath base path '/actuator'
+2024-12-15 16:44:46 - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-15 16:44:46 - Tomcat started on port 8080 (http) with context path '/'
+2024-12-15 16:44:46 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 16:44:46 - Periodic state save executed.
+2024-12-15 16:44:46 - Server state loaded: ServerState{serverName='MainServ', status='running', activeConnections=1}
+2024-12-15 16:44:46 - Started CourseApplication in 6.458 seconds (process running for 6.871)
+2024-12-15 16:45:32 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-15 16:45:32 - Initializing Servlet 'dispatcherServlet'
+2024-12-15 16:45:32 - Completed initialization in 2 ms
+2024-12-15 16:45:32 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 16:45:46 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 16:45:46 - Periodic state save executed.
+2024-12-15 16:46:46 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 16:46:46 - Periodic state save executed.
+2024-12-15 16:47:46 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 16:47:46 - Periodic state save executed.
+2024-12-15 16:48:46 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 16:48:46 - Periodic state save executed.
+2024-12-15 16:53:41 - Starting CourseApplication using Java 22.0.2 with PID 27020 (C:\Users\dmirt\OneDrive\Рабочий стол\labs\java\course\target\classes started by dmirt in C:\Users\dmirt\OneDrive\Рабочий стол\labs\java\course)
+2024-12-15 16:53:41 - No active profile set, falling back to 1 default profile: "default"
+2024-12-15 16:53:42 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-15 16:53:42 - Finished Spring Data repository scanning in 64 ms. Found 6 JPA repository interfaces.
+2024-12-15 16:53:43 - Tomcat initialized with port 8080 (http)
+2024-12-15 16:53:43 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-15 16:53:43 - Starting service [Tomcat]
+2024-12-15 16:53:43 - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-15 16:53:43 - Initializing Spring embedded WebApplicationContext
+2024-12-15 16:53:43 - Root WebApplicationContext: initialization completed in 1817 ms
+2024-12-15 16:53:43 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-15 16:53:43 - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-15 16:53:43 - HHH000026: Second-level cache disabled
+2024-12-15 16:53:44 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-15 16:53:44 - HikariPool-1 - Starting...
+2024-12-15 16:53:44 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19213a74
+2024-12-15 16:53:44 - HikariPool-1 - Start completed.
+2024-12-15 16:53:44 - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-15 16:53:45 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-15 16:53:45 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-15 16:53:46 - ServerStateService initialized with file: C:/Users/dmirt/OneDrive/server_state.ser
+2024-12-15 16:53:46 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-15 16:53:46 - Exposing 15 endpoints beneath base path '/actuator'
+2024-12-15 16:53:46 - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-15 16:53:46 - Tomcat started on port 8080 (http) with context path '/'
+2024-12-15 16:53:46 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 16:53:46 - Periodic state save executed.
+2024-12-15 16:53:46 - Server state loaded: ServerState{serverName='MainServ', status='running', activeConnections=2}
+2024-12-15 16:53:46 - Started CourseApplication in 6.1 seconds (process running for 6.549)
+2024-12-15 16:54:17 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-15 16:54:17 - Initializing Servlet 'dispatcherServlet'
+2024-12-15 16:54:17 - Completed initialization in 2 ms
+2024-12-15 16:54:27 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 16:54:46 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 16:54:46 - Periodic state save executed.
+2024-12-15 16:54:48 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 16:55:46 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 16:55:46 - Periodic state save executed.
+2024-12-15 16:56:46 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 16:56:46 - Periodic state save executed.
+2024-12-15 16:58:40 - Starting CourseApplication using Java 22.0.2 with PID 27884 (C:\Users\dmirt\OneDrive\Рабочий стол\labs\java\course\target\classes started by dmirt in C:\Users\dmirt\OneDrive\Рабочий стол\labs\java\course)
+2024-12-15 16:58:40 - No active profile set, falling back to 1 default profile: "default"
+2024-12-15 16:58:41 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-15 16:58:41 - Finished Spring Data repository scanning in 71 ms. Found 6 JPA repository interfaces.
+2024-12-15 16:58:42 - Tomcat initialized with port 8080 (http)
+2024-12-15 16:58:42 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-15 16:58:42 - Starting service [Tomcat]
+2024-12-15 16:58:42 - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-15 16:58:42 - Initializing Spring embedded WebApplicationContext
+2024-12-15 16:58:42 - Root WebApplicationContext: initialization completed in 1961 ms
+2024-12-15 16:58:43 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-15 16:58:43 - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-15 16:58:43 - HHH000026: Second-level cache disabled
+2024-12-15 16:58:43 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-15 16:58:43 - HikariPool-1 - Starting...
+2024-12-15 16:58:43 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@59b1edab
+2024-12-15 16:58:43 - HikariPool-1 - Start completed.
+2024-12-15 16:58:44 - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-15 16:58:45 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-15 16:58:45 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-15 16:58:45 - ServerStateService initialized with file: C:/Users/dmirt/OneDrive/server_state.ser
+2024-12-15 16:58:45 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-15 16:58:46 - Exposing 15 endpoints beneath base path '/actuator'
+2024-12-15 16:58:46 - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-15 16:58:46 - Tomcat started on port 8080 (http) with context path '/'
+2024-12-15 16:58:46 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 16:58:46 - Periodic state save executed.
+2024-12-15 16:58:46 - Server state loaded: ServerState{serverName='MainServ', status='running', activeConnections=0}
+2024-12-15 16:58:46 - Started CourseApplication in 6.475 seconds (process running for 6.89)
+2024-12-15 16:59:17 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 16:59:46 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 16:59:46 - Periodic state save executed.
+2024-12-15 17:00:00 - Server state loaded: ServerState{serverName='MainServ', status='running', activeConnections=0}
+2024-12-15 17:17:35 - Starting CourseApplication using Java 22.0.2 with PID 25936 (C:\Users\dmirt\OneDrive\Рабочий стол\labs\java\course\target\classes started by dmirt in C:\Users\dmirt\OneDrive\Рабочий стол\labs\java\course)
+2024-12-15 17:17:35 - No active profile set, falling back to 1 default profile: "default"
+2024-12-15 17:17:36 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-15 17:17:36 - Finished Spring Data repository scanning in 64 ms. Found 6 JPA repository interfaces.
+2024-12-15 17:17:37 - Tomcat initialized with port 8080 (http)
+2024-12-15 17:17:37 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-15 17:17:37 - Starting service [Tomcat]
+2024-12-15 17:17:37 - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-15 17:17:37 - Initializing Spring embedded WebApplicationContext
+2024-12-15 17:17:37 - Root WebApplicationContext: initialization completed in 1860 ms
+2024-12-15 17:17:37 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-15 17:17:37 - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-15 17:17:37 - HHH000026: Second-level cache disabled
+2024-12-15 17:17:38 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-15 17:17:38 - HikariPool-1 - Starting...
+2024-12-15 17:17:38 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3855b27e
+2024-12-15 17:17:38 - HikariPool-1 - Start completed.
+2024-12-15 17:17:38 - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-15 17:17:39 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-15 17:17:39 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-15 17:17:40 - ServerStateService initialized with file: C:/Users/dmirt/OneDrive/server_state.ser
+2024-12-15 17:17:40 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-15 17:17:40 - Exposing 15 endpoints beneath base path '/actuator'
+2024-12-15 17:17:41 - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-15 17:17:41 - Tomcat started on port 8080 (http) with context path '/'
+2024-12-15 17:17:41 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 17:17:41 - Periodic state save executed.
+2024-12-15 17:17:41 - Server state loaded: ServerState{serverName='MainServ', status='running', activeConnections=0}
+2024-12-15 17:17:41 - Started CourseApplication in 6.059 seconds (process running for 6.436)
+2024-12-15 17:17:55 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-15 17:17:55 - Initializing Servlet 'dispatcherServlet'
+2024-12-15 17:17:55 - Completed initialization in 3 ms
+2024-12-15 17:17:56 - User login attempt with username: user229
+2024-12-15 17:17:56 - User entering the system.
+2024-12-15 17:17:56 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 17:17:56 - Fetching properties for ownerId: 4
+2024-12-15 17:18:15 - User exiting the system.
+2024-12-15 17:18:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 17:18:25 - User login attempt with username: user229
+2024-12-15 17:18:25 - User entering the system.
+2024-12-15 17:18:25 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 17:18:25 - Fetching properties for ownerId: 4
+2024-12-15 17:18:41 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 17:18:41 - Periodic state save executed.
+2024-12-15 17:18:45 - Adding new property for ownerId: 4
+2024-12-15 17:18:47 - Fetching properties for ownerId: 4
+2024-12-15 17:18:47 - Getting reviews for property with ID: 20
+2024-12-15 17:18:52 - User exiting the system.
+2024-12-15 17:18:52 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 17:18:55 - User login attempt with username: user228
+2024-12-15 17:18:55 - User entering the system.
+2024-12-15 17:18:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 17:18:56 - Fetching all properties
+2024-12-15 17:18:56 - Fetching all bookings
+2024-12-15 17:18:59 - Fetching bookings for userId: 2
+2024-12-15 17:19:03 - Fetching all properties
+2024-12-15 17:19:03 - Fetching all bookings
+2024-12-15 17:19:10 - Setting review for property with id: 5
+2024-12-15 17:19:11 - Fetching all properties
+2024-12-15 17:19:17 - User exiting the system.
+2024-12-15 17:19:17 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 17:21:03 - Starting CourseApplication using Java 22.0.2 with PID 27136 (C:\Users\dmirt\OneDrive\Рабочий стол\labs\java\course\target\classes started by dmirt in C:\Users\dmirt\OneDrive\Рабочий стол\labs\java\course)
+2024-12-15 17:21:03 - No active profile set, falling back to 1 default profile: "default"
+2024-12-15 17:21:04 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-15 17:21:04 - Finished Spring Data repository scanning in 68 ms. Found 6 JPA repository interfaces.
+2024-12-15 17:21:05 - Tomcat initialized with port 8080 (http)
+2024-12-15 17:21:05 - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-15 17:21:05 - Starting service [Tomcat]
+2024-12-15 17:21:05 - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-15 17:21:05 - Initializing Spring embedded WebApplicationContext
+2024-12-15 17:21:05 - Root WebApplicationContext: initialization completed in 1809 ms
+2024-12-15 17:21:05 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-15 17:21:05 - HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-15 17:21:05 - HHH000026: Second-level cache disabled
+2024-12-15 17:21:06 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-15 17:21:06 - HikariPool-1 - Starting...
+2024-12-15 17:21:06 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b1a1a37
+2024-12-15 17:21:06 - HikariPool-1 - Start completed.
+2024-12-15 17:21:06 - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.39
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-15 17:21:07 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-15 17:21:07 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-15 17:21:07 - ServerStateService initialized with file: C:/Users/dmirt/OneDrive/server_state.ser
+2024-12-15 17:21:08 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-15 17:21:08 - Exposing 15 endpoints beneath base path '/actuator'
+2024-12-15 17:21:08 - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-15 17:21:08 - Tomcat started on port 8080 (http) with context path '/'
+2024-12-15 17:21:08 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 17:21:08 - Periodic state save executed.
+2024-12-15 17:21:08 - Server state loaded: ServerState{serverName='MainServ', status='running', activeConnections=0}
+2024-12-15 17:21:08 - Started CourseApplication in 5.959 seconds (process running for 6.329)
+2024-12-15 17:21:18 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-15 17:21:18 - Initializing Servlet 'dispatcherServlet'
+2024-12-15 17:21:18 - Completed initialization in 2 ms
+2024-12-15 17:21:18 - User login attempt with username: user228
+2024-12-15 17:21:18 - User entering the system.
+2024-12-15 17:21:18 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 17:21:19 - Fetching all properties
+2024-12-15 17:21:19 - Fetching all bookings

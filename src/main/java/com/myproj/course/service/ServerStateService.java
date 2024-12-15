@@ -55,6 +55,7 @@ public class ServerStateService {
             // Записываем состояние в JSON файл
             objectMapper.writerWithDefaultPrettyPrinter().writeValue(stateFile, currentState);
             logger.info("Server state successfully saved to file: {}", stateFile.getAbsolutePath());
+            //currentState.setActiveConnections(0);
         } catch (IOException e) {
             logger.error("Failed to save server state to file.", e);
         }
@@ -67,6 +68,7 @@ public class ServerStateService {
     public void updateState(ServerState newState) {
         this.currentState = newState;
         saveState(); // Сохранение состояния сразу после обновления
+        logger.info("Server state updated");
     }
 
     // Периодическое сохранение состояния

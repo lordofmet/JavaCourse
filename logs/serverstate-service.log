@@ -1,0 +1,25 @@
+2024-12-15 16:58:45 - ServerStateService initialized with file: C:/Users/dmirt/OneDrive/server_state.ser
+2024-12-15 16:58:46 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 16:58:46 - Periodic state save executed.
+2024-12-15 16:58:46 - Server state loaded: ServerState{serverName='MainServ', status='running', activeConnections=0}
+2024-12-15 16:59:17 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 16:59:46 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 16:59:46 - Periodic state save executed.
+2024-12-15 17:00:00 - Server state loaded: ServerState{serverName='MainServ', status='running', activeConnections=0}
+2024-12-15 17:17:40 - ServerStateService initialized with file: C:/Users/dmirt/OneDrive/server_state.ser
+2024-12-15 17:17:41 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 17:17:41 - Periodic state save executed.
+2024-12-15 17:17:41 - Server state loaded: ServerState{serverName='MainServ', status='running', activeConnections=0}
+2024-12-15 17:17:56 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 17:18:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 17:18:25 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 17:18:41 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 17:18:41 - Periodic state save executed.
+2024-12-15 17:18:52 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 17:18:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 17:19:17 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 17:21:07 - ServerStateService initialized with file: C:/Users/dmirt/OneDrive/server_state.ser
+2024-12-15 17:21:08 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-15 17:21:08 - Periodic state save executed.
+2024-12-15 17:21:08 - Server state loaded: ServerState{serverName='MainServ', status='running', activeConnections=0}
+2024-12-15 17:21:18 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
