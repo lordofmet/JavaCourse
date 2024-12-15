@@ -2,7 +2,6 @@ package com.myproj.course.controller;
 
 import com.myproj.course.model.Basket;
 import com.myproj.course.service.BasketService;
-import com.myproj.course.service.ServerStateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.slf4j.Logger;

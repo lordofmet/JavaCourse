@@ -139,7 +139,6 @@ async function addProperty() {
         return;
     }
 
-    // Проверка на отрицательные или слишком большие значения
     if (price <= 0 || price > 10000) {
         alert("Property price must be a positive number and not greater than 10000.");
         return;
@@ -200,11 +199,9 @@ function logout() {
 function showEditPropertyModal(id) {
     editingPropertyId = id;
 
-    // Получить текущие данные свойства
     const property = properties.find((prop) => prop.id === id);
     if (!property) return;
 
-    // Установить текущие значения в поля
     document.getElementById("edit-property-title").value = property.title;
     document.getElementById("edit-property-description").value = property.description;
     document.getElementById("edit-property-price").value = property.price;
@@ -222,12 +219,10 @@ function closeEditModal() {
 }
 
 function editProperty(propertyId) {
-    // Получить данные о свойстве
     fetch(`http://localhost:8080/properties/${propertyId}`)
         .then(response => response.json())
         .then(property => {
 
-            // Заполнить поля модального окна значениями из объекта property
             document.getElementById("edit-property-title").value = property.title;
             document.getElementById("edit-property-description").value = property.description;
             document.getElementById("edit-property-price").value = property.price;
@@ -236,13 +231,10 @@ function editProperty(propertyId) {
             document.getElementById("edit-property-capacity").value = property.capacity;
             document.getElementById("edit-property-type").value = property.type;
 
-
-            // Открыть модальное окно редактирования
             const modal = document.getElementById("edit-property-modal");
             modal.style.display = "block";
 
-            // Сохранить ID свойства для использования при сохранении изменений
-            window.propertyToEdit = propertyId;  // Убедитесь, что ID сохраняется
+            window.propertyToEdit = propertyId;
         })
         .catch(error => {
             console.error("Error loading property for editing:", error);
@@ -250,13 +242,9 @@ function editProperty(propertyId) {
         });
 }
 
-// Функция для открытия модального окна подтверждения удаления
 function confirmDelete(propertyId) {
-    // Открыть модальное окно
     const modal = document.getElementById("delete-property-modal");
     modal.style.display = "block";
-
-    // Сохранить ID для удаления в переменной
     window.propertyToDelete = propertyId;
 }
 
@@ -289,7 +277,6 @@ async function saveEditedProperty() {
         return;
     }
 
-    // Создаем объект с измененными данными
     const updatedProperty = {
         title,
         description,
@@ -300,7 +287,6 @@ async function saveEditedProperty() {
         type
     };
 
-    // Используем ID, которое мы сохранили в window.propertyToEdit
     const propertyId = window.propertyToEdit;
 
     if (!propertyId) {
@@ -318,7 +304,7 @@ async function saveEditedProperty() {
 
         if (response.ok) {
             alert("Property updated successfully.");
-            loadProperties(); // Перезагрузить список свойств
+            loadProperties();
         } else {
             const errorData = await response.json();
             console.error("Error response:", errorData);
@@ -329,7 +315,6 @@ async function saveEditedProperty() {
         alert("Failed to update property. Please try again.");
     }
 
-    // Закрыть модальное окно
     closeEditModal();
 }
 
@@ -347,14 +332,13 @@ function closeDeleteModal() {
 
 async function deleteConfirmedProperty() {
     try {
-        // Отправить запрос на удаление свойства по ID
         const response = await fetch(`http://localhost:8080/properties/${window.propertyToDelete}`, {
             method: "DELETE"
         });
 
         if (response.ok) {
             alert("Property deleted successfully.");
-            loadProperties(); // Перезагрузить список свойств
+            loadProperties();
         } else {
             alert("Failed to delete property.");
         }
@@ -363,7 +347,6 @@ async function deleteConfirmedProperty() {
         alert("Failed to delete property. Please try again.");
     }
 
-    // Закрыть модальное окно
     closeDeleteModal();
 }
 

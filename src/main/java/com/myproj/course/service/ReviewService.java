@@ -45,7 +45,6 @@ public class ReviewService {
     }
 
     public Review addReview(Review review) {
-        // Проверка на наличие пользователя
         if (review.getUser() == null || review.getUser().getId() == null) {
             throw new IllegalArgumentException("User must be provided for the review");
         }

@@ -86,12 +86,10 @@ public class UserService {
         throw new RuntimeException("Invalid credentials");
     }
 
-    // Проверка существования пользователя по username
     public boolean existsByUsername(String username) {
         return userRepository.findByUsername(username) != null;
     }
 
-    // Проверка существования пользователя по email
     public boolean existsByEmail(String email) {
         return userRepository.findByEmail(email) != null;
     }

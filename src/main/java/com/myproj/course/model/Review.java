@@ -16,7 +16,6 @@ public class Review {
 
     private int rating;
 
-    //@JsonBackReference
     @ManyToOne
     @JoinColumn(name = "user_id")
     private Users user;

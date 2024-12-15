@@ -21,14 +21,11 @@ async function loadBasket() {
 
         const basketList = document.getElementById("basket-list");
 
-        // Фильтрация бронирований с статусом, отличным от "Paid"
         const unPaidBookings = basket.bookings.filter(booking => booking.status !== "Paid");
 
         if (unPaidBookings.length === 0) {
-            // Если все заказы оплачены, показать сообщение
             basketList.innerHTML = "<p>Your basket contains only paid bookings.</p>";
         } else {
-            // Если есть незавершенные заказы, показываем их
             basketList.innerHTML = unPaidBookings
                 .map(
                     (booking) => `

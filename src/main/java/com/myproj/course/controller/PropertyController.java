@@ -47,10 +47,8 @@ public class PropertyController {
     @PostMapping
     public ResponseEntity<Property> addProperty(@RequestBody Property property) {
         logger.info("Adding new property for ownerId: {}", property.getOwner().getId());
-        // Получаем пользователя по ID
         Users owner = userService.getUserById(property.getOwner().getId());
 
-        // Устанавливаем владельца
         property.setOwner(owner);
 
         if (property.getBookingPricePerDay() == 0) {

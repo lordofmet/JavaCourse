@@ -35,7 +35,7 @@ async function updateTenantProfile() {
         } else {
             const errorData = await response.json();
             if (errorData.message) {
-                alert(errorData.message); // Display server's error message
+                alert(errorData.message);
             } else {
                 alert("Failed to update profile. Please use another username or email.");
             }
@@ -100,7 +100,7 @@ function logout() {
 }
 
 function goToHomePage() {
-    window.location.href = "tenant.html"; // ”кажите URL вашей главной страницы
+    window.location.href = "tenant.html";
 }
 
 async function userExit() {

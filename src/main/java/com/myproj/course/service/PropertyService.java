@@ -83,13 +83,12 @@ public class PropertyService {
         Users user = userRepository.findById(review.getUser().getId())
                 .orElseThrow(() -> new RuntimeException("User not found"));
         review.setProperty(property);
-        review.setUser(user); // связываем отзыв с пользователем
+        review.setUser(user);
         reviewRepository.save(review);
         property.getReviews().add(review);
         return propertyRepository.save(property);
     }
 
-    // Метод для получения всех свойств по владельцу
     public List<Property> getPropertiesByOwnerId(Long ownerId) {
         return propertyRepository.findByOwnerId(ownerId);
     }

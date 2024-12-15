@@ -22,7 +22,6 @@ public class ServerStateService {
     private final File stateFile;
     private ServerState currentState;
 
-    // Конструктор, где получаем путь к файлу из конфигурации
     public ServerStateService(@Value("${server.state.file}") String filePath, ObjectMapper objectMapper) {
         this.objectMapper = objectMapper;
         this.stateFile = new File(filePath);
@@ -30,8 +29,6 @@ public class ServerStateService {
         logger.info("ServerStateService initialized with file: {}", filePath);
     }
 
-    // Загружаем состояние при старте приложения
-    //@EventListener(ContextRefreshedEvent.class)
     public void loadState() {
         if (stateFile.exists() && stateFile.length() > 0) {
             try {
@@ -52,25 +49,22 @@ public class ServerStateService {
     public void initState() {
         if (stateFile.exists() && stateFile.length() > 0) {
             try {
-                // Чтение состояния из JSON файла
                 currentState = objectMapper.readValue(stateFile, ServerState.class);
                 logger.info("Server state loaded: {}", currentState);
                 currentState.setActiveConnections(0);
             } catch (IOException e) {
                 logger.error("Failed to load server state from file. Initializing with empty state.", e);
-                currentState = new ServerState(); // Инициализация пустого состояния
+                currentState = new ServerState();
             }
         } else {
             logger.warn("State file not found or is empty. Initializing with empty state.");
-            currentState = new ServerState(); // Инициализация пустого состояния
+            currentState = new ServerState();
         }
     }
 
-    // Сохраняем состояние при завершении работы приложения
     @EventListener(ContextClosedEvent.class)
     public void saveState() {
         try {
-            // Записываем состояние в JSON файл
             objectMapper.writerWithDefaultPrettyPrinter().writeValue(stateFile, currentState);
             logger.info("Server state successfully saved to file: {}", stateFile.getAbsolutePath());
         } catch (IOException e) {
@@ -84,11 +78,10 @@ public class ServerStateService {
 
     public void updateState(ServerState newState) {
         this.currentState = newState;
-        saveState(); // Сохранение состояния сразу после обновления
+        saveState();
         logger.info("Server state updated");
     }
 
-    // Периодическое сохранение состояния
     @Scheduled(fixedRate = 60000) // Каждую минуту
     public void periodicSaveState() {
         saveState();

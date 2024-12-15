@@ -22,16 +22,12 @@ public class BasketService {
     private UserRepository userRepository;
 
     public Basket createBasket(Long userId) {
-        // Check if the user exists
         Users user = userRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
-        // Create a new basket
         Basket basket = new Basket();
         basket.setUser(user);
-        // Initialize any other properties of the basket if necessary (e.g., status, date created)
 
-        // Save the new basket to the repository
         return basketRepository.save(basket);
     }
 

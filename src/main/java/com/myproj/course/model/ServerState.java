@@ -1,7 +1,6 @@
 package com.myproj.course.model;
 
 import java.io.Serializable;
-import java.util.Map;
 
 public class ServerState implements Serializable {
     private static final long serialVersionUID = 1L;

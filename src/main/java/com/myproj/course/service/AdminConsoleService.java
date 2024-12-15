@@ -1,7 +1,6 @@
 package com.myproj.course.service;
 
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Scanner;
@@ -22,11 +21,9 @@ public class AdminConsoleService implements CommandLineRunner {
         System.out.println("Admin Console started. Type 'help' for available commands.");
 
         while (true) {
-            // Ожидаем ввода команды
             System.out.print("Enter command: ");
             command = scanner.nextLine().trim();
 
-            // Обработка команд
             switch (command.toLowerCase()) {
                 case "exit":
                     System.out.println("Shutting down server...");

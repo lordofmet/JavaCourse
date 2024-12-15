@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loadBookings();
 });
 
-let bookingsVisible = true; // Состояние видимости бронирований
+let bookingsVisible = true;
 
 async function loadBookings() {
     const user = JSON.parse(localStorage.getItem("user"));
@@ -23,14 +23,11 @@ async function loadBookings() {
         const bookingSection = document.getElementById("booking-section");
         const bookingHeader = document.getElementById("booking-header");
 
-        // Фильтрация бронирований с статусом "Paid"
         const paidBookings = bookings.filter(booking => booking.status === "Paid");
 
         if (paidBookings.length === 0) {
-            // Если нет оплаченных бронирований, скрыть раздел
             bookingSection.style.display = "none";
         } else {
-            // Если есть оплаченные бронирования, показываем их
             bookingHeader.style.display = "block";
             bookingList.innerHTML = paidBookings
                 .map(
@@ -66,7 +63,7 @@ async function payForBasket() {
 
         if (response.ok) {
             alert("Payment successful!");
-            loadBookings(); // Reload bookings to show updated statuses
+            loadBookings();
         } else {
             alert("Payment failed. Please try again later.");
         }
@@ -76,11 +73,9 @@ async function payForBasket() {
     }
 }
 
-// Функция для удаления бронирования
 async function deleteBooking(bookingId) {
     const user = JSON.parse(localStorage.getItem("user"));
     
-    // Подтверждение удаления бронирования
     const confirmDelete = confirm("Are you sure you want to delete this booking?");
     if (!confirmDelete) return;
 
@@ -92,7 +87,7 @@ async function deleteBooking(bookingId) {
 
         if (response.ok) {
             alert("Booking deleted successfully.");
-            loadBookings(); // Перезагружаем список бронирований
+            loadBookings();
         } else {
             alert("Failed to delete booking.");
         }
@@ -202,7 +197,7 @@ async function addReview() {
 
         if (response.ok) {
             alert("Review added successfully!");
-            document.getElementById("add-review-form").style.display = "none"; // Закрыть форму
+            document.getElementById("add-review-form").style.display = "none";
             loadProperties();
         } else {
             alert("Failed to add review.");
@@ -264,7 +259,7 @@ async function addBooking() {
             const booking = await bookingResponse.json();
             await addToBasket(user.id, booking.id);
             alert("Booking successful!");
-            document.getElementById("add-booking-form").style.display = "none"; // Закрыть форму
+            document.getElementById("add-booking-form").style.display = "none";
             loadBookings();
         } else {
             alert("Failed to book the property.");
@@ -314,16 +309,14 @@ function toggleBookings() {
     const toggleButton = document.getElementById("toggle-bookings-button");
 
     if (bookingsVisible) {
-        // Скрыть список бронирований
         bookingList.style.display = "none";
         toggleButton.textContent = "Show Bookings";
     } else {
-        // Показать список бронирований
         bookingList.style.display = "block";
         toggleButton.textContent = "Hide Bookings";
     }
 
-    bookingsVisible = !bookingsVisible; // Меняем состояние
+    bookingsVisible = !bookingsVisible;
 }
 
 async function userExit() {
