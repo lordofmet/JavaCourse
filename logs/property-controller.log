@@ -1,39 +1,62 @@
-2024-12-16 15:40:11 - Fetching properties for ownerId: 1
-2024-12-16 15:40:16 - Fetching properties for ownerId: 1
-2024-12-16 15:40:17 - Fetching property with id: 17
-2024-12-16 15:40:26 - Updating property with id: 17
-2024-12-16 15:40:27 - Fetching properties for ownerId: 1
-2024-12-16 15:40:32 - Fetching all properties
-2024-12-16 15:42:16 - Fetching all properties
-2024-12-16 15:42:36 - Fetching all properties
-2024-12-16 15:47:47 - Fetching all properties
-2024-12-16 15:47:51 - Fetching all properties
-2024-12-16 15:50:16 - Fetching all properties
-2024-12-16 15:50:25 - Fetching all properties
-2024-12-16 15:50:34 - Setting review for property with id: 5
-2024-12-16 15:50:35 - Fetching all properties
-2024-12-16 15:50:47 - Setting review for property with id: 5
-2024-12-16 15:50:48 - Fetching all properties
-2024-12-16 15:51:18 - Fetching all properties
-2024-12-16 15:51:20 - Fetching all properties
-2024-12-16 15:51:21 - Fetching all properties
-2024-12-16 15:51:39 - Fetching all properties
-2024-12-16 15:51:40 - Fetching all properties
-2024-12-16 15:51:41 - Fetching all properties
-2024-12-16 15:51:43 - Fetching all properties
-2024-12-16 15:51:44 - Fetching all properties
-2024-12-16 15:51:46 - Fetching all properties
-2024-12-16 15:51:47 - Fetching all properties
-2024-12-16 15:51:48 - Fetching all properties
-2024-12-16 15:51:52 - Fetching all properties
-2024-12-16 15:51:54 - Fetching all properties
-2024-12-16 15:51:57 - Fetching all properties
-2024-12-16 15:52:05 - Setting review for property with id: 5
-2024-12-16 15:52:06 - Fetching all properties
-2024-12-16 15:52:12 - Fetching all properties
-2024-12-16 15:52:13 - Fetching all properties
-2024-12-16 15:54:22 - Fetching all properties
-2024-12-16 15:54:44 - Fetching all properties
-2024-12-16 15:56:15 - Fetching all properties
-2024-12-16 15:56:24 - Fetching all properties
-2024-12-16 16:00:58 - Fetching properties for ownerId: 1
+2024-12-16 23:19:35 - Fetching properties for ownerId: 1
+2024-12-16 23:19:45 - Fetching properties for ownerId: 1
+2024-12-16 23:19:59 - Fetching properties for ownerId: 1
+2024-12-16 23:20:03 - Fetching properties for ownerId: 1
+2024-12-16 23:20:18 - Fetching properties for ownerId: 1
+2024-12-16 23:20:19 - Fetching properties for ownerId: 1
+2024-12-17 00:45:58 - Fetching properties for ownerId: 1
+2024-12-17 00:46:01 - Fetching property with id: 17
+2024-12-17 00:46:04 - Updating property with id: 17
+2024-12-17 00:46:05 - Fetching properties for ownerId: 1
+2024-12-17 00:47:33 - Fetching property with id: 18
+2024-12-17 00:47:43 - Updating property with id: 18
+2024-12-17 00:47:44 - Fetching properties for ownerId: 1
+2024-12-17 00:49:15 - Fetching properties for ownerId: 1
+2024-12-17 00:49:16 - Fetching properties for ownerId: 1
+2024-12-17 00:49:18 - Fetching properties for ownerId: 1
+2024-12-17 00:49:21 - Fetching properties for ownerId: 1
+2024-12-17 00:49:34 - Fetching properties for ownerId: 1
+2024-12-17 00:49:34 - Fetching properties for ownerId: 1
+2024-12-17 00:49:38 - Fetching properties for ownerId: 1
+2024-12-17 00:49:39 - Fetching properties for ownerId: 1
+2024-12-17 00:49:42 - Fetching properties for ownerId: 1
+2024-12-17 00:50:10 - Fetching properties for ownerId: 1
+2024-12-17 00:50:11 - Fetching properties for ownerId: 1
+2024-12-17 00:50:13 - Fetching properties for ownerId: 1
+2024-12-17 00:50:13 - Fetching properties for ownerId: 1
+2024-12-17 00:50:16 - Fetching properties for ownerId: 1
+2024-12-17 00:50:42 - Adding new property for ownerId: 1
+2024-12-17 00:50:44 - Fetching properties for ownerId: 1
+2024-12-17 00:51:24 - Adding new property for ownerId: 1
+2024-12-17 00:51:25 - Fetching properties for ownerId: 1
+2024-12-17 00:51:35 - Adding new property for ownerId: 1
+2024-12-17 00:51:36 - Fetching properties for ownerId: 1
+2024-12-17 00:56:34 - Deleting property with id: 24
+2024-12-17 00:56:35 - Fetching properties for ownerId: 1
+2024-12-17 00:57:26 - Fetching all properties
+2024-12-17 00:57:34 - Fetching all properties
+2024-12-17 00:57:48 - Setting review for property with id: 5
+2024-12-17 00:57:49 - Fetching all properties
+2024-12-17 00:57:58 - Setting review for property with id: 25
+2024-12-17 00:57:59 - Fetching all properties
+2024-12-17 00:58:23 - Fetching all properties
+2024-12-17 00:58:27 - Fetching properties for ownerId: 1
+2024-12-17 00:58:34 - Fetching all properties
+2024-12-17 00:58:38 - Fetching all properties
+2024-12-17 00:58:41 - Fetching properties for ownerId: 1
+2024-12-17 00:59:00 - Fetching all properties
+2024-12-17 00:59:14 - Fetching all properties
+2024-12-17 00:59:17 - Fetching properties for ownerId: 1
+2024-12-17 00:59:33 - Fetching all properties
+2024-12-17 00:59:49 - Fetching all properties
+2024-12-17 00:59:53 - Fetching properties for ownerId: 1
+2024-12-17 01:02:12 - Fetching properties for ownerId: 1
+2024-12-17 01:02:14 - Fetching property with id: 23
+2024-12-17 01:02:19 - Updating property with id: 23
+2024-12-17 01:02:22 - Fetching properties for ownerId: 1
+2024-12-17 01:02:23 - Fetching property with id: 23
+2024-12-17 01:02:41 - Updating property with id: 23
+2024-12-17 01:02:41 - Fetching properties for ownerId: 1
+2024-12-17 01:02:48 - Fetching property with id: 23
+2024-12-17 01:03:00 - Updating property with id: 23
+2024-12-17 01:03:02 - Fetching properties for ownerId: 1

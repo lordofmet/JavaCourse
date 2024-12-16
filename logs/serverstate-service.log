@@ -1,56 +1,553 @@
-2024-12-16 15:39:56 - ServerStateService initialized with file: C:/Users/dmirt/OneDrive/server_state.ser
-2024-12-16 15:39:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:39:57 - Periodic state save executed.
-2024-12-16 15:39:57 - Server state loaded: ServerState{serverName='MainServ', status='running', activeConnections=1}
-2024-12-16 15:40:09 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:40:11 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:40:30 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:40:32 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:40:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:40:57 - Periodic state save executed.
-2024-12-16 15:41:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:41:57 - Periodic state save executed.
-2024-12-16 15:42:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:42:57 - Periodic state save executed.
-2024-12-16 15:43:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:43:57 - Periodic state save executed.
-2024-12-16 15:44:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:44:57 - Periodic state save executed.
-2024-12-16 15:45:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:45:57 - Periodic state save executed.
-2024-12-16 15:46:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:46:57 - Periodic state save executed.
-2024-12-16 15:47:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:47:57 - Periodic state save executed.
-2024-12-16 15:48:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:48:57 - Periodic state save executed.
-2024-12-16 15:49:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:49:57 - Periodic state save executed.
-2024-12-16 15:50:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:50:57 - Periodic state save executed.
-2024-12-16 15:51:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:51:57 - Periodic state save executed.
-2024-12-16 15:52:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:52:57 - Periodic state save executed.
-2024-12-16 15:54:16 - ServerStateService initialized with file: C:/Users/dmirt/OneDrive/server_state.ser
-2024-12-16 15:54:17 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:54:17 - Periodic state save executed.
-2024-12-16 15:54:17 - Server state loaded: ServerState{serverName='MainServ', status='running', activeConnections=1}
-2024-12-16 15:55:17 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:55:17 - Periodic state save executed.
-2024-12-16 15:56:17 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:56:17 - Periodic state save executed.
-2024-12-16 15:56:17 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:56:24 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:57:17 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:57:17 - Periodic state save executed.
-2024-12-16 15:58:17 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:58:17 - Periodic state save executed.
-2024-12-16 15:59:17 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 15:59:17 - Periodic state save executed.
-2024-12-16 16:00:17 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 16:00:17 - Periodic state save executed.
-2024-12-16 16:00:54 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 16:00:58 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 16:01:17 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
-2024-12-16 16:01:17 - Periodic state save executed.
+2024-12-16 20:42:57 - ServerStateService initialized with file: C:/Users/dmirt/OneDrive/server_state.ser
+2024-12-16 20:42:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 20:42:57 - Periodic state save executed.
+2024-12-16 20:42:57 - Server state loaded: ServerState{serverName='MainServ', status='running', activeConnections=0}
+2024-12-16 20:43:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 20:43:57 - Periodic state save executed.
+2024-12-16 20:44:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 20:44:57 - Periodic state save executed.
+2024-12-16 20:45:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 20:45:57 - Periodic state save executed.
+2024-12-16 20:46:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 20:46:57 - Periodic state save executed.
+2024-12-16 20:47:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 20:47:57 - Periodic state save executed.
+2024-12-16 20:48:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 20:48:57 - Periodic state save executed.
+2024-12-16 20:49:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 20:49:57 - Periodic state save executed.
+2024-12-16 20:50:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 20:50:57 - Periodic state save executed.
+2024-12-16 20:51:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 20:51:57 - Periodic state save executed.
+2024-12-16 20:52:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 20:52:57 - Periodic state save executed.
+2024-12-16 20:53:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 20:53:57 - Periodic state save executed.
+2024-12-16 20:54:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 20:54:57 - Periodic state save executed.
+2024-12-16 20:55:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 20:55:57 - Periodic state save executed.
+2024-12-16 20:56:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 20:56:57 - Periodic state save executed.
+2024-12-16 20:57:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 20:57:57 - Periodic state save executed.
+2024-12-16 20:58:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 20:58:57 - Periodic state save executed.
+2024-12-16 20:59:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 20:59:57 - Periodic state save executed.
+2024-12-16 21:00:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:00:57 - Periodic state save executed.
+2024-12-16 21:01:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:01:57 - Periodic state save executed.
+2024-12-16 21:02:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:02:57 - Periodic state save executed.
+2024-12-16 21:03:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:03:57 - Periodic state save executed.
+2024-12-16 21:04:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:04:57 - Periodic state save executed.
+2024-12-16 21:05:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:05:57 - Periodic state save executed.
+2024-12-16 21:06:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:06:57 - Periodic state save executed.
+2024-12-16 21:07:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:07:57 - Periodic state save executed.
+2024-12-16 21:08:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:08:57 - Periodic state save executed.
+2024-12-16 21:09:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:09:57 - Periodic state save executed.
+2024-12-16 21:10:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:10:57 - Periodic state save executed.
+2024-12-16 21:11:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:11:57 - Periodic state save executed.
+2024-12-16 21:12:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:12:57 - Periodic state save executed.
+2024-12-16 21:13:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:13:57 - Periodic state save executed.
+2024-12-16 21:14:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:14:57 - Periodic state save executed.
+2024-12-16 21:15:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:15:57 - Periodic state save executed.
+2024-12-16 21:16:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:16:57 - Periodic state save executed.
+2024-12-16 21:17:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:17:57 - Periodic state save executed.
+2024-12-16 21:18:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:18:57 - Periodic state save executed.
+2024-12-16 21:19:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:19:57 - Periodic state save executed.
+2024-12-16 21:20:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:20:57 - Periodic state save executed.
+2024-12-16 21:21:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:21:57 - Periodic state save executed.
+2024-12-16 21:22:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:22:57 - Periodic state save executed.
+2024-12-16 21:23:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:23:57 - Periodic state save executed.
+2024-12-16 21:24:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:24:57 - Periodic state save executed.
+2024-12-16 21:25:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:25:57 - Periodic state save executed.
+2024-12-16 21:26:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:26:57 - Periodic state save executed.
+2024-12-16 21:27:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:27:57 - Periodic state save executed.
+2024-12-16 21:28:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:28:57 - Periodic state save executed.
+2024-12-16 21:29:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:29:57 - Periodic state save executed.
+2024-12-16 21:30:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:30:57 - Periodic state save executed.
+2024-12-16 21:31:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:31:57 - Periodic state save executed.
+2024-12-16 21:32:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:32:57 - Periodic state save executed.
+2024-12-16 21:33:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:33:57 - Periodic state save executed.
+2024-12-16 21:34:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:34:57 - Periodic state save executed.
+2024-12-16 21:35:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:35:57 - Periodic state save executed.
+2024-12-16 21:36:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:36:57 - Periodic state save executed.
+2024-12-16 21:37:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:37:57 - Periodic state save executed.
+2024-12-16 21:38:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:38:57 - Periodic state save executed.
+2024-12-16 21:39:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:39:57 - Periodic state save executed.
+2024-12-16 21:40:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:40:57 - Periodic state save executed.
+2024-12-16 21:41:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:41:57 - Periodic state save executed.
+2024-12-16 21:42:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:42:57 - Periodic state save executed.
+2024-12-16 21:43:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:43:57 - Periodic state save executed.
+2024-12-16 21:44:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:44:57 - Periodic state save executed.
+2024-12-16 21:45:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:45:57 - Periodic state save executed.
+2024-12-16 21:46:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:46:57 - Periodic state save executed.
+2024-12-16 21:47:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:47:57 - Periodic state save executed.
+2024-12-16 21:48:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:48:57 - Periodic state save executed.
+2024-12-16 21:49:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:49:57 - Periodic state save executed.
+2024-12-16 21:50:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:50:57 - Periodic state save executed.
+2024-12-16 21:51:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:51:57 - Periodic state save executed.
+2024-12-16 21:52:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:52:57 - Periodic state save executed.
+2024-12-16 21:53:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:53:57 - Periodic state save executed.
+2024-12-16 21:54:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:54:57 - Periodic state save executed.
+2024-12-16 21:55:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:55:57 - Periodic state save executed.
+2024-12-16 21:56:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:56:57 - Periodic state save executed.
+2024-12-16 21:57:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:57:57 - Periodic state save executed.
+2024-12-16 21:58:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 21:58:57 - Periodic state save executed.
+2024-12-16 22:01:26 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:01:26 - Periodic state save executed.
+2024-12-16 22:01:26 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:01:26 - Periodic state save executed.
+2024-12-16 22:01:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:01:57 - Periodic state save executed.
+2024-12-16 22:02:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:02:57 - Periodic state save executed.
+2024-12-16 22:03:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:03:57 - Periodic state save executed.
+2024-12-16 22:04:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:04:57 - Periodic state save executed.
+2024-12-16 22:05:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:05:57 - Periodic state save executed.
+2024-12-16 22:06:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:06:57 - Periodic state save executed.
+2024-12-16 22:20:27 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:20:27 - Periodic state save executed.
+2024-12-16 22:20:27 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:20:27 - Periodic state save executed.
+2024-12-16 22:20:27 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:20:27 - Periodic state save executed.
+2024-12-16 22:20:27 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:20:27 - Periodic state save executed.
+2024-12-16 22:20:27 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:20:27 - Periodic state save executed.
+2024-12-16 22:20:27 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:20:27 - Periodic state save executed.
+2024-12-16 22:20:27 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:20:27 - Periodic state save executed.
+2024-12-16 22:20:27 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:20:27 - Periodic state save executed.
+2024-12-16 22:20:27 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:20:27 - Periodic state save executed.
+2024-12-16 22:20:27 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:20:27 - Periodic state save executed.
+2024-12-16 22:20:27 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:20:27 - Periodic state save executed.
+2024-12-16 22:20:27 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:20:27 - Periodic state save executed.
+2024-12-16 22:20:27 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:20:27 - Periodic state save executed.
+2024-12-16 22:20:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:20:57 - Periodic state save executed.
+2024-12-16 22:21:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:21:57 - Periodic state save executed.
+2024-12-16 22:22:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:22:57 - Periodic state save executed.
+2024-12-16 22:23:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:23:57 - Periodic state save executed.
+2024-12-16 22:24:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:24:57 - Periodic state save executed.
+2024-12-16 22:25:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:25:57 - Periodic state save executed.
+2024-12-16 22:26:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:26:57 - Periodic state save executed.
+2024-12-16 22:27:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:27:57 - Periodic state save executed.
+2024-12-16 22:28:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:28:57 - Periodic state save executed.
+2024-12-16 22:29:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:29:57 - Periodic state save executed.
+2024-12-16 22:30:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:30:57 - Periodic state save executed.
+2024-12-16 22:31:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:31:57 - Periodic state save executed.
+2024-12-16 22:32:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:32:57 - Periodic state save executed.
+2024-12-16 22:33:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:33:57 - Periodic state save executed.
+2024-12-16 22:34:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:34:57 - Periodic state save executed.
+2024-12-16 22:35:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:35:57 - Periodic state save executed.
+2024-12-16 22:36:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:36:57 - Periodic state save executed.
+2024-12-16 22:37:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:37:57 - Periodic state save executed.
+2024-12-16 22:38:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:38:57 - Periodic state save executed.
+2024-12-16 22:39:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:39:57 - Periodic state save executed.
+2024-12-16 22:40:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:40:57 - Periodic state save executed.
+2024-12-16 22:41:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:41:57 - Periodic state save executed.
+2024-12-16 22:42:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:42:57 - Periodic state save executed.
+2024-12-16 22:43:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:43:57 - Periodic state save executed.
+2024-12-16 22:44:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:44:57 - Periodic state save executed.
+2024-12-16 22:45:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:45:57 - Periodic state save executed.
+2024-12-16 22:46:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:46:57 - Periodic state save executed.
+2024-12-16 22:47:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:47:57 - Periodic state save executed.
+2024-12-16 22:48:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:48:57 - Periodic state save executed.
+2024-12-16 22:49:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:49:57 - Periodic state save executed.
+2024-12-16 22:50:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:50:57 - Periodic state save executed.
+2024-12-16 22:51:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:51:57 - Periodic state save executed.
+2024-12-16 22:52:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:52:57 - Periodic state save executed.
+2024-12-16 22:53:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:53:57 - Periodic state save executed.
+2024-12-16 22:54:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:54:57 - Periodic state save executed.
+2024-12-16 22:55:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:55:57 - Periodic state save executed.
+2024-12-16 22:56:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:56:57 - Periodic state save executed.
+2024-12-16 22:57:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:57:57 - Periodic state save executed.
+2024-12-16 22:58:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:58:57 - Periodic state save executed.
+2024-12-16 22:59:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 22:59:57 - Periodic state save executed.
+2024-12-16 23:00:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:00:57 - Periodic state save executed.
+2024-12-16 23:01:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:01:57 - Periodic state save executed.
+2024-12-16 23:02:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:02:57 - Periodic state save executed.
+2024-12-16 23:03:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:03:57 - Periodic state save executed.
+2024-12-16 23:04:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:04:57 - Periodic state save executed.
+2024-12-16 23:05:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:05:57 - Periodic state save executed.
+2024-12-16 23:06:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:06:57 - Periodic state save executed.
+2024-12-16 23:07:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:07:57 - Periodic state save executed.
+2024-12-16 23:08:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:08:57 - Periodic state save executed.
+2024-12-16 23:09:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:09:57 - Periodic state save executed.
+2024-12-16 23:10:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:10:57 - Periodic state save executed.
+2024-12-16 23:11:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:11:57 - Periodic state save executed.
+2024-12-16 23:12:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:12:57 - Periodic state save executed.
+2024-12-16 23:13:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:13:57 - Periodic state save executed.
+2024-12-16 23:14:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:14:57 - Periodic state save executed.
+2024-12-16 23:15:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:15:57 - Periodic state save executed.
+2024-12-16 23:16:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:16:57 - Periodic state save executed.
+2024-12-16 23:17:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:17:57 - Periodic state save executed.
+2024-12-16 23:18:55 - ServerStateService initialized with file: C:/Users/dmirt/OneDrive/server_state.ser
+2024-12-16 23:18:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:18:55 - Periodic state save executed.
+2024-12-16 23:18:55 - Server state loaded: ServerState{serverName='MainServ', status='running', activeConnections=0}
+2024-12-16 23:19:10 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:19:35 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:19:41 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:19:45 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:19:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:19:55 - Periodic state save executed.
+2024-12-16 23:20:01 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:20:21 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:20:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:20:55 - Periodic state save executed.
+2024-12-16 23:21:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:21:55 - Periodic state save executed.
+2024-12-16 23:22:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:22:55 - Periodic state save executed.
+2024-12-16 23:23:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:23:55 - Periodic state save executed.
+2024-12-16 23:24:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:24:55 - Periodic state save executed.
+2024-12-16 23:25:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:25:55 - Periodic state save executed.
+2024-12-16 23:26:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:26:55 - Periodic state save executed.
+2024-12-16 23:27:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:27:55 - Periodic state save executed.
+2024-12-16 23:28:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:28:55 - Periodic state save executed.
+2024-12-16 23:29:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:29:55 - Periodic state save executed.
+2024-12-16 23:30:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:30:55 - Periodic state save executed.
+2024-12-16 23:31:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:31:55 - Periodic state save executed.
+2024-12-16 23:32:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:32:55 - Periodic state save executed.
+2024-12-16 23:33:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:33:55 - Periodic state save executed.
+2024-12-16 23:34:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:34:55 - Periodic state save executed.
+2024-12-16 23:35:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:35:55 - Periodic state save executed.
+2024-12-16 23:36:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:36:55 - Periodic state save executed.
+2024-12-16 23:37:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:37:55 - Periodic state save executed.
+2024-12-16 23:46:39 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:46:39 - Periodic state save executed.
+2024-12-16 23:46:39 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:46:39 - Periodic state save executed.
+2024-12-16 23:46:39 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:46:39 - Periodic state save executed.
+2024-12-16 23:46:39 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:46:39 - Periodic state save executed.
+2024-12-16 23:46:39 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:46:39 - Periodic state save executed.
+2024-12-16 23:46:39 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:46:39 - Periodic state save executed.
+2024-12-16 23:46:39 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:46:39 - Periodic state save executed.
+2024-12-16 23:46:39 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:46:39 - Periodic state save executed.
+2024-12-16 23:46:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:46:55 - Periodic state save executed.
+2024-12-16 23:47:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:47:55 - Periodic state save executed.
+2024-12-16 23:48:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:48:55 - Periodic state save executed.
+2024-12-16 23:49:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:49:55 - Periodic state save executed.
+2024-12-16 23:50:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:50:55 - Periodic state save executed.
+2024-12-16 23:51:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:51:55 - Periodic state save executed.
+2024-12-16 23:52:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:52:55 - Periodic state save executed.
+2024-12-16 23:53:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:53:55 - Periodic state save executed.
+2024-12-16 23:54:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:54:55 - Periodic state save executed.
+2024-12-16 23:55:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:55:55 - Periodic state save executed.
+2024-12-16 23:56:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:56:55 - Periodic state save executed.
+2024-12-16 23:57:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:57:55 - Periodic state save executed.
+2024-12-16 23:58:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:58:55 - Periodic state save executed.
+2024-12-16 23:59:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-16 23:59:55 - Periodic state save executed.
+2024-12-17 00:00:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:00:55 - Periodic state save executed.
+2024-12-17 00:01:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:01:55 - Periodic state save executed.
+2024-12-17 00:02:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:02:55 - Periodic state save executed.
+2024-12-17 00:03:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:03:55 - Periodic state save executed.
+2024-12-17 00:04:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:04:55 - Periodic state save executed.
+2024-12-17 00:05:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:05:55 - Periodic state save executed.
+2024-12-17 00:06:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:06:55 - Periodic state save executed.
+2024-12-17 00:07:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:07:55 - Periodic state save executed.
+2024-12-17 00:08:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:08:55 - Periodic state save executed.
+2024-12-17 00:09:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:09:55 - Periodic state save executed.
+2024-12-17 00:10:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:10:55 - Periodic state save executed.
+2024-12-17 00:11:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:11:55 - Periodic state save executed.
+2024-12-17 00:12:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:12:55 - Periodic state save executed.
+2024-12-17 00:13:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:13:55 - Periodic state save executed.
+2024-12-17 00:14:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:14:55 - Periodic state save executed.
+2024-12-17 00:15:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:15:55 - Periodic state save executed.
+2024-12-17 00:16:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:16:55 - Periodic state save executed.
+2024-12-17 00:17:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:17:55 - Periodic state save executed.
+2024-12-17 00:18:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:18:55 - Periodic state save executed.
+2024-12-17 00:19:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:19:55 - Periodic state save executed.
+2024-12-17 00:20:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:20:55 - Periodic state save executed.
+2024-12-17 00:21:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:21:55 - Periodic state save executed.
+2024-12-17 00:22:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:22:55 - Periodic state save executed.
+2024-12-17 00:23:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:23:55 - Periodic state save executed.
+2024-12-17 00:24:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:24:55 - Periodic state save executed.
+2024-12-17 00:25:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:25:55 - Periodic state save executed.
+2024-12-17 00:26:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:26:55 - Periodic state save executed.
+2024-12-17 00:27:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:27:55 - Periodic state save executed.
+2024-12-17 00:28:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:28:55 - Periodic state save executed.
+2024-12-17 00:29:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:29:55 - Periodic state save executed.
+2024-12-17 00:30:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:30:55 - Periodic state save executed.
+2024-12-17 00:31:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:31:55 - Periodic state save executed.
+2024-12-17 00:32:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:32:55 - Periodic state save executed.
+2024-12-17 00:33:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:33:55 - Periodic state save executed.
+2024-12-17 00:34:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:34:55 - Periodic state save executed.
+2024-12-17 00:35:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:35:55 - Periodic state save executed.
+2024-12-17 00:36:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:36:55 - Periodic state save executed.
+2024-12-17 00:37:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:37:55 - Periodic state save executed.
+2024-12-17 00:38:55 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:38:55 - Periodic state save executed.
+2024-12-17 00:39:39 - ServerStateService initialized with file: C:/Users/dmirt/OneDrive/server_state.ser
+2024-12-17 00:39:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:39:40 - Periodic state save executed.
+2024-12-17 00:39:40 - Server state loaded: ServerState{serverName='MainServ', status='running', activeConnections=0}
+2024-12-17 00:40:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:40:40 - Periodic state save executed.
+2024-12-17 00:41:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:41:40 - Periodic state save executed.
+2024-12-17 00:42:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:42:40 - Periodic state save executed.
+2024-12-17 00:43:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:43:40 - Periodic state save executed.
+2024-12-17 00:44:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:44:40 - Periodic state save executed.
+2024-12-17 00:45:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:45:40 - Periodic state save executed.
+2024-12-17 00:45:58 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:46:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:46:40 - Periodic state save executed.
+2024-12-17 00:47:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:47:40 - Periodic state save executed.
+2024-12-17 00:48:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:48:40 - Periodic state save executed.
+2024-12-17 00:49:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:49:40 - Periodic state save executed.
+2024-12-17 00:50:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:50:40 - Periodic state save executed.
+2024-12-17 00:51:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:51:40 - Periodic state save executed.
+2024-12-17 00:52:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:52:40 - Periodic state save executed.
+2024-12-17 00:53:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:53:40 - Periodic state save executed.
+2024-12-17 00:54:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:54:40 - Periodic state save executed.
+2024-12-17 00:55:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:55:40 - Periodic state save executed.
+2024-12-17 00:56:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:56:40 - Periodic state save executed.
+2024-12-17 00:56:49 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:57:25 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:57:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:57:40 - Periodic state save executed.
+2024-12-17 00:58:24 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:58:27 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:58:31 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:58:33 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:58:39 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:58:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:58:40 - Periodic state save executed.
+2024-12-17 00:58:41 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:58:57 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:59:00 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:59:15 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:59:17 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:59:29 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:59:33 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:59:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:59:40 - Periodic state save executed.
+2024-12-17 00:59:50 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 00:59:53 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 01:00:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 01:00:40 - Periodic state save executed.
+2024-12-17 01:01:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 01:01:40 - Periodic state save executed.
+2024-12-17 01:02:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 01:02:40 - Periodic state save executed.
+2024-12-17 01:03:40 - Server state successfully saved to file: C:\Users\dmirt\OneDrive\server_state.ser
+2024-12-17 01:03:40 - Periodic state save executed.

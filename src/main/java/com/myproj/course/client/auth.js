@@ -9,6 +9,7 @@ async function login() {
     });
 
     if (response.ok) {
+        console.log(response);
         const user = await response.json();
         localStorage.setItem("user", JSON.stringify(user));
         userEnter();

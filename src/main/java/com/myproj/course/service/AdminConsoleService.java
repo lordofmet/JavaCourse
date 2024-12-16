@@ -1,12 +1,17 @@
 package com.myproj.course.service;
 
+import com.myproj.course.controller.ServerStateController;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Scanner;
 
 @Service
 public class AdminConsoleService implements CommandLineRunner {
+
+    private static final Logger logger = LoggerFactory.getLogger(AdminConsoleService.class);
     private final ServerStateService serverStateService;
 
     public AdminConsoleService(ServerStateService serverStateService) {
@@ -18,15 +23,15 @@ public class AdminConsoleService implements CommandLineRunner {
         Scanner scanner = new Scanner(System.in);
         String command;
 
-        System.out.println("Admin Console started. Type 'help' for available commands.");
+        logger.info("Admin Console started. Type 'help' for available commands.");
 
         while (true) {
-            System.out.print("Enter command: ");
+            logger.info("Enter command: ");
             command = scanner.nextLine().trim();
 
             switch (command.toLowerCase()) {
                 case "exit":
-                    System.out.println("Shutting down server...");
+                    logger.info("Shutting down server...");
                     System.exit(0);  // Завершаем приложение
                     break;
                 case "help":
@@ -42,47 +47,44 @@ public class AdminConsoleService implements CommandLineRunner {
                     deserializeState();
                     break;
                 default:
-                    System.out.println("Unknown command: " + command);
+                    logger.info("Unknown command: " + command);
                     break;
             }
         }
     }
 
-    // Показать доступные команды
     private void showHelp() {
-        System.out.println("Available commands:");
-        System.out.println("  help             - Show available commands");
-        System.out.println("  status           - Show current server status");
-        System.out.println("  serialize        - Serialize server state to file");
-        System.out.println("  deserialize      - Deserialize server state from file");
-        System.out.println("  exit             - Shut down the server");
+        logger.info("Available commands:");
+        logger.info("  help             - Show available commands");
+        logger.info("  status           - Show current server status");
+        logger.info("  serialize        - Serialize server state to file");
+        logger.info("  deserialize      - Deserialize server state from file");
+        logger.info("  exit             - Shut down the server");
     }
 
-    // Показать текущее состояние сервера
     private void showServerStatus() {
-        System.out.println("Current server status: ");
-        System.out.println("Server Name: " + serverStateService.getCurrentState().getServerName());
-        System.out.println("Status: " + serverStateService.getCurrentState().getStatus());
-        System.out.println("Active Connections: " + serverStateService.getCurrentState().getActiveConnections());
+        logger.info("Current server status: ");
+        logger.info("Server Name: " + serverStateService.getCurrentState().getServerName());
+        logger.info("Status: " + serverStateService.getCurrentState().getStatus());
+        logger.info("Active Connections: " + serverStateService.getCurrentState().getActiveConnections());
     }
 
     // Сериализация состояния
     private void serializeState() {
         try {
             serverStateService.saveState();
-            System.out.println("Server state serialized successfully.");
+            logger.info("Server state serialized successfully.");
         } catch (Exception e) {
-            System.out.println("Error during state serialization: " + e.getMessage());
+            logger.info("Error during state serialization: " + e.getMessage());
         }
     }
 
-    // Десериализация состояния
     private void deserializeState() {
         try {
             serverStateService.loadState();
-            System.out.println("Server state deserialized successfully.");
+            logger.info("Server state deserialized successfully.");
         } catch (Exception e) {
-            System.out.println("Error during state deserialization: " + e.getMessage());
+            logger.info("Error during state deserialization: " + e.getMessage());
         }
     }
 }

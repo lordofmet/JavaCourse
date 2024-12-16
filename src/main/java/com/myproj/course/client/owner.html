@@ -51,12 +51,12 @@
     
             <div class="form-group">
                 <label for="property-price">Price ($)</label>
-                <input type="number" id="property-price" placeholder="Enter price" required />
+                <input type="text" id="property-price" placeholder="Enter price" required pattern="^\d+(\.\d{1,2})?$" title="Enter a valid price (e.g., 200 or 200.00)" />
             </div>
     
             <div class="form-group">
                 <label for="property-booking-price">Booking Price per Day ($)</label>
-                <input type="number" id="property-booking-price" placeholder="Enter booking price per day" required />
+                <input type="text" id="property-booking-price" placeholder="Enter booking price per day" required pattern="^\d+(\.\d{1,2})?$" title="Enter a valid price (e.g., 200 or 200.00)" />
             </div>
     
             <div class="form-group">
