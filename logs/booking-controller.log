@@ -1,111 +1,33 @@
-2024-12-15 17:18:56 - Fetching all bookings
-2024-12-15 17:18:59 - Fetching bookings for userId: 2
-2024-12-15 17:19:03 - Fetching all bookings
-2024-12-15 17:21:19 - Fetching all bookings
-2024-12-15 17:48:07 - Fetching all bookings
-2024-12-15 17:48:10 - Fetching all bookings
-2024-12-15 17:50:30 - Fetching all bookings
-2024-12-15 17:50:56 - Fetching all bookings
-2024-12-15 17:51:30 - Fetching all bookings
-2024-12-15 17:51:40 - Fetching all bookings
-2024-12-15 18:18:32 - Fetching all bookings
-2024-12-15 18:26:47 - Fetching all bookings
-2024-12-15 18:27:30 - Fetching all bookings
-2024-12-15 18:27:30 - Fetching all bookings
-2024-12-15 18:27:32 - Fetching all bookings
-2024-12-15 18:28:23 - Fetching all bookings
-2024-12-15 18:28:24 - Fetching all bookings
-2024-12-15 18:28:25 - Fetching all bookings
-2024-12-15 18:28:25 - Fetching all bookings
-2024-12-15 18:28:26 - Fetching all bookings
-2024-12-15 18:28:26 - Fetching all bookings
-2024-12-15 18:28:31 - Fetching all bookings
-2024-12-15 18:28:32 - Fetching all bookings
-2024-12-15 18:28:33 - Fetching all bookings
-2024-12-15 18:28:34 - Fetching all bookings
-2024-12-15 18:29:52 - Fetching all bookings
-2024-12-15 18:29:53 - Fetching all bookings
-2024-12-15 18:29:54 - Fetching all bookings
-2024-12-15 18:29:55 - Fetching all bookings
-2024-12-15 18:29:55 - Fetching all bookings
-2024-12-15 18:29:56 - Fetching all bookings
-2024-12-15 18:29:57 - Fetching all bookings
-2024-12-15 18:30:01 - Fetching all bookings
-2024-12-15 18:30:05 - Fetching all bookings
-2024-12-15 18:30:13 - Fetching sales statistics for ownerId: 1
-2024-12-15 18:31:19 - Fetching all bookings
-2024-12-15 18:31:32 - Booking created for propertyId: 10
-2024-12-15 18:31:33 - Fetching all bookings
-2024-12-15 18:31:40 - Fetching all bookings
-2024-12-15 18:32:00 - Fetching all bookings
-2024-12-15 18:32:00 - Fetching all bookings
-2024-12-15 18:32:01 - Fetching all bookings
-2024-12-15 18:32:01 - Fetching all bookings
-2024-12-15 18:32:01 - Fetching all bookings
-2024-12-15 18:32:02 - Fetching all bookings
-2024-12-15 18:32:02 - Fetching all bookings
-2024-12-15 18:32:12 - Fetching all bookings
-2024-12-15 18:32:13 - Fetching all bookings
-2024-12-15 18:32:14 - Fetching all bookings
-2024-12-15 18:32:15 - Fetching all bookings
-2024-12-15 18:32:16 - Fetching all bookings
-2024-12-15 18:32:18 - Fetching all bookings
-2024-12-15 18:32:22 - Fetching bookings for userId: 2
-2024-12-15 18:32:31 - Fetching sales statistics for ownerId: 1
-2024-12-15 18:33:31 - Fetching all bookings
-2024-12-15 18:33:58 - Fetching all bookings
-2024-12-15 18:36:19 - Booking created for propertyId: 19
-2024-12-15 18:36:20 - Fetching all bookings
-2024-12-15 18:40:13 - Fetching all bookings
-2024-12-15 18:40:28 - Booking created for propertyId: 5
-2024-12-15 18:40:30 - Fetching all bookings
-2024-12-15 18:41:05 - Fetching all bookings
-2024-12-15 18:41:07 - Fetching bookings for userId: 2
-2024-12-15 18:41:10 - Fetching all bookings
-2024-12-15 18:41:29 - Fetching all bookings
-2024-12-15 18:41:30 - Fetching all bookings
-2024-12-15 18:41:31 - Fetching all bookings
-2024-12-15 18:41:36 - Fetching all bookings
-2024-12-15 18:41:59 - Fetching all bookings
-2024-12-15 18:43:07 - Fetching all bookings
-2024-12-15 18:43:35 - Fetching all bookings
-2024-12-15 18:44:00 - Booking created for propertyId: 5
-2024-12-15 18:44:01 - Fetching all bookings
-2024-12-15 18:46:20 - Fetching all bookings
-2024-12-15 18:46:23 - Fetching all bookings
-2024-12-15 18:46:46 - Fetching all bookings
-2024-12-15 18:54:40 - Fetching all bookings
-2024-12-15 18:57:37 - Fetching sales statistics for ownerId: 5
-2024-12-15 18:57:39 - Fetching sales statistics for ownerId: 5
-2024-12-15 18:59:01 - Fetching all bookings
-2024-12-15 19:02:31 - Fetching all bookings
-2024-12-15 19:02:36 - Fetching bookings for userId: 2
-2024-12-15 19:13:36 - Fetching all bookings
-2024-12-15 19:42:29 - Fetching sales statistics for ownerId: 1
-2024-12-15 19:43:20 - Fetching all bookings
-2024-12-15 19:43:45 - Booking created for propertyId: 22
-2024-12-15 19:43:46 - Fetching all bookings
-2024-12-15 19:43:51 - Fetching all bookings
-2024-12-15 19:43:56 - Fetching all bookings
-2024-12-15 19:44:05 - Booking created for propertyId: 5
-2024-12-15 19:44:06 - Fetching all bookings
-2024-12-15 19:44:12 - Fetching all bookings
-2024-12-15 19:44:21 - Fetching sales statistics for ownerId: 1
-2024-12-15 20:08:23 - Fetching all bookings
-2024-12-15 20:09:22 - Fetching all bookings
-2024-12-15 20:09:24 - Fetching all bookings
-2024-12-15 20:09:28 - Fetching all bookings
-2024-12-15 20:20:06 - Fetching sales statistics for ownerId: 1
-2024-12-15 20:20:11 - Fetching all bookings
-2024-12-15 21:32:51 - Fetching sales statistics for ownerId: 1
-2024-12-15 21:38:48 - Fetching all bookings
-2024-12-15 21:39:26 - Booking created for propertyId: 18
-2024-12-15 21:39:27 - Fetching all bookings
-2024-12-15 21:39:33 - Fetching all bookings
-2024-12-15 21:40:12 - Fetching sales statistics for ownerId: 1
-2024-12-15 21:40:31 - Fetching all bookings
-2024-12-15 21:40:52 - Booking created for propertyId: 17
-2024-12-15 21:40:53 - Fetching all bookings
-2024-12-15 21:40:57 - Fetching all bookings
-2024-12-15 21:41:06 - Fetching sales statistics for ownerId: 1
-2024-12-15 21:46:59 - Fetching sales statistics for ownerId: 1
+2024-12-16 15:40:14 - Fetching sales statistics for ownerId: 1
+2024-12-16 15:40:32 - Fetching all bookings
+2024-12-16 15:42:09 - Booking created for propertyId: 7
+2024-12-16 15:42:10 - Fetching all bookings
+2024-12-16 15:42:17 - Fetching all bookings
+2024-12-16 15:42:30 - Booking created for propertyId: 5
+2024-12-16 15:42:31 - Fetching all bookings
+2024-12-16 15:42:36 - Fetching all bookings
+2024-12-16 15:47:47 - Fetching all bookings
+2024-12-16 15:47:51 - Fetching all bookings
+2024-12-16 15:50:16 - Fetching all bookings
+2024-12-16 15:50:25 - Fetching all bookings
+2024-12-16 15:51:18 - Fetching all bookings
+2024-12-16 15:51:20 - Fetching all bookings
+2024-12-16 15:51:21 - Fetching all bookings
+2024-12-16 15:51:40 - Fetching all bookings
+2024-12-16 15:51:41 - Fetching all bookings
+2024-12-16 15:51:42 - Fetching all bookings
+2024-12-16 15:51:43 - Fetching all bookings
+2024-12-16 15:51:44 - Fetching all bookings
+2024-12-16 15:51:46 - Fetching all bookings
+2024-12-16 15:51:47 - Fetching all bookings
+2024-12-16 15:51:48 - Fetching all bookings
+2024-12-16 15:51:52 - Fetching all bookings
+2024-12-16 15:51:54 - Fetching all bookings
+2024-12-16 15:51:57 - Fetching all bookings
+2024-12-16 15:52:12 - Fetching all bookings
+2024-12-16 15:52:13 - Fetching all bookings
+2024-12-16 15:54:22 - Fetching all bookings
+2024-12-16 15:54:44 - Fetching all bookings
+2024-12-16 15:55:15 - Fetching bookings for userId: 3
+2024-12-16 15:56:15 - Fetching all bookings
+2024-12-16 15:56:24 - Fetching all bookings

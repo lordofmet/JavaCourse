@@ -29,6 +29,8 @@ async function updateOwnerProfile() {
         });
 
         if (response.ok) {
+            const updatedUser = await response.json();
+            localStorage.setItem("user", JSON.stringify(updatedUser));
             alert("Profile updated successfully.");
             loadOwnerProfile();
         } else {

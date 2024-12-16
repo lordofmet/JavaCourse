@@ -30,6 +30,8 @@ async function updateTenantProfile() {
         });
 
         if (response.ok) {
+            const updatedUser = await response.json();
+            localStorage.setItem("user", JSON.stringify(updatedUser));
             alert("Profile updated successfully.");
             loadTenantProfile();
         } else {
